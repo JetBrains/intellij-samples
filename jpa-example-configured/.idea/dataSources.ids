@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Local Data Source" product="MySQL" version="5.5.25" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="30ec0c99-43e7-4adf-84a2-d224810a1fb3">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost/crm</jdbc-url>
+    <user-name>root</user-name>
+    <schema-pattern>crm.*</schema-pattern>
+    <default-schemas>crm.*</default-schemas>
+    <default-dialect>MySQL</default-dialect>
+    <libraries>
+      <library>
+        <url>file://$PROJECT_DIR$/lib/mysql-connector-java-5.1.18-bin.jar</url>
+      </library>
+    </libraries>
+    <table name="customer" schema="" catalog="crm" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="first_name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="middle_name" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="last_name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="phone" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="notes" sqlType="VARCHAR" length="4000" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="order" schema="" catalog="crm" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="customer_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="created_date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="delivery_address" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="delivery_notes" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="delivered_date" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="order_ibfk_1" columns="customer_id" ref-table="customer" ref-schema="" ref-catalog="crm" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+    </table>
+    <table name="order_item" schema="" catalog="crm" type="TABLE">
+      <column name="order_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="product_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="quantity" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="order_item_ibfk_1" columns="order_id" ref-table="order" ref-schema="" ref-catalog="crm" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="order_item_ibfk_2" columns="product_id" ref-table="product" ref-schema="" ref-catalog="crm" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+    </table>
+    <table name="product" schema="" catalog="crm" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
+      <column name="title" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="vendor_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="description" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="notes" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="price" sqlType="DECIMAL" length="10" precision="3" nullable="true" jdbcType="3" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="product_ibfk_1" columns="vendor_id" ref-table="vendor" ref-schema="" ref-catalog="crm" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+    </table>
+    <table name="vendor" schema="" catalog="crm" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="phone" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="notes" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+  </data-source>
+</component>

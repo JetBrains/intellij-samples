@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-commons-annotations-4.0.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-core-4.1.5.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/antlr-2.7.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.18-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javassist-3.15.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.persistence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-entitymanager-4.1.5.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jboss-logging-3.1.0.GA.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

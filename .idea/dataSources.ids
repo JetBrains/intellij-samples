@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="ChinookDB" uuid="c264bb84-2937-4a55-a0bd-cee38323c3c4">
+    <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="Album" schema="" catalog="" type="TABLE">
+      <column name="AlbumId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Title" sqlType="NVARCHAR(160)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="ArtistId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="AlbumId"/>
+      <foreign-key name="#FAKE_Album_1" columns="ArtistId" ref-table="Artist" ref-schema="" ref-catalog="" ref-columns="ArtistId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_Track_3" table="Track" schema="" catalog="" columns="AlbumId"/>
+      <index name="IFK_AlbumArtistId" unique="true" columns="ArtistId"/>
+      <index name="IPK_Album" unique="true" columns="AlbumId"/>
+    </table>
+    <table name="Artist" schema="" catalog="" type="TABLE">
+      <column name="ArtistId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Name" sqlType="NVARCHAR(120)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="ArtistId"/>
+      <exported-key name="#FAKE_Album_1" table="Album" schema="" catalog="" columns="ArtistId"/>
+      <index name="IPK_Artist" unique="true" columns="ArtistId"/>
+    </table>
+    <table name="Customer" schema="" catalog="" type="TABLE">
+      <column name="CustomerId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="FirstName" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="LastName" sqlType="NVARCHAR(20)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="Company" sqlType="NVARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Address" sqlType="NVARCHAR(70)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="City" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="State" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Country" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="PostalCode" sqlType="NVARCHAR(10)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Phone" sqlType="NVARCHAR(24)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Fax" sqlType="NVARCHAR(24)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Email" sqlType="NVARCHAR(60)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="SupportRepId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="CustomerId"/>
+      <foreign-key name="#FAKE_Customer_1" columns="SupportRepId" ref-table="Employee" ref-schema="" ref-catalog="" ref-columns="EmployeeId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_Invoice_1" table="Invoice" schema="" catalog="" columns="CustomerId"/>
+      <index name="IFK_CustomerSupportRepId" unique="true" columns="SupportRepId"/>
+      <index name="IPK_Customer" unique="true" columns="CustomerId"/>
+    </table>
+    <table name="Employee" schema="" catalog="" type="TABLE">
+      <column name="EmployeeId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="LastName" sqlType="NVARCHAR(20)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="FirstName" sqlType="NVARCHAR(20)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="Title" sqlType="NVARCHAR(30)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="ReportsTo" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="BirthDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="HireDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Address" sqlType="NVARCHAR(70)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="City" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="State" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Country" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="PostalCode" sqlType="NVARCHAR(10)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Phone" sqlType="NVARCHAR(24)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Fax" sqlType="NVARCHAR(24)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Email" sqlType="NVARCHAR(60)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="EmployeeId"/>
+      <foreign-key name="#FAKE_Employee_1" columns="ReportsTo" ref-table="Employee" ref-schema="" ref-catalog="" ref-columns="EmployeeId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_Customer_1" table="Customer" schema="" catalog="" columns="SupportRepId"/>
+      <exported-key name="#FAKE_Employee_1" table="Employee" schema="" catalog="" columns="ReportsTo"/>
+      <index name="IFK_EmployeeReportsTo" unique="true" columns="ReportsTo"/>
+      <index name="IPK_Employee" unique="true" columns="EmployeeId"/>
+    </table>
+    <table name="Genre" schema="" catalog="" type="TABLE">
+      <column name="GenreId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Name" sqlType="NVARCHAR(120)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="GenreId"/>
+      <exported-key name="#FAKE_Track_2" table="Track" schema="" catalog="" columns="GenreId"/>
+      <index name="IPK_Genre" unique="true" columns="GenreId"/>
+    </table>
+    <table name="Invoice" schema="" catalog="" type="TABLE">
+      <column name="InvoiceId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="CustomerId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="InvoiceDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="BillingAddress" sqlType="NVARCHAR(70)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="BillingCity" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="BillingState" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="BillingCountry" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="BillingPostalCode" sqlType="NVARCHAR(10)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Total" sqlType="NUMERIC(10,2)" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <primary-key columns="InvoiceId"/>
+      <foreign-key name="#FAKE_Invoice_1" columns="CustomerId" ref-table="Customer" ref-schema="" ref-catalog="" ref-columns="CustomerId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_InvoiceLine_2" table="InvoiceLine" schema="" catalog="" columns="InvoiceId"/>
+      <index name="IFK_InvoiceCustomerId" unique="true" columns="CustomerId"/>
+      <index name="IPK_Invoice" unique="true" columns="InvoiceId"/>
+    </table>
+    <table name="InvoiceLine" schema="" catalog="" type="TABLE">
+      <column name="InvoiceLineId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="InvoiceId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="TrackId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="UnitPrice" sqlType="NUMERIC(10,2)" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="Quantity" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="InvoiceLineId"/>
+      <foreign-key name="#FAKE_InvoiceLine_1" columns="TrackId" ref-table="Track" ref-schema="" ref-catalog="" ref-columns="TrackId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_InvoiceLine_2" columns="InvoiceId" ref-table="Invoice" ref-schema="" ref-catalog="" ref-columns="InvoiceId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="IFK_InvoiceLineTrackId" unique="true" columns="TrackId"/>
+      <index name="IFK_InvoiceLineInvoiceId" unique="true" columns="InvoiceId"/>
+      <index name="IPK_InvoiceLine" unique="true" columns="InvoiceLineId"/>
+    </table>
+    <table name="MediaType" schema="" catalog="" type="TABLE">
+      <column name="MediaTypeId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Name" sqlType="NVARCHAR(120)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="MediaTypeId"/>
+      <exported-key name="#FAKE_Track_1" table="Track" schema="" catalog="" columns="MediaTypeId"/>
+      <index name="IPK_MediaType" unique="true" columns="MediaTypeId"/>
+    </table>
+    <table name="Playlist" schema="" catalog="" type="TABLE">
+      <column name="PlaylistId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Name" sqlType="NVARCHAR(120)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="PlaylistId"/>
+      <exported-key name="#FAKE_PlaylistTrack_2" table="PlaylistTrack" schema="" catalog="" columns="PlaylistId"/>
+      <index name="IPK_Playlist" unique="true" columns="PlaylistId"/>
+    </table>
+    <table name="PlaylistTrack" schema="" catalog="" type="TABLE">
+      <column name="PlaylistId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="TrackId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="PlaylistId,TrackId"/>
+      <foreign-key name="#FAKE_PlaylistTrack_1" columns="TrackId" ref-table="Track" ref-schema="" ref-catalog="" ref-columns="TrackId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_PlaylistTrack_2" columns="PlaylistId" ref-table="Playlist" ref-schema="" ref-catalog="" ref-columns="PlaylistId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="IFK_PlaylistTrackTrackId" unique="true" columns="TrackId"/>
+      <index name="IPK_PlaylistTrack" unique="true" columns="PlaylistId,TrackId"/>
+    </table>
+    <table name="Track" schema="" catalog="" type="TABLE">
+      <column name="TrackId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Name" sqlType="NVARCHAR(200)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="AlbumId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="MediaTypeId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="GenreId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="Composer" sqlType="NVARCHAR(220)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Milliseconds" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Bytes" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="UnitPrice" sqlType="NUMERIC(10,2)" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <primary-key columns="TrackId"/>
+      <foreign-key name="#FAKE_Track_1" columns="MediaTypeId" ref-table="MediaType" ref-schema="" ref-catalog="" ref-columns="MediaTypeId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_Track_2" columns="GenreId" ref-table="Genre" ref-schema="" ref-catalog="" ref-columns="GenreId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_Track_3" columns="AlbumId" ref-table="Album" ref-schema="" ref-catalog="" ref-columns="AlbumId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_InvoiceLine_1" table="InvoiceLine" schema="" catalog="" columns="TrackId"/>
+      <exported-key name="#FAKE_PlaylistTrack_1" table="PlaylistTrack" schema="" catalog="" columns="TrackId"/>
+      <index name="IFK_TrackMediaTypeId" unique="true" columns="MediaTypeId"/>
+      <index name="IFK_TrackGenreId" unique="true" columns="GenreId"/>
+      <index name="IFK_TrackAlbumId" unique="true" columns="AlbumId"/>
+      <index name="IPK_Track" unique="true" columns="TrackId"/>
+    </table>
+  </data-source>
+</component>

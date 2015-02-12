@@ -21,6 +21,11 @@
       <exported-key name="#FAKE_Album_1" table="Album" schema="" catalog="" columns="ArtistId"/>
       <index name="IPK_Artist" unique="true" columns="ArtistId"/>
     </table>
+    <table name="Cover" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="image" sqlType="BLOB" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
     <table name="Customer" schema="" catalog="" type="TABLE">
       <column name="CustomerId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="FirstName" sqlType="NVARCHAR(40)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>

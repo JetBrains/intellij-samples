@@ -5,6 +5,7 @@ package com.jetbrains.refactoring;
  */
 public class PushMembersDown {
     public class A {
+        //Push these members down to subclasses
         public void a() {
             System.out.println("a");
         }

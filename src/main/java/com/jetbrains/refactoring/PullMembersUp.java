@@ -11,6 +11,7 @@ public class PullMembersUp {
                 System.out.println("b");
             }
 
+            //Pull these methods up to superclass
             public void a() {
                 System.out.println("a");
             }

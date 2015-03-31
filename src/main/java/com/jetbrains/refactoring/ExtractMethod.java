@@ -8,7 +8,7 @@ public class ExtractMethod {
         String s = "How to extract a method: ";
 
         String hotkey = "Ctrl/Cmd+Alt+M";
-        
+
         String[] steps = new String[5];
         steps[0] = "First select a block of code";
         steps[1] = "Then press " + hotkey;
@@ -19,6 +19,10 @@ public class ExtractMethod {
         System.out.println(s);
         
         //Extract this loop
+        printSteps(steps);
+    }
+
+    private static void printSteps(String[] steps) {
         for(String step : steps) {
             System.out.println(step);
         }
@@ -26,9 +30,7 @@ public class ExtractMethod {
 
     public class StepPrinter {
         public void printTheSteps(String... theSteps) {
-            for(String aStep : theSteps) {
-                System.out.println(aStep);
-            }
+            printSteps(theSteps);
         }
     }
 }

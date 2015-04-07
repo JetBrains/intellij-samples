@@ -25,5 +25,8 @@
         <module name="intellij-code-samples" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="intellij-code-samples" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

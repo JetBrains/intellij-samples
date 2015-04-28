@@ -15,7 +15,6 @@ public class GenerateSwitchBranches {
 
     private Nucleotide getBasePair(Nucleotide nucleotide) {
         switch (nucleotide) {
-
             case ADENINE:
                 return Nucleotide.THYMINE;
             case CYTOSINE:

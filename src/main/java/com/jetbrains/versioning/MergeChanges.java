@@ -11,31 +11,50 @@ public class MergeChanges {
 
     public MergeChanges(int anInt, String s) {
         aDouble = 1.0;
-        this.anInt = anInt+1;
+        this.anInt = anInt;
         this.aFloat = 2F;
+        this.string = s + ":";
     }
 
     public String getString() {
-        return string;
+        string += ".";
+        return string.toLowerCase();
     }
 
     public void setString(String string) {
         this.string += string;
+        this.setaFloat(aFloat + string.length());
     }
 
-    public float getaFloat() {
+    public float getaFloatFactor() {
+        int i = (int) aFloat;
+
+        for(int j = 0; j < Math.sqrt(j); j++) {
+            if(i % j == 0)
+                aFloat = j;
+        }
+
         return aFloat;
     }
 
     public void setaFloat(float aFloat) {
+        string += aFloat + ",";
         this.aFloat = aFloat;
     }
 
     public int getAnInt() {
-        return anInt--;
+        if (anInt > 0)
+            anInt--;
+
+        return anInt;
     }
 
     public void setAnInt(int anInt) {
-        this.anInt += anInt;
+        if (anInt % 2 == 0)
+            this.anInt += anInt / 2;
+        else if (anInt % 3 == 0)
+            this.anInt += anInt / 3;
+        else
+            anInt++;
     }
 }

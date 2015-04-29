@@ -5,10 +5,12 @@ package com.jetbrains.versioning;
  */
 public class MergeChanges {
     private int anInt;
+    private double aDouble;
     private String string;
     private float aFloat;
 
     public MergeChanges(int anInt, String s) {
+        aDouble = 1.0;
         this.anInt = anInt;
         this.aFloat = 2F;
     }
@@ -18,7 +20,7 @@ public class MergeChanges {
     }
 
     public void setString(String string) {
-        this.string = string;
+        this.string += string;
     }
 
     public float getaFloat() {
@@ -30,11 +32,10 @@ public class MergeChanges {
     }
 
     public int getAnInt() {
-
-        return anInt;
+        return anInt--;
     }
 
     public void setAnInt(int anInt) {
-        this.anInt = anInt;
+        this.anInt += anInt;
     }
 }

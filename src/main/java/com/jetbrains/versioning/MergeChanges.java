@@ -11,7 +11,7 @@ public class MergeChanges {
 
     public MergeChanges(int anInt, String s) {
         aDouble = 1.0;
-        this.anInt = anInt;
+        this.anInt = anInt+1;
         this.aFloat = 2F;
     }
 

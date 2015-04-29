@@ -6,9 +6,11 @@ package com.jetbrains.versioning;
 public class MergeChanges {
     private int anInt;
     private String string;
+    private float aFloat;
 
     public MergeChanges(int anInt, String s) {
         this.anInt = anInt;
+        this.aFloat = 2F;
     }
 
     public String getString() {
@@ -17,6 +19,14 @@ public class MergeChanges {
 
     public void setString(String string) {
         this.string = string;
+    }
+
+    public float getaFloat() {
+        return aFloat;
+    }
+
+    public void setaFloat(float aFloat) {
+        this.aFloat = aFloat;
     }
 
     public int getAnInt() {

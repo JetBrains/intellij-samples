@@ -33,12 +33,15 @@ public class MergeChanges {
     public float getaFloatFactor() {
         int i = (int) aFloat;
 
-        for(int j = 0; j < Math.sqrt(j); j++) {
-            if(i % j == 0)
+        for (int j = 0; j < Math.sqrt(j); j++) {
+            if (i % j == 0)
                 aFloat = j;
         }
 
         return aFloat;
+
+    }
+
     public float getaFloat() {
         return aFloat * 3;
     }
@@ -63,7 +66,5 @@ public class MergeChanges {
             this.anInt += anInt / 3;
         else
             anInt++;
-    public void setAnInt(int add) {
-        this.anInt += add;
     }
 }

@@ -6,12 +6,15 @@ package com.jetbrains.versioning;
 public class MergeChanges {
     private int anInt;
     private double aDouble;
+    private boolean flag;
     private String string;
     private float aFloat;
 
     public MergeChanges(int anInt, String s) {
         aDouble = 1.0;
         this.anInt = anInt;
+        this.flag = false;
+        this.anInt = anInt+1;
         this.aFloat = 2F;
         this.string = s + ":";
     }
@@ -24,6 +27,7 @@ public class MergeChanges {
     public void setString(String string) {
         this.string += string;
         this.setaFloat(aFloat + string.length());
+        this.string += string + ",";
     }
 
     public float getaFloatFactor() {
@@ -35,9 +39,12 @@ public class MergeChanges {
         }
 
         return aFloat;
+    public float getaFloat() {
+        return aFloat * 3;
     }
 
     public void setaFloat(float aFloat) {
+        this.aFloat = aFloat - 2;
         string += aFloat + ",";
         this.aFloat = aFloat;
     }
@@ -56,5 +63,7 @@ public class MergeChanges {
             this.anInt += anInt / 3;
         else
             anInt++;
+    public void setAnInt(int add) {
+        this.anInt += add;
     }
 }

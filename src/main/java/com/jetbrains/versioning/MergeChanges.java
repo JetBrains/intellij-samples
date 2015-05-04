@@ -14,7 +14,7 @@ public class MergeChanges {
         aDouble = 1.0;
         this.anInt = anInt;
         this.flag = false;
-        this.anInt = anInt+1; //Comment
+        this.anInt = anInt+3; //Comment
         this.aFloat = 2F;
         this.string = s + ":";
     }

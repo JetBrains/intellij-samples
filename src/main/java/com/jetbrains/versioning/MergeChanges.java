@@ -10,10 +10,6 @@ public class MergeChanges {
     private String string;
     private float aFloat;
 
-    private class NewFeature{
-
-    }
-
     public MergeChanges(int anInt, String s) {
         aDouble = 1.0;
         this.anInt = anInt;

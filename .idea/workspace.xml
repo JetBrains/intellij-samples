@@ -26,66 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87f30376-2052-4bcd-9c76-6609906cbdfd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/lib/annotation-inference.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/resources/Chinook_Sqlite.sqlite" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_runtime_0_12_613.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_0_12_613.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/completion/DataFlowCompletion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/completion/QueryCompletion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/debugging/InlineDebugging.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/debugging/LambdaEvaluation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/debugging/SingleLineLambda.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/generation/GenerateHashCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/generation/GenerateSwitchBranches.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/inspections/BooleanInspections.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/inspections/Java8Inspections.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/inspections/LocateDuplicates.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/inspections/NullityInference.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/intentions/BindParametersToFields.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/intentions/BooleanIntentions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/intentions/ControlFlow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/intentions/ExceptionIntentions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/intentions/LoopIntentions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/intentions/RegexChecker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/navigation/NavigateToTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/CallHeirarchy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/ExtractDelegate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/ExtractFunctionalParameter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/ExtractInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/ExtractMethod.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/ExtractParameter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/Java8Refactorings.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/MakeStatic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/PullMembersUp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/PushMembersDown.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/RateProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/Rename.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/refactoring/StringRefactoring.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/testing/Alphabet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/versioning/Feature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/versioning/LocalHistory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/versioning/MergeChanges.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/versioning/NewClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/com/jetbrains/versioning/NewFeature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/main/java/simultaneous_tag_editing.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/test/com/jetbrains/navigation/NavigateToTestTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-samples/src/test/com/jetbrains/testing/AlphabetTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/annotation_inference.xml" afterPath="$PROJECT_DIR$/.idea/libraries/annotation_inference.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name.orig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml.orig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml.orig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml.orig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml.orig" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jpa-example-configured/jpa-example-configured.iml" afterPath="$PROJECT_DIR$/jpa-example-configured/jpa-example-configured.iml" />
     </list>
     <ignored path="intellij-samples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name=".name" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/.name">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3977778">
-              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -249,6 +195,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="intellij-samples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -623,7 +587,7 @@
       <option name="number" value="Default" />
       <updated>1439751392988</updated>
       <workItem from="1439751395100" duration="283000" />
-      <workItem from="1439755905643" duration="1083000" />
+      <workItem from="1439755905643" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'code-samples/master'&#10;">
       <created>1439756867938</created>
@@ -631,11 +595,17 @@
       <option name="project" value="LOCAL" />
       <updated>1439756867938</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add code-samples module&#10;">
+      <created>1439757044846</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1439757044846</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1366000" />
+    <option name="totallyTimeSpent" value="2062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -677,9 +647,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Merge remote-tracking branch 'code-samples/master'" />
     <MESSAGE value="Merge remote-tracking branch 'code-samples/master'&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'code-samples/master'&#10;" />
+    <MESSAGE value="Add code-samples module&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add code-samples module&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -860,6 +832,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3977778">
           <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/.name">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

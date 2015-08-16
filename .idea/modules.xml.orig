@@ -1,8 +1,8 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/code-samples/code-samples.iml" filepath="$PROJECT_DIR$/code-samples/code-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/intellij-samples.iml" filepath="$PROJECT_DIR$/.idea/intellij-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/jpa-example/jpa-example.iml" filepath="$PROJECT_DIR$/jpa-example/jpa-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/jpa-example-configured/jpa-example-configured.iml" filepath="$PROJECT_DIR$/jpa-example-configured/jpa-example-configured.iml" />
@@ -10,3 +10,14 @@
     </modules>
   </component>
 </project>
+||||||| merged common ancestors
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/intellij-code-samples.iml" filepath="$PROJECT_DIR$/intellij-code-samples.iml" />
+    </modules>
+  </component>
+</project>
+>>>>>>> code-samples/master

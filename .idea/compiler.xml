@@ -18,6 +18,23 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for intellij-code-samples" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for code-samples" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="code-samples" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="code-samples" target="1.8" />
+      <module name="intellij-code-samples" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

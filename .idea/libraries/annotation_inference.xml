@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="annotation-inference">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/annotation-inference.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>

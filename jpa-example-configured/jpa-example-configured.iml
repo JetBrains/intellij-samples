@@ -11,16 +11,8 @@
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
       </configuration>
     </facet>
-    <facet type="jpa" name="JPA2">
-      <configuration>
-        <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="" />
-        <datasource-mapping />
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/out/production/jpa-example-configured/META-INF/persistence.xml" />
-      </configuration>
-    </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file:///production/jpa-example-configured" />
     <output-test url="file:///test/jpa-example-configured" />
     <exclude-output />

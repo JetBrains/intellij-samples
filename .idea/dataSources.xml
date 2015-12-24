@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3844330507">
+    <data-source source="LOCAL" name="ChinookDB" uuid="c264bb84-2937-4a55-a0bd-cee38323c3c4">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/main/resources/Chinook_Sqlite.sqlite</jdbc-url>
+    </data-source>
+  </component>
+</project>

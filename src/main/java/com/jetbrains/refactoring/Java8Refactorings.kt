@@ -1,6 +1,6 @@
 package com.jetbrains.refactoring
 
-import java.util.ArrayList
+import java.util.*
 
 
 public class Java8Refactorings {

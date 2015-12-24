@@ -39,10 +39,18 @@
         <module name="jpa-example" />
         <module name="unit-tests-example" />
       </profile>
+      <profile default="false" name="Annotation profile for intellij-samples" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="intellij-samples" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="code-samples" target="1.8" />
       <module name="intellij-code-samples" target="1.8" />
+      <module name="intellij-samples" target="1.8" />
       <module name="jpa-example" target="1.5" />
       <module name="jpa-example-configured" target="1.5" />
       <module name="unit-tests-example" target="1.5" />

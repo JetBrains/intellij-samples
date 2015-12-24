@@ -19,22 +19,33 @@
         <processorPath useClasspath="true" />
       </profile>
       <profile default="false" name="Annotation profile for intellij-code-samples" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
       </profile>
       <profile default="false" name="Annotation profile for code-samples" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="code-samples" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jpa-example" />
+        <module name="unit-tests-example" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="code-samples" target="1.8" />
       <module name="intellij-code-samples" target="1.8" />
+      <module name="jpa-example" target="1.5" />
+      <module name="jpa-example-configured" target="1.5" />
+      <module name="unit-tests-example" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

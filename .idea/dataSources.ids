@@ -3,13 +3,4 @@
   <data-source name="ChinookDB" uuid="c264bb84-2937-4a55-a0bd-cee38323c3c4">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
-  <data-source name="SQLite -" uuid="b050bd72-96e9-41f9-92aa-36bee31252f8">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-  <data-source name="MySQL - @localhost" uuid="a3e5c4c2-ffe3-4efb-a8fd-f866e3839d7e">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-  <data-source name="MySQL - sakila@localhost" uuid="ee071eab-cb84-4889-9588-c45d4b340fbb">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
 </component>

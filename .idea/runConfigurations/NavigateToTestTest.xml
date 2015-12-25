@@ -14,7 +14,7 @@
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
-    <module name="code-samples" />
+    <module name="intellij-samples" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <option name="PACKAGE_NAME" value="com.jetbrains.navigation" />

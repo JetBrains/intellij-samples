@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/code-samples/code-samples.iml" filepath="$PROJECT_DIR$/code-samples/code-samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/code-samples/code-samples.iml" filepath="$PROJECT_DIR$/code-samples/code-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/intellij-samples.iml" filepath="$PROJECT_DIR$/.idea/intellij-samples.iml" />
     </modules>
   </component>

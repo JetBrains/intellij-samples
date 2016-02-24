@@ -4,6 +4,8 @@ public class Feature {
     private class NewFeature {
         // Implemented feature
 
+        // New experimental feature...
+
         // Hotfix on master
     }
 }

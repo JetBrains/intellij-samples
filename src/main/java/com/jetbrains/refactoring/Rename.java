@@ -9,7 +9,7 @@ public class Rename {
 
     static class CloudProvider {
         private Provider provider;
-        private AuthProvider authProvider;
+        private AuthProvider authenticator;
 
         public CloudProvider(Provider provider) {
             this.provider = provider;
@@ -19,8 +19,8 @@ public class Rename {
             return this.provider;
         }
 
-        public void setAuthProvider(AuthProvider authProvider) {
-            this.authProvider = authProvider;
+        public void setAuthenticator(AuthProvider authenticator) {
+            this.authenticator = authenticator;
         }
     }
 
@@ -28,7 +28,7 @@ public class Rename {
         CloudProvider primary = new CloudProvider(Provider.EC2);
         CloudProvider secondary = new CloudProvider(Provider.GCE);
 
-        primary.setAuthProvider(null);
-        secondary.setAuthProvider(primary.authProvider);
+        primary.setAuthenticator(null);
+        secondary.setAuthenticator(primary.authenticator);
     }
 }

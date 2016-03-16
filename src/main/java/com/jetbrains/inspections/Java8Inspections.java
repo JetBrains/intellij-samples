@@ -2,7 +2,13 @@ package com.jetbrains.inspections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Created by breandan on 2/9/2015.
@@ -39,5 +45,28 @@ public class Java8Inspections {
                 System.out.println(s);
             }
         }
+    }
+
+    public void methodReferences(Predicate<Integer> predicate) {
+        //Method reference can be replaced with qualifier
+        List<Integer> integers = IntStream.range(0, 100)
+                .boxed()
+                .filter(predicate::test)
+                .collect(Collectors.toList());
+    }
+
+    public void trivialLambdaUsage() {
+        ((Runnable) () -> {
+            //Do some work
+            System.out.println("Hello");
+        }).run();
+
+        String s = ((Supplier<String>) () -> "Hello").get();
+    }
+
+    public void optionals(Optional<String> optionalString) {
+        optionalString.get();
+        if(optionalString.isPresent())
+            optionalString.get();
     }
 }

@@ -4,8 +4,6 @@ import java.util.*
 
 
 public class Java8Refactorings {
-
-
     private val rateProvider = RateProvider.getInstance()
 
     private fun convert(amounts: List<Double>, src: String, dest: String): List<Double> {

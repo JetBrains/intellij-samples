@@ -26,18 +26,4 @@ public class GenerateHashCode {
         return !(string != null ? !string.equals(that.string) : that.string != null);
 
     }
-
-    @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = string != null ? string.hashCode() : 0;
-        result = 31 * result + (int) (aLong ^ (aLong >>> 32));
-        result = 31 * result + anInt;
-        result = 31 * result + (int) aChar;
-        result = 31 * result + (int) aShort;
-        temp = Double.doubleToLongBits(aDouble);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        return result;
-    }
 }

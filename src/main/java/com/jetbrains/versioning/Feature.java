@@ -9,6 +9,10 @@ public class Feature {
         // Hotfix on master
     }
 
+    public Feature() {
+
+    }
+
 
     public static void main(String[] args) {
         //Implement startup

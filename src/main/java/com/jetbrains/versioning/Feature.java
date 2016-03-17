@@ -12,4 +12,8 @@ public class Feature {
     public Feature() {
 
     }
+
+    public void someMethod() {
+        // Implement method
+    }
 }

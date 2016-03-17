@@ -32,4 +32,6 @@ public class NewFeature {
     protected void finalize() throws Throwable {
         super.finalize();
     }
+
+    //Test
 }

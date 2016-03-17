@@ -1,0 +1,3 @@
+[submodule "AndroidWearDemo"]
+	path = AndroidWearDemo
+	url = https://github.com/breandan/AndroidWearDemo

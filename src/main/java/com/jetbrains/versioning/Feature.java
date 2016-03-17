@@ -8,4 +8,8 @@ public class Feature {
 
         // Hotfix on master
     }
+
+    public Feature() {
+
+    }
 }

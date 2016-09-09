@@ -49,3 +49,5 @@ crashlytics.properties
 crashlytics-build.properties
 
 
+.idea/dataSources.local.xml
+.idea/dataSources/

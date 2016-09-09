@@ -3,11 +3,11 @@
 
     <persistence-unit name="NewPersistenceUnit">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <class>com.jetbrains.persistience.models.Customer</class>
-        <class>com.jetbrains.persistience.models.Order</class>
-        <class>com.jetbrains.persistience.models.OrderItem</class>
-        <class>com.jetbrains.persistience.models.Product</class>
-        <class>com.jetbrains.persistience.models.Vendor</class>
+        <class>com.jetbrains.persistence.models.Customer</class>
+        <class>com.jetbrains.persistence.models.Order</class>
+        <class>com.jetbrains.persistence.models.OrderItem</class>
+        <class>com.jetbrains.persistence.models.Product</class>
+        <class>com.jetbrains.persistence.models.Vendor</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost/crm"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>

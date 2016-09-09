@@ -1,6 +1,6 @@
 package com.jetbrains.navigation;
 
-import com.jetbrains.persistience.models.Customer;
+import com.jetbrains.persistence.models.Customer;
 
 import java.util.List;
 

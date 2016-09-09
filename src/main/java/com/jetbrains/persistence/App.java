@@ -1,6 +1,6 @@
-package com.jetbrains.persistience;
+package com.jetbrains.persistence;
 
-import com.jetbrains.persistience.models.Customer;
+import com.jetbrains.persistence.models.Customer;
 import org.hibernate.ejb.HibernatePersistence;
 
 import javax.persistence.EntityManager;

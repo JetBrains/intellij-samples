@@ -1,4 +1,4 @@
-package com.jetbrains.persistience.models;
+package com.jetbrains.persistence.models;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;

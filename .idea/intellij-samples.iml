@@ -8,7 +8,7 @@
         <datasource-mapping>
           <factory-entry name="NewPersistenceUnit" value="4c3a2697-3ce5-416e-b1f2-338a39453bfb" />
         </datasource-mapping>
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/java/com/jetbrains/persistience/META-INF/persistence.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/java/com/jetbrains/persistence/META-INF/persistence.xml" />
       </configuration>
     </facet>
   </component>

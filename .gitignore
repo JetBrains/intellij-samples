@@ -30,6 +30,6 @@ out/
 .DS_Store/
 lib/kotlin-runtime.jar
 */target/*
-.idea/workspace.xml
+workspace.xml
 *.iml
 */*.iml

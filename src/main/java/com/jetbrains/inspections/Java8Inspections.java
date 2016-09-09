@@ -31,8 +31,8 @@ public class Java8Inspections {
         //Lambda can be replaced with method reference
         String[] stringArray = {"IntelliJ IDEA", "AppCode", "CLion", "0xDBE", "Upsource"};
         Arrays.sort(stringArray, (s1, s2) -> s1.compareToIgnoreCase(s2));
-       
-        //Replace with forEach
+
+        //Replace with forEach on foo
         ArrayList<String> foo = new ArrayList<>();
         for (String s : foo) {
             if (s != null) {

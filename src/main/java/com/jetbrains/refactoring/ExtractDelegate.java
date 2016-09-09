@@ -18,7 +18,7 @@ public class ExtractDelegate {
 
         System.out.println(s);
 
-        //Extract this loop
+
         for(String step : steps) {
             System.out.println(step);
         }

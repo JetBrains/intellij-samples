@@ -11,8 +11,6 @@ public class ExtractFunctionalParameter {
     private static void doStuff() {
         long i = 0;
         String s = "d";
-
-        //Extract functional parameter as BiFunction (Ctrl/Cmd+Alt+Shift+P)
         Double d = stringToDouble(i + s);
     }
 
@@ -22,7 +20,7 @@ public class ExtractFunctionalParameter {
         public D convert(A a, B b, C c);
     }
 
-    public static double stringToDouble(String s) {
+    private static double stringToDouble(String s) {
         return Double.valueOf(s);
     }
 

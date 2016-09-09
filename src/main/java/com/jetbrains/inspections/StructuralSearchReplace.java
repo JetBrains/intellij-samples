@@ -14,7 +14,7 @@ public class StructuralSearchReplace {
         try {
             reader.read();
         } catch (Exception e) {
-            // Do nothing.
+            System.out.println(e.getMessage());
         }
     }
 

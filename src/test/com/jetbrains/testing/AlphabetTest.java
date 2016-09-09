@@ -12,13 +12,13 @@ public class AlphabetTest {
 
     @Test
     public void testCountVowels() throws Exception {
-        int vowels = 16; // Uncomment - CFU Alphabet.countVowels(s);
+        int vowels = Alphabet.countVowels(s);
         assertEquals(16, vowels);
     }
 
     @Test
     public void testCountConsonants() throws Exception {
-        int consonants = 18; // Uncomment - CFU Alphabet.countConsonants(s);
+        int consonants = Alphabet.countConsonants(s);
         assertEquals(18, consonants);
     }
 }

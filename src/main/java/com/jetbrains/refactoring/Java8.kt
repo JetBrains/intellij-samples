@@ -3,7 +3,7 @@ package com.jetbrains.refactoring
 import java.util.*
 
 
-public class Java8 {
+class Java8 {
 
 
     private val rateProvider = RateProvider.getInstance()
@@ -17,7 +17,7 @@ public class Java8 {
 
     }
 
-    public fun print(amounts: List<Double>, src: String, dest: String, threshold: Double) {
+    fun print(amounts: List<Double>, src: String, dest: String, threshold: Double) {
         for (amount in convert(amounts, src, dest)) {
             if ((amount < threshold)) {
                 System.out.println(amount)

@@ -14,5 +14,7 @@ public class SingleLineLambda {
                 .average();
 
         System.out.println(od.getAsDouble());
+
+        System.out.println(IntStream.range(-128, 127).filter( i -> Math.random() < 0.2).average());
     }
 }

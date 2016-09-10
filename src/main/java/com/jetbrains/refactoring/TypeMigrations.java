@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by hadihariri on 09/09/16.
  */
-public class TypeMigrationsRefactoring {
+public class TypeMigrations {
 
         private ArrayList<String> myResult;
         public String[] getResult() {

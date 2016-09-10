@@ -3,7 +3,7 @@ package com.jetbrains.refactoring
 import java.util.*
 
 
-public class Java8Refactorings {
+public class Java8 {
 
 
     private val rateProvider = RateProvider.getInstance()

@@ -1,6 +1,6 @@
 package com.jetbrains.refactoring;
 
-public class StringRefactoring {
+public class Strings {
 
     public void stringRefactoring() {
 

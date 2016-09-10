@@ -13,7 +13,7 @@ public class RateProvider {
         return 1;
     }
 
-    Java8Refactorings sampleApp = new Java8Refactorings();
+    Java8 sampleApp = new Java8();
     {
         sampleApp.print(Arrays.asList(1d, 5d, 10d), "USD", "EUR", 10d);
     }

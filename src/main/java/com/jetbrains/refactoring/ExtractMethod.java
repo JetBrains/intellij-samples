@@ -1,8 +1,6 @@
 package com.jetbrains.refactoring;
 
-/**
- * Created by breandan on 2/9/2015.
- */
+
 public class ExtractMethod {
     public static void main(String[] args) {
         String s = "How to extract a method: ";
@@ -17,7 +15,7 @@ public class ExtractMethod {
         steps[4] = "Apply the refactoring";
 
         System.out.println(s);
-        
+
         //Extract this loop
         printSteps(steps);
     }

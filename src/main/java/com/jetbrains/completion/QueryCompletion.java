@@ -3,9 +3,6 @@ package com.jetbrains.completion;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/**
- * Created by breandan on 2/9/2015.
- */
 public class QueryCompletion {
     public void query(Connection connection) {
         try {

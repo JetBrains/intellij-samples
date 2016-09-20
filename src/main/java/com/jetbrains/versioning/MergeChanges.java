@@ -1,8 +1,6 @@
 package com.jetbrains.versioning;
 
-/**
- * Created by breandan on 4/29/2015.
- */
+
 public class MergeChanges {
     private int anInt;
     private double aDouble;

@@ -2,9 +2,6 @@ package com.jetbrains.versioning;
 
 import java.util.List;
 
-/**
- * Created by breandan on 4/29/2015.
- */
 public class LocalHistory {
     String change;
     List<String> changes;

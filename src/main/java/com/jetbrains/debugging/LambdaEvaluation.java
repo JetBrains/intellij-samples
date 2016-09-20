@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by breandan on 2/9/2015.
- */
+
 public class LambdaEvaluation {
     public static void main(String[] args) {
         List<String> words = new ArrayList<>();

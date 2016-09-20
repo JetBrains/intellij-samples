@@ -4,9 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by breandan on 4/21/2015.
- */
+
 public class AlphabetTest {
     private String s = "supercalifragilisticexpialidocious!~";
 

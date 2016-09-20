@@ -1,8 +1,8 @@
 package com.jetbrains.generation;
 
-/**
- * Created by breandan on 3/24/2015.
- */
+import static java.lang.Double.compare;
+import static java.lang.Double.doubleToLongBits;
+
 public class GenerateHashCode {
     private String string;
     private long aLong;
@@ -22,7 +22,7 @@ public class GenerateHashCode {
         if (anInt != that.anInt) return false;
         if (aChar != that.aChar) return false;
         if (aShort != that.aShort) return false;
-        if (Double.compare(that.aDouble, aDouble) != 0) return false;
+        if (compare(that.aDouble, aDouble) != 0) return false;
         return !(string != null ? !string.equals(that.string) : that.string != null);
 
     }
@@ -36,7 +36,7 @@ public class GenerateHashCode {
         result = 31 * result + anInt;
         result = 31 * result + (int) aChar;
         result = 31 * result + (int) aShort;
-        temp = Double.doubleToLongBits(aDouble);
+        temp = doubleToLongBits(aDouble);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }

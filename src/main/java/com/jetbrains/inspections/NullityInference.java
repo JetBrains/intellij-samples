@@ -2,9 +2,7 @@ package com.jetbrains.inspections;
 
 import com.jetbrains.CallMe;
 
-/**
- * Created by breandan on 2/10/2015.
- */
+
 public class NullityInference {
     public void testAnnotationInference(Object nullityUnknown) {
         if (CallMe.neverReturnsNull() == null) {

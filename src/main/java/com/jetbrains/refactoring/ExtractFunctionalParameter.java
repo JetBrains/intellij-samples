@@ -1,8 +1,6 @@
 package com.jetbrains.refactoring;
 
-/**
- * Created by breandan on 2/9/2015.
- */
+
 public class ExtractFunctionalParameter {
     public static void main(String[] args) {
         doStuff();

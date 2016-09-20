@@ -6,9 +6,6 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 
 
-/**
- * Created by breandan on 4/21/2015.
- */
 public class NavigateToTestTest extends TestCase {
 
     public void testFastInvSqrt() throws Exception {

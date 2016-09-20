@@ -1,8 +1,6 @@
 package com.jetbrains.inspections;
 
-/**
- * Created by breandan on 2/13/2015.
- */
+
 public class BooleanInspections {
     //Run inspection by name: "Boolean method is aways inverted"
     class BooleanMethodIsAlwaysInverted {

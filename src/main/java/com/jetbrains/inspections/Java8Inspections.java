@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.Function;
 
-/**
- * Created by breandan on 2/9/2015.
- */
+import static java.lang.System.out;
+import static java.util.Arrays.sort;
+
 public class Java8Inspections {
     public void lambdas() {
         //Anonymous function Function<Function, Function>() can be replaced with lambda
@@ -30,13 +30,13 @@ public class Java8Inspections {
 
         //Lambda can be replaced with method reference
         String[] stringArray = {"IntelliJ IDEA", "AppCode", "CLion", "0xDBE", "Upsource"};
-        Arrays.sort(stringArray, (s1, s2) -> s1.compareToIgnoreCase(s2));
+        sort(stringArray, (s1, s2) -> s1.compareToIgnoreCase(s2));
 
         //Replace with forEach on foo
         ArrayList<String> foo = new ArrayList<>();
         for (String s : foo) {
             if (s != null) {
-                System.out.println(s);
+                out.println(s);
             }
         }
     }

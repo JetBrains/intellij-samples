@@ -1,8 +1,6 @@
 package com.jetbrains.refactoring;
 
-/**
- * Created by breandan on 2/9/2015.
- */
+
 public class PushMembersDown {
     public class A {
         //Push these members down to subclasses

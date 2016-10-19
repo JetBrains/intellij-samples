@@ -11,6 +11,7 @@ public class DropFrame {
         for (int i = 0; i < 10; i++) {
             executeMethodA(i);
             executeMethodB(i);
+            throwException();
         }
 
     }
@@ -33,5 +34,9 @@ public class DropFrame {
     private static void executeMethodA(int i) {
         int a = i * 30;
         System.out.println(a);
+    }
+
+    private static void throwException() {
+        throw new RuntimeException("Should never get here!");
     }
 }

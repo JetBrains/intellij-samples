@@ -1,10 +1,10 @@
 package com.jetbrains.inspections;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.jetbrains.inspections.entities.Counter;
+
+import java.util.*;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 import static java.lang.System.out;
 import static java.util.Arrays.sort;
@@ -157,6 +157,56 @@ public class Java8Inspections {
             }
         }
         return false;
+    }
+
+    private void incrementCounterForId(Map<Integer, Counter> idToCounter, Integer id) {
+        Counter counter = idToCounter.get(id);
+        if (counter == null) {
+            counter = new Counter();
+            idToCounter.put(id, counter);
+        }
+        counter.incrementCount();
+    }
+
+    private Counter getCounterForId(Map<Integer, Counter> idToCounter, Integer id) {
+        Counter counter = idToCounter.get(id);
+        if (counter == null) {
+            counter = Counter.EMPTY;
+        }
+        return counter;
+    }
+
+    private void removeIfCountExceedsLimit(Collection<Counter> counters) {
+        Predicate<Counter> predicate = (c) -> c.getCount() > 100;
+
+        Iterator<Counter> iterator = counters.iterator();
+        while (iterator.hasNext()) {
+            Counter counter = iterator.next();
+            if (predicate.test(counter)) {
+                iterator.remove();
+            }
+        }
+    }
+
+    private String getOptionalValue(Optional<String> anOptional) {
+        if (!anOptional.isPresent()) {
+            throw new IllegalArgumentException("Optional should not be empty");
+        }
+        return anOptional.get();
+    }
+
+    private String getOptionalValue(Optional<String> anOptional, boolean flag) {
+        if (flag || anOptional.isPresent()) {
+            return anOptional.get();
+        }
+        return "";
+    }
+
+    private String useOptionalProperly(Optional<String> anOptional) {
+        if (anOptional.isPresent()) {
+            return anOptional.get();
+        }
+        return "";
     }
 
 }

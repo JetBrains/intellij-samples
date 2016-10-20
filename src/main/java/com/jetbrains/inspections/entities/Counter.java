@@ -1,8 +1,8 @@
 package com.jetbrains.inspections.entities;
 
-import com.jetbrains.inspections.Java8Inspections;
+import org.jetbrains.annotations.NotNull;
 
-public class Counter {
+public class Counter implements Comparable<Counter>{
     public final static Counter EMPTY = new Counter();
     private int count;
 
@@ -12,5 +12,10 @@ public class Counter {
 
     public int getCount() {
         return count;
+    }
+
+    @Override
+    public int compareTo(@NotNull Counter o) {
+        return count-o.count;
     }
 }

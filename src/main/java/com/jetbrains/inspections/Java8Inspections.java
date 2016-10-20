@@ -8,6 +8,7 @@ import java.util.function.Predicate;
 
 import static java.lang.System.out;
 import static java.util.Arrays.sort;
+import static java.util.stream.Collectors.toList;
 
 @SuppressWarnings("unused")
 public class Java8Inspections {
@@ -104,7 +105,7 @@ public class Java8Inspections {
 
         for (String line : stringArray) {
             if (line != null) {
-                for (String word : line.split(" ")) {
+                for (String word : line.split("\\s")) {
                     result.add(word);
                 }
             }
@@ -202,11 +203,27 @@ public class Java8Inspections {
         return "";
     }
 
-    private String useOptionalProperly(Optional<String> anOptional) {
+    private String useOptionalProperlyOrElse(Optional<String> anOptional) {
         if (anOptional.isPresent()) {
             return anOptional.get();
         }
         return "";
+    }
+
+    private List<Counter> findTopTenAlt(List<Counter> counters) {
+        return counters.stream()
+                       .sorted((o1, o2) -> o1.getCount() - o2.getCount())
+                       .limit(10)
+                       .collect(toList());
+
+    }
+
+    private List<Counter> findTopTen(List<Counter> counters) {
+        return counters.stream()
+                       .sorted((o1, o2) -> o1.compareTo(o2))
+                       .limit(10)
+                       .collect(toList());
+
     }
 
 }

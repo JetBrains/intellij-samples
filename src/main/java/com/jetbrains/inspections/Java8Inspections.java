@@ -188,11 +188,11 @@ public class Java8Inspections {
         }
     }
 
-    private String getOptionalValue(Optional<String> anOptional) {
-        if (!anOptional.isPresent()) {
-            throw new IllegalArgumentException("Optional should not be empty");
+    private String getOptionalValue(Optional<String> firstOptional, Optional<String> secondOptional) {
+        if (!firstOptional.isPresent() || !secondOptional.isPresent()) {
+            throw new IllegalArgumentException("Neither Optional should not be empty");
         }
-        return anOptional.get();
+        return firstOptional.get() + secondOptional.get();
     }
 
     private String getOptionalValue(Optional<String> anOptional, boolean flag) {

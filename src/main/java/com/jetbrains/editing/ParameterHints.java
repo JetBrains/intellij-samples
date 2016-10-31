@@ -2,6 +2,7 @@ package com.jetbrains.editing;
 
 import com.jetbrains.persistence.models.Customer;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -20,29 +21,28 @@ public class ParameterHints {
                       .collect(toList());
     }
 
-    private void printWordsInSentence(String sentence) {
-        for (String word : sentence.split("\\s")) {
-            System.out.println(word);
-        }
+    private String[] getWordsInSentence(String sentence) {
+        return sentence.split("\\s");
     }
 
 
     public void startUserService() {
-        new Service("/users/", 8083).run();
+        new Service("/users/", 8080);
     }
 
 
-    public void shortParameterNames() {
-        throw new IllegalArgumentException("Neither Optional should not be empty");
+    public Customer findCustomerByName(String name) {
+        return findCustomer(name, null, null, 0, true);
     }
 
     public void noParamNames() {
         IntStream.range(10, 100);
         IntStream.of(1);
+
     }
 
-    public Customer findCustomerByName(String name) {
-        return findCustomer(name, null, null, 0, true);
+    public void shortParameterNames() {
+        throw new IllegalArgumentException("This is wrong!");
     }
 
 

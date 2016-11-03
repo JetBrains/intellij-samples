@@ -13,8 +13,15 @@ public class DebuggingTest {
     }
 
     @Test
-    public void shouldShowMemoryView() {
-        new MemoryView().addLoadsOfThingsToLists();
+    public void shouldShowChangingValuesInMemoryView() {
+        UnderTest underTest = new UnderTest();
+        underTest.doSomething();
+
+        IgnoreException ignoreException = new IgnoreException();
+
+        UnderTest anotherUnderTest = new UnderTest();
+
+        InlineDebugging inlineDebugging = new InlineDebugging();
     }
 
     @Test

@@ -8,24 +8,24 @@ import java.util.stream.Stream;
 
 import static java.lang.String.format;
 
-/**
- * Created by hadihariri on 10/09/16.
- */
 public class MemoryView {
 
     public static void main(String[] args) {
+        new MemoryView().addLoadsOfThingsToLists();
+    }
 
+    public void addLoadsOfThingsToLists() {
         String message = "I do not know where family doctors acquired illegibly perplexing handwriting";
 
         String[] words = message.split(" ");
 
 
         String containingL = Stream.of(words)
-                .distinct()
-                .map(String::toLowerCase)
-                .filter(mood -> mood.contains("l"))
-                .distinct()
-                .collect(Collectors.joining(","));
+                                   .distinct()
+                                   .map(String::toLowerCase)
+                                   .filter(word -> word.contains("l"))
+                                   .distinct()
+                                   .collect(Collectors.joining(","));
         ArrayList<Customer> customers = new ArrayList<>();
 
         ArrayList<String> cars = new ArrayList<>();

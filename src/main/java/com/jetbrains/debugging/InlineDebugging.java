@@ -6,14 +6,12 @@ import java.util.Arrays;
 import java.util.List;
 
 
-
-public class InlineDebugging {
-
+public class InlineDebugging implements Runnable {
     static class MyList<T> {
-        public T head;
-        public MyList<T> tail = null;
+        T head;
+        MyList<T> tail = null;
 
-        public MyList(List<T> list) {
+        MyList(List<T> list) {
             if (!list.isEmpty()) {
                 head = list.get(0);
                 tail = new MyList<T>(list.subList(1, list.size()));
@@ -21,9 +19,14 @@ public class InlineDebugging {
         }
     }
 
-    static MyList<String> list;
+    private static MyList<String> list;
 
     public static void main(String[] args) {
+        new InlineDebugging().run();
+    }
+
+    @Override
+    public void run() {
         MyList<Integer> list = new MyList<Integer>(Arrays.asList(1, 2, 3));
         System.out.println(getNthFromLast(list, 2));
 

@@ -2,7 +2,6 @@ package com.jetbrains.editing;
 
 import com.jetbrains.persistence.models.Customer;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -30,7 +29,6 @@ public class ParameterHints {
         new Service("/users/", 8080);
     }
 
-
     public Customer findCustomerByName(String name) {
         return findCustomer(name, null, null, 0, true);
     }
@@ -38,7 +36,6 @@ public class ParameterHints {
     public void noParamNames() {
         IntStream.range(10, 100);
         IntStream.of(1);
-
     }
 
     public void shortParameterNames() {
@@ -46,10 +43,9 @@ public class ParameterHints {
     }
 
 
-    public Customer findCustomer(String name, String address, Integer orderNumber, int id, boolean ascending) {
+    private Customer findCustomer(String name, String address, Integer orderNumber, int id, boolean ascending) {
         return null;
     }
-
 
     private static class Service implements Runnable {
         public Service(String path, int port) {

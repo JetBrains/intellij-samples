@@ -1,0 +1,9 @@
+Sometimes the features we want to demo are, by definition, too complex to be contained within a few lines of code. This is often the case when demoing support for particular libraries or frameworks.
+
+Here we'll keep a list of those projects that we use, and which features they are useful for demoing.
+
+
+React Native:
+https://github.com/mcnamee/react-native-starter-app
+
+IntelliJ IDEA 2016.3 demo used commit https://github.com/mcnamee/react-native-starter-app/commit/d5bca5fd05d3504493ea995487631a76c5ad371b

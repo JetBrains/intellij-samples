@@ -12,13 +12,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="intellij-samples" />
         <module name="jpa-example" />
         <module name="unit-tests-example" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="code-samples" target="1.8" />
+      <module name="code-samples_main" target="1.8" />
+      <module name="code-samples_test" target="1.8" />
       <module name="intellij-code-samples" target="1.8" />
       <module name="intellij-samples" target="1.8" />
       <module name="jpa-example" target="1.5" />

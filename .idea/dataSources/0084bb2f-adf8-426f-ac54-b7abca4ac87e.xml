@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="trishagee@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="trishagee">
+      <ObjectId>16385</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2016-11-16.16:28:35.862</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12349</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="plants">
+      <ObjectId>16386</ObjectId>
+      <IntrospectionTimestamp>2016-11-16.16:28:35.862</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1009</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="10" parent="2" name="animals">
+      <ObjectId>16387</ObjectId>
+      <IntrospectionTimestamp>2016-11-16.16:28:35.862</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1022</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="11" parent="2" name="outer_space">
+      <ObjectId>16388</ObjectId>
+    </schema>
+    <sequence id="12" parent="9" name="species_id_seq">
+      <ObjectId>16389</ObjectId>
+      <StateNumber>945</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="13" parent="9" name="species">
+      <ObjectId>16391</ObjectId>
+      <StateNumber>1009</StateNumber>
+    </table>
+    <routine id="14" parent="9" name="pretty_display_string">
+      <ObjectId>16410</ObjectId>
+      <StateNumber>988</StateNumber>
+      <LanguageName>sql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <routine id="15" parent="9" name="pretty_display_string">
+      <ObjectId>16409</ObjectId>
+      <StateNumber>989</StateNumber>
+      <LanguageName>sql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <sequence id="16" parent="10" name="sighting_id_seq">
+      <ObjectId>16417</ObjectId>
+      <StateNumber>966</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="17" parent="10" name="species_id_seq">
+      <ObjectId>16398</ObjectId>
+      <StateNumber>947</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="18" parent="10" name="sighting">
+      <ObjectId>16414</ObjectId>
+      <StateNumber>1017</StateNumber>
+    </table>
+    <table id="19" parent="10" name="species">
+      <ObjectId>16400</ObjectId>
+      <StateNumber>1012</StateNumber>
+    </table>
+    <view id="20" parent="10" name="animal_sighting">
+      <ObjectId>16461</ObjectId>
+      <StateNumber>1014</StateNumber>
+    </view>
+    <routine id="21" parent="10" name="archive">
+      <ObjectId>16465</ObjectId>
+      <StateNumber>1022</StateNumber>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <column id="22" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>945</StateNumber>
+      <DefaultExpression>nextval(&apos;species_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="23" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>945</StateNumber>
+    </column>
+    <index id="24" parent="13" name="species_id_uindex">
+      <ObjectId>16397</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="25" parent="13" name="species_pkey">
+      <ObjectId>16395</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="13" name="species_pkey">
+      <ObjectId>16396</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>species_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <argument id="27" parent="14" name="str">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="28" parent="14">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="29" parent="15" name="str">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="30" parent="15">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>text|0</DataType>
+    </argument>
+    <column id="31" parent="18" name="time">
+      <Position>1</Position>
+      <DataType>time with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>970</StateNumber>
+    </column>
+    <column id="32" parent="18" name="date">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>965</StateNumber>
+    </column>
+    <column id="33" parent="18" name="id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>966</StateNumber>
+      <DefaultExpression>nextval(&apos;sighting_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="34" parent="18" name="species_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1009</StateNumber>
+    </column>
+    <index id="35" parent="18" name="sighting_id_pk">
+      <ObjectId>16424</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="36" parent="18" name="sighting_id_uindex">
+      <ObjectId>16423</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="18" name="sighting_id_pk">
+      <ObjectId>16425</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>sighting_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="38" parent="18" name="sighting_species_id_fk">
+      <ObjectId>16456</ObjectId>
+      <ColNames>species_id</ColNames>
+      <RefTableName>species</RefTableName>
+      <RefKeyName>species_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <trigger id="39" parent="18" name="new_sighting">
+      <ObjectId>16466</ObjectId>
+      <StateNumber>1017</StateNumber>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+      <FireMode>origin</FireMode>
+    </trigger>
+    <column id="40" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>947</StateNumber>
+      <DefaultExpression>nextval(&apos;species_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="41" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>947</StateNumber>
+    </column>
+    <column id="42" parent="19" name="average_size">
+      <Position>3</Position>
+      <DataType>int4range|0</DataType>
+      <StateNumber>960</StateNumber>
+    </column>
+    <index id="43" parent="19" name="species_id_uindex">
+      <ObjectId>16406</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="44" parent="19" name="species_pkey">
+      <ObjectId>16404</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="45" parent="19" name="species_pkey">
+      <ObjectId>16405</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>species_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="20" name="name">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>1014</StateNumber>
+    </column>
+    <column id="47" parent="20" name="time">
+      <Position>2</Position>
+      <DataType>time with time zone|0</DataType>
+      <StateNumber>1014</StateNumber>
+    </column>
+    <column id="48" parent="20" name="date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>1014</StateNumber>
+    </column>
+    <argument id="49" parent="21">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>

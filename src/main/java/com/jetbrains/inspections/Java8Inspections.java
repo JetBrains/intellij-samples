@@ -1,8 +1,17 @@
 package com.jetbrains.inspections;
 
+import com.jetbrains.inspections.entities.Converter;
 import com.jetbrains.inspections.entities.Counter;
+import com.jetbrains.inspections.entities.Person;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -15,6 +24,7 @@ public class Java8Inspections {
     private final Map<Integer, List<String>> integerStringMap = new HashMap<>();
 
     private final String[] stringArray = new String[]{"IntelliJ IDEA", "AppCode", "CLion", "0xDBE", "Upsource"};
+    private List<Converter> converters;
 
     public void lambdas() {
         //Anonymous function Function<Function, Function>() can be replaced with lambda
@@ -126,8 +136,6 @@ public class Java8Inspections {
         return result;
     }
 
-    // missing an example for "continue" as it looked a bit complicated to type
-
     private List<String> getListOfAllNonEmptyStringValues(Map<String, List<String>> map) {
         List<String> result = new ArrayList<>();
         for (Map.Entry<String, List<String>> entry : map.entrySet()) {
@@ -224,6 +232,55 @@ public class Java8Inspections {
                        .limit(10)
                        .collect(toList());
 
+    }
+
+    //Streams: findFirst
+    private Converter getFirstConverterForClass(final Class aClass) {
+        for (final Converter converter : converters) {
+            if (converter.canHandle(aClass)) {
+                return converter;
+            }
+        }
+        return Converter.IDENTITY_CONVERTER;
+    }
+
+    //Arrays: findFirst
+    public String toCountedLoopInFindFirst(int[] data, List<String> info) {
+        for (int val : data) {
+            for (int x = 0; x <= val; x++) {
+                String str = info.get(x);
+                if (!str.isEmpty()) {
+                    return str;
+                }
+            }
+        }
+        return null;
+    }
+
+    //Streams: toArray
+    public String[] replaceWithToArray(List<String> data) {
+        List<String> result = new ArrayList<>();
+        for (String str : data) {
+            if (!str.isEmpty()) {
+                result.add(str);
+            }
+        }
+        return result.toArray(new String[0]);
+    }
+
+    //Streams: sorting
+    public List<String> getSortedListOfNames(List<Person> persons) {
+        List<String> names = new ArrayList<>();
+        for (Person person : persons) {
+            names.add(person.getName());
+        }
+        Collections.sort(names, String::compareToIgnoreCase);
+        return names;
+    }
+
+    public long countNumberOfItems(List<String> strings) {
+        return strings.stream()
+                      .count();
     }
 
 }

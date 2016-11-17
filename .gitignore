@@ -34,3 +34,5 @@ workspace.xml
 *.iml
 */*.iml
 .idea/libraries
+**/node_modules/*
+**/npm-debug.log

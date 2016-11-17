@@ -1,0 +1,9 @@
+{
+  "name": "get_started-with-flow",
+  "scripts": {
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.35.0"
+  }
+}

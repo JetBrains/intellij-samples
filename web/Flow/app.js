@@ -1,4 +1,4 @@
-
+// @flow
 
 function multiply(arr:Array<number>) {
     return arr.map(e => e * 2);

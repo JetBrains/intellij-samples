@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/code-samples.iml" filepath="$PROJECT_DIR$/.idea/modules/code-samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/code-samples_main.iml" filepath="$PROJECT_DIR$/.idea/modules/code-samples_main.iml" group="code-samples" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/code-samples_test.iml" filepath="$PROJECT_DIR$/.idea/modules/code-samples_test.iml" group="code-samples" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/intellij-samples.iml" filepath="$PROJECT_DIR$/.idea/modules/intellij-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code-samples.iml" filepath="$PROJECT_DIR$/code-samples.iml" />
     </modules>
   </component>
 </project>

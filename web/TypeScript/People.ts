@@ -10,3 +10,7 @@ class Employee implements Person {
     constructor(protected name:string){
     }
 }
+
+class Manager extends Employee {
+
+}

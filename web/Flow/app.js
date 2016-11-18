@@ -1,6 +1,6 @@
 // @flow
 
-function multiply(arr:Array<number>) {
+function multiply(arr) {
     return arr.map(e => e * 2);
 }
 

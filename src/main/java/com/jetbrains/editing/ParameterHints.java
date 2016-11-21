@@ -8,22 +8,14 @@ import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 
-@SuppressWarnings({"unused", "ResultOfMethodCallIgnored"})
+@SuppressWarnings({"unused", "ResultOfMethodCallIgnored", "SameParameterValue"})
 public class ParameterHints {
     private ParameterHints() {
-    }
-
-    private List<String> findTenLongestStrings(List<String> strings) {
-        return strings.stream()
-                      .sorted(Comparator.comparing(String::length).reversed())
-                      .limit(10)
-                      .collect(toList());
     }
 
     private String[] getWordsInSentence(String sentence) {
         return sentence.split("\\s");
     }
-
 
     public void startUserService() {
         new Service("/users/", 8080);
@@ -39,7 +31,7 @@ public class ParameterHints {
     }
 
     public void shortParameterNames() {
-        throw new IllegalArgumentException("This is wrong!");
+        Service.generateServiceName("user");
     }
 
 
@@ -53,6 +45,10 @@ public class ParameterHints {
 
         public void run() {
 
+        }
+
+        static String generateServiceName(String n) {
+            return null;
         }
     }
 }

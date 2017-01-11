@@ -19,7 +19,7 @@ import static java.lang.System.out;
 import static java.util.Arrays.sort;
 import static java.util.stream.Collectors.toList;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "unchecked"})
 public class Java8Inspections {
     private final Map<Integer, List<String>> integerStringMap = new HashMap<>();
 

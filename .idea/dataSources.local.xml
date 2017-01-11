@@ -6,6 +6,7 @@
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>memory</secret-storage>
       <auth-required>false</auth-required>
+      <introspection-schemas>*:</introspection-schemas>
     </data-source>
     <data-source name="NewPersistenceUnit/Hibernate" uuid="cd317dc9-8fce-462a-9107-0d8b42e935c6">
       <database-info product="MySQL" version="5.7.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
@@ -15,7 +16,9 @@
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
       <user-name>root</user-name>
       <user-password>dfc7dfd3dfd9dfdbdfc6df9bdf9adf9adf8b</user-password>
+      <introspection-schemas>*:information_schema</introspection-schemas>
       <resolve-scope>:</resolve-scope>
+      <unqualified-resolve-schemas>:</unqualified-resolve-schemas>
     </data-source>
     <data-source name="trishagee@localhost" uuid="0084bb2f-adf8-426f-ac54-b7abca4ac87e">
       <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
@@ -24,7 +27,9 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>memory</secret-storage>
       <user-name>trishagee</user-name>
+      <introspection-schemas>trishagee:animals,plants,public</introspection-schemas>
       <resolve-scope>postgres:public,trishagee</resolve-scope>
+      <unqualified-resolve-schemas>postgres:public,trishagee</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

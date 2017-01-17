@@ -316,29 +316,6 @@ public class Java8Inspections {
             this.phone = phone;
         }
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-
-            CityAndPhone that = (CityAndPhone) o;
-
-            if (city != null ? !city.equals(that.city) : that.city != null) {
-                return false;
-            }
-            return phone != null ? phone.equals(that.phone) : that.phone == null;
-        }
-
-        @Override
-        public int hashCode() {
-            int result = city != null ? city.hashCode() : 0;
-            result = 31 * result + (phone != null ? phone.hashCode() : 0);
-            return result;
-        }
     }
 
 }

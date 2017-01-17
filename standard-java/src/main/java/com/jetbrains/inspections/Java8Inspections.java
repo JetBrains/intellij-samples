@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -139,7 +140,8 @@ public class Java8Inspections {
     private List<String> getListOfAllNonEmptyStringValues(Map<String, List<String>> map) {
         List<String> result = new ArrayList<>();
         for (Map.Entry<String, List<String>> entry : map.entrySet()) {
-            if (entry.getKey().isEmpty()) {
+            if (entry.getKey()
+                     .isEmpty()) {
                 continue;
             }
             List<String> list = entry.getValue();
@@ -281,6 +283,62 @@ public class Java8Inspections {
     public long countNumberOfItems(List<String> strings) {
         return strings.stream()
                       .count();
+    }
+
+
+    public static List<CityAndPhone> acquireData(String input) {
+        String[] lines = input.split("\n");
+        boolean firstLine = true;
+        List<CityAndPhone> result = new ArrayList<>();
+        for (String line : lines) {
+            if (firstLine) {
+                firstLine = false;
+                continue;
+            }
+            if (Objects.equals("", line.trim())) {
+                continue;
+            }
+            String[] record = line.split(",");
+            if (Objects.equals("China", record[1].trim())) {
+                result.add(new CityAndPhone(record[0].trim(), record[2].trim()));
+            }
+        }
+        return result;
+    }
+
+    public static class CityAndPhone {
+
+        private String city;
+        private String phone;
+
+        public CityAndPhone(String city, String phone) {
+            this.city = city;
+            this.phone = phone;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+
+            CityAndPhone that = (CityAndPhone) o;
+
+            if (city != null ? !city.equals(that.city) : that.city != null) {
+                return false;
+            }
+            return phone != null ? phone.equals(that.phone) : that.phone == null;
+        }
+
+        @Override
+        public int hashCode() {
+            int result = city != null ? city.hashCode() : 0;
+            result = 31 * result + (phone != null ? phone.hashCode() : 0);
+            return result;
+        }
     }
 
 }

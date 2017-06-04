@@ -4,7 +4,6 @@
     <data-source name="ChinookDB" uuid="c264bb84-2937-4a55-a0bd-cee38323c3c4">
       <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>memory</secret-storage>
       <auth-required>false</auth-required>
       <introspection-schemas>*:</introspection-schemas>
     </data-source>
@@ -15,7 +14,6 @@
       </database-info>
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
       <user-name>root</user-name>
-      <user-password>dfc7dfd3dfd9dfdbdfc6df9bdf9adf9adf8b</user-password>
       <introspection-schemas>*:information_schema</introspection-schemas>
       <resolve-scope>:</resolve-scope>
       <unqualified-resolve-schemas>:</unqualified-resolve-schemas>
@@ -25,7 +23,6 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <secret-storage>memory</secret-storage>
       <user-name>trishagee</user-name>
       <introspection-schemas>trishagee:animals,plants,public</introspection-schemas>
       <resolve-scope>postgres:public,trishagee</resolve-scope>

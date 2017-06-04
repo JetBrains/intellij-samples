@@ -18,7 +18,7 @@ public class OrderService {
 
     @PreAuthorize("hasRole('IS_AUTHENTICATED_FULLY')")
     public void publishOrderEvent(int orderId, boolean confirmed) {
-        OrderEvent event = new OrderEvent(this, orderId, confirmed);
+        OrderEvent event = new OrderEvent(this, orderId, confirmed, 1);
         publisher.publishEvent(event);
     }
 

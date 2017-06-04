@@ -2,10 +2,16 @@ package com.jetbrains.refactoring;
 
 
 public class CallHeirarchy {
-    private void foo() { bar();}
-    private void bar() { baz();}
+    private void bar() {
+        baz();
+    }
+
+    private void foo() {
+        bar();
+    }
 
     //Change signature
-    private void baz() {}
+    private void baz() {
+    }
 
 }

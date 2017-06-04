@@ -4,9 +4,7 @@ package com.jetbrains.refactoring;
  * Created by hadihariri on 09/09/16.
  */
 public class InvertBoolean {
-
     private boolean isValid = false;
-
 
     public void usingBooleans() {
 
@@ -16,6 +14,7 @@ public class InvertBoolean {
             System.out.println("Something else takes place here");
         }
     }
+
 
 
 

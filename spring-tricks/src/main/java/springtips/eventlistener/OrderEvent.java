@@ -2,15 +2,22 @@ package springtips.eventlistener;
 
 import org.springframework.context.ApplicationEvent;
 
+import java.util.ArrayList;
+
 @SuppressWarnings({"WeakerAccess", "unused"})
 public class OrderEvent extends ApplicationEvent {
     private final int orderId;
     private boolean confirmed;
 
-    public OrderEvent(Object source, int orderId, boolean confirmed) {
+    private final int id1;
+    public OrderEvent(Object source, int orderId, boolean confirmed, int id1) {
         super(source);
+        ArrayList elements = new ArrayList(2);
+
+
         this.orderId = orderId;
         this.confirmed = confirmed;
+        this.id1 = id1;
     }
 
     /**

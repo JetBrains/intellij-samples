@@ -25,7 +25,7 @@ public class MoodAnalyser {
   public static Mood analyseMood(String sentence) {
     String[] wordsInMessage = sentence.split("\\s");
     // figure out the unique moods in this message and return as CSV
-    return Mood.HAPPY;
+    return null;
   }
 
 }

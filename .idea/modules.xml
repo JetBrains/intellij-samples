@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/code-samples.iml" filepath="$PROJECT_DIR$/.idea/modules/code-samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/code-samples_main.iml" filepath="$PROJECT_DIR$/.idea/modules/code-samples_main.iml" group="code-samples" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/code-samples_test.iml" filepath="$PROJECT_DIR$/.idea/modules/code-samples_test.iml" group="code-samples" />
       <module fileurl="file://$PROJECT_DIR$//root.iml" filepath="$PROJECT_DIR$//root.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-tricks/springtricks.iml" filepath="$PROJECT_DIR$/spring-tricks/springtricks.iml" />
       <module fileurl="file://$PROJECT_DIR$/standard-java.iml" filepath="$PROJECT_DIR$/standard-java.iml" />

@@ -144,7 +144,7 @@
 
     </dependencies>
     <properties>
-        <kotlin.version>1.1.0</kotlin.version>
+        <kotlin.version>1.1.50</kotlin.version>
         <org.springframework-version>4.3.4.RELEASE</org.springframework-version>
     </properties>
 </project>

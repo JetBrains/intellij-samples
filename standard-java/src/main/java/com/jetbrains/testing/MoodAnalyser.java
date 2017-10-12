@@ -1,7 +1,9 @@
 package com.jetbrains.testing;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class MoodAnalyser {
   private static final Map<String, Mood> WORD_TO_MOOD = new HashMap<>();
@@ -25,7 +27,12 @@ public class MoodAnalyser {
   public static Mood analyseMood(String sentence) {
     String[] wordsInMessage = sentence.split("\\s");
     // figure out the unique moods in this message and return as CSV
-    return null;
+    Optional<Mood> moodOptional = Arrays.stream(wordsInMessage)
+            .map(String::toLowerCase)
+            .map(word -> WORD_TO_MOOD.get(word))
+            .filter(mood -> mood != null)
+            .findFirst();
+    return moodOptional.get();
   }
 
 }

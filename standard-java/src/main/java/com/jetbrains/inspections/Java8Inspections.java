@@ -5,15 +5,21 @@ import com.jetbrains.inspections.entities.Counter;
 import com.jetbrains.inspections.entities.Person;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static java.lang.System.out;
 import static java.util.Arrays.sort;
@@ -139,7 +145,8 @@ public class Java8Inspections {
     private List<String> getListOfAllNonEmptyStringValues(Map<String, List<String>> map) {
         List<String> result = new ArrayList<>();
         for (Map.Entry<String, List<String>> entry : map.entrySet()) {
-            if (entry.getKey().isEmpty()) {
+            if (entry.getKey()
+                     .isEmpty()) {
                 continue;
             }
             List<String> list = entry.getValue();
@@ -282,5 +289,160 @@ public class Java8Inspections {
         return strings.stream()
                       .count();
     }
+
+    //2017.3
+    public String[] fuseStepsIntoStream() {
+        final Stream<String> stream = Stream.of("a", "b", "c");
+
+        final List<String> strings = stream.collect(Collectors.toList());
+        strings.sort(Comparator.naturalOrder());
+
+        return strings.toArray(new String[0]);
+    }
+
+    public Stream<Object> simplifyStreamAPICallChain1() {
+        return Collections.nCopies(10, "")
+                          .stream()
+                          .map(s -> doMapping());
+    }
+
+    public boolean simplifyStreamAPICallChain2() {
+        final Stream<String> stream = Stream.of("a", "b", "c");
+        return stream.filter(this::stringMatchesSomeCriteria)
+                     .count() > 0;
+    }
+
+    public Stream<Object> simplifyStreamAPICallChain3(Object[] array) {
+        return IntStream.range(1, 10)
+                        .mapToObj(value -> array[value]);
+    }
+
+    static String turnIntoLowerCase(List<String> words) {
+        final StringBuilder stringBuilder = new StringBuilder();
+        for (String word : words) {
+            String toLowerCase = word.toLowerCase();
+            stringBuilder.append(toLowerCase);
+            stringBuilder.append(",");
+        }
+
+        return stringBuilder.toString();
+    }
+
+    public void simplifyMatchOperations(List<String> list) {
+        if (!list.isEmpty()) {
+            return;
+        }
+
+        final boolean hasNoNulls = list.stream()
+                                       .allMatch(Objects::nonNull);
+        doSomething(hasNoNulls);
+
+        final Optional<Object> first = Stream.empty()
+                                             .findFirst();
+        doSomething(first.isPresent());
+
+        final Optional<Object> any = Stream.empty()
+                                           .findAny();
+        doSomething(any.isPresent());
+
+        //min, max, reduce
+        final Optional<Object> min = Stream.empty()
+                                           .min(Comparator.comparing(Object::toString));
+        doSomething(min.isPresent());
+
+        //sum & count
+        final long count = IntStream.empty()
+                                    .count();
+        doSomething(count);
+
+        final int sum = IntStream.empty()
+                                 .sum();
+        doSomething(sum);
+    }
+
+    public void nullabilityAnalysis(String[] stringArray) {
+        Arrays.stream(stringArray)
+              .map(s -> s.isEmpty() ? s : null)
+              .map(String::trim)
+              .collect(Collectors.toList());
+    }
+
+
+    public void simplifyOptionalCallChains1() {
+        Optional<String> optional = getOptional();
+
+        final Optional<String> trimOptional = optional.map(s -> Optional.of(s.trim()))
+                                                      .orElse(Optional.empty());
+    }
+
+    public String simplifyOptionalCallChains2() {
+        Optional<String> optional = getOptional();
+
+        String value = optional.orElse(null);
+        return value == null ? "default" : value;
+    }
+
+    public void simplifyOptionalCallChains3() {
+        Optional<String> optional = getOptional();
+
+        String value = optional.orElse(null);
+        if (value != null) {
+            System.out.println(value);
+        }
+    }
+
+    public Optional<String> unnecessaryWrapping() {
+        final Optional<String> optional = getOptional();
+
+        return Optional.ofNullable(Stream.of("1", "2", "3")
+                                         .filter(Objects::nonNull)
+                                         .findFirst()
+                                         .orElse(null));
+    }
+
+    @SuppressWarnings("OptionalIsPresent")
+    public Optional<String> warnAboutWrappingOptional() {
+        final Optional<String> optional = getOptional();
+        if (optional.isPresent()) {
+            return Optional.of(optional.get());
+        }
+        return Optional.empty();
+    }
+
+    @SuppressWarnings("SimplifyOptionalCallChains")
+    public Optional<String> suggestJava9Or() {
+        final Optional<String> optional = getOptional();
+        if (optional.isPresent()) {
+            return Optional.of(optional.get());
+        }
+        return getAlternativeOptional();
+    }
+
+
+    //helpers
+    private void doSomething(boolean hasNoNulls) {
+
+    }
+
+    private void doSomething(long count) {
+
+    }
+
+    private Optional<String> getAlternativeOptional() {
+        return Optional.empty();
+    }
+
+    private Optional<String> getOptional() {
+        return Optional.empty();
+    }
+
+    private <R> R doMapping() {
+        return null;
+    }
+
+    private boolean stringMatchesSomeCriteria(String s) {
+        return false;
+    }
+
 
 }

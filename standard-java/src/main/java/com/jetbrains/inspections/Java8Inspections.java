@@ -317,15 +317,41 @@ public class Java8Inspections {
                         .mapToObj(value -> array[value]);
     }
 
-    static String turnIntoLowerCase(List<String> words) {
-        final StringBuilder stringBuilder = new StringBuilder();
-        for (String word : words) {
-            String toLowerCase = word.toLowerCase();
-            stringBuilder.append(toLowerCase);
-            stringBuilder.append(",");
+    public String useJoiningForStringBuilders(Character[] value) {
+        final StringBuilder builder = new StringBuilder();
+        for (final Character character : value) {
+            builder.append(character);
+        }
+        return builder.toString();
+    }
+
+    public String collapseBuilderIntoStreamOperation(CustomError[] ve) {
+        final StringBuilder sb = new StringBuilder(128);
+        sb.append("Number of violations: " + ve.length + " \n");
+        for (final CustomError validationError : ve) {
+            sb.append(validationError.render());
+        }
+        return sb.toString();
+    }
+
+    public MappedField smarterStreamInspections(final String storedName, List<MappedField> persistenceFields) {
+        for (final MappedField mf : persistenceFields) {
+            for (final String n : mf.getLoadNames()) {
+                if (storedName.equals(n)) {
+                    return mf;
+                }
+            }
+        }
+        return null;
+    }
+
+    public boolean smarterStreamInspections2(List<Map<String, String>> indexInfo) {
+        boolean indexFound = false;
+        for (Map<String, String> item : indexInfo) {
+            indexFound |= "nested.field.fail".equals((item.get("key")));
         }
 
-        return stringBuilder.toString();
+        return indexFound;
     }
 
     public void simplifyMatchOperations(List<String> list) {
@@ -445,4 +471,17 @@ public class Java8Inspections {
     }
 
 
+    private class CustomError {
+        public String render() {
+            return null;
+        }
+    }
+
+    private class MappedField {
+        private String[] loadNames;
+
+        public String[] getLoadNames() {
+            return loadNames;
+        }
+    }
 }

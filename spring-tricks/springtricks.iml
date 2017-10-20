@@ -2,7 +2,24 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/importedXml.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/importResource.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-config.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/springtips/caching/CachingConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/profileConfigs/CustomProfileConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/GenericsAutowiringConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/ImportedConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/MainConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/mvc/MyMvcConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/profileConfigs/ScannedConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/xmlScan/XmlScannedConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/xmlScan/XmlScannedConfiguration2.java</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">

@@ -1,0 +1,12 @@
+
+
+POST http://localhost:63342
+
+###
+
+GET https://sales.jetbrains.com/api/v2/help_center/en-gb/articles/206544639.json
+Accept-Charset:UTF-8
+
+###
+
+GET http://localhost:63342/code-samples/web/StaticFile.html

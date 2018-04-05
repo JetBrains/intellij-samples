@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="NewPersistenceUnit/Hibernate">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="3.1">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
     <root id="1"/>
     <schema id="2" parent="1" name="information_schema">
-      <visible>1</visible>
+      <Visible>1</Visible>
     </schema>
     <schema id="3" parent="1" name="mysql"/>
     <schema id="4" parent="1" name="performance_schema"/>

@@ -1,11 +1,10 @@
 package com.jetbrains.debugging;
 
+@SuppressWarnings("SameParameterValue")
 public class StackTraceExplorer {
 
     public static void main(String[] args) {
-
         executeMethod(10);
-
     }
 
     private static void executeMethod(int i) {

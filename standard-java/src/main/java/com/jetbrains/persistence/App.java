@@ -13,8 +13,9 @@ public class App {
     public static final String SELECT_QUERY =
             "from Customer where email = :email";
 
+    @SuppressWarnings("deprecation")
     public static void main(String[] args) {
-        String email = "andrey.cheptsov@gmail.com";
+        String email = "andrey.cheptsov@jetbrains.com";
         PersistenceProvider persistenceProvider = new HibernatePersistence();
         EntityManagerFactory entityManagerFactory = persistenceProvider.
                 createEntityManagerFactory("NewPersistenceUnit", new HashMap());

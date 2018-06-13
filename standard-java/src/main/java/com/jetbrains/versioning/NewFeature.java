@@ -1,5 +1,6 @@
 package com.jetbrains.versioning;
 
+@SuppressWarnings("deprecation")
 public class NewFeature {
     public NewFeature() {
         //Work in progress...

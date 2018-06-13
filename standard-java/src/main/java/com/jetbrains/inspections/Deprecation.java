@@ -15,6 +15,7 @@ public class Deprecation {
         /**
          * @deprecated use {@link MyClass#replacementMethod()} instead.
          */
+        @Deprecated
         void deprecatedMethod() {
 
         }

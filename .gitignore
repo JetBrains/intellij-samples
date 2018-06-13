@@ -1,3 +1,6 @@
-**/node_modules
 .idea/libraries
-
+.idea/usage.statistics.xml
+.idea/shelf/
+.idea/workspace.xml
+spring-tricks/target/
+standard-java/target/

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="NewPersistenceUnit/Hibernate">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.8">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
     <root id="1"/>
     <schema id="2" parent="1" name="information_schema">
       <Visible>1</Visible>

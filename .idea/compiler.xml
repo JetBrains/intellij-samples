@@ -16,7 +16,7 @@
       <module name="code-samples_main" target="1.8" />
       <module name="code-samples_test" target="1.8" />
       <module name="springtricks" target="1.8" />
-      <module name="standard-java" target="1.10" />
+      <module name="standard-java" target="1.11" />
     </bytecodeTargetLevel>
   </component>
 </project>

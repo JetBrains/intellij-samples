@@ -135,4 +135,21 @@ public class DataFlowAnalysisTest {
 
     private class Foo {
     }
+
+    private void constantEvaluationOfSimpleMethods() {
+        String foo = "foo";
+        String bar = "bar";
+
+        boolean startsWith = foo.startsWith(bar);
+        boolean contains = foo.contains(bar);
+
+        String o = "o";
+        boolean lastIndexOf = foo.lastIndexOf(o) == 0;
+        //String: contains, indexOf, startsWith, endsWith, lastIndexOf, length, trim, substring, equals, equalsIgnoreCase, charAt, codePointAt, compareTo, replace, valueOf
+
+        int four = 4;
+        boolean sqrt = Math.sqrt(four) == 1;
+        //Math: abs, sqrt, min, max
+
+    }
 }

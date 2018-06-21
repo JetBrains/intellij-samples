@@ -127,14 +127,14 @@ public class DataFlowAnalysisTest {
     private class Value {
     }
 
-    private void automaticallyRemoveDoubleNegation(Object x) {
+    private void automaticallyRemoveDoubleNegation(Foo x) {
         if (!(x instanceof Foo)) {
             return;
         }
+        System.out.println(x);
     }
 
-    private class Foo {
-    }
+    interface Foo {}
 
     private void constantEvaluationOfSimpleMethods() {
         String foo = "foo";

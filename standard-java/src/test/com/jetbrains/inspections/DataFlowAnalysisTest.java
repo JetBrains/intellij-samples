@@ -1,11 +1,14 @@
 package com.jetbrains.inspections;
 
+import org.hamcrest.Matchers;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.junit.Test;
 
 import java.util.*;
 import java.util.stream.Stream;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -82,6 +85,18 @@ public class DataFlowAnalysisTest {
         assertThat(foo.get(), is(42)); // INSPECTION: 'Optional.get()' without 'isPresent()' check
     }
 
+    @Test
+    public void test() {
+        String[] things = retrieveThings();
+        assertThat(things, is(Matchers.arrayWithSize(1)));
+        assertThat(things[0], is(equalTo("...")));
+    }
+
+    @Nullable
+    private static String[] retrieveThings() {
+        return new String[]{"..."};
+    }
+
     private Optional<String> getAnOptional() {
         return Optional.empty();
     }
@@ -112,4 +127,12 @@ public class DataFlowAnalysisTest {
     private class Value {
     }
 
+    private void automaticallyRemoveDoubleNegation(Object x) {
+        if (!(x instanceof Foo)) {
+            return;
+        }
+    }
+
+    private class Foo {
+    }
 }

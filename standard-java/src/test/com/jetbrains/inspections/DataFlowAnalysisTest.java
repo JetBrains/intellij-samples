@@ -1,16 +1,15 @@
 package com.jetbrains.inspections;
 
+import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+@SuppressWarnings("StatementWithEmptyBody")
 public class DataFlowAnalysisTest {
 
     @Test
@@ -86,4 +85,31 @@ public class DataFlowAnalysisTest {
     private Optional<String> getAnOptional() {
         return Optional.empty();
     }
+
+    List<Object> noFalsePositiveAfterIsAssignableFrom(Object value) {
+        if (value instanceof List) {
+            //do something
+        }
+        if (Object[].class.isAssignableFrom(value.getClass())) {
+            return Arrays.asList((Object[]) value);//warning on cast to Object[]; removing if above, removes the warning
+        }
+        return null;
+    }
+
+    public <T> void newWarningsForIsInstance(@NotNull String property, @NotNull Class<T> clazz) {
+        assert clazz == String.class || clazz == Integer.class || clazz == Boolean.class;
+        Value value = getValue(property);
+
+        if (clazz.isInstance(value)) {
+            // new warning: always false as we know that clazz is String/Integer/Boolean which is never Value
+        }
+    }
+
+    private Value getValue(String property) {
+        return null;
+    }
+
+    private class Value {
+    }
+
 }

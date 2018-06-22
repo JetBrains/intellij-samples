@@ -11,7 +11,7 @@ import java.util.*;
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 
-@SuppressWarnings({"unused", "MismatchedQueryAndUpdateOfCollection", "UnnecessaryLocalVariable"})
+@SuppressWarnings({"unused"})
 public class Java10Inspections {
 
     private final Person person = new Person();
@@ -96,12 +96,12 @@ public class Java10Inspections {
         }
     }
 
-    void shouldNotWarnThatInitializerIsRedundant(boolean b) {
-        var x = 0; // 2018.1 warns that initializer is redundant
+    void shouldNotWarnThatInitializerIsRedundantWithVar(boolean b) {
+        String x = "Unknown";
         if (b) {
-            x = 5;
+            x = "Happy";
         } else {
-            x = 6;
+            x = "Sad";
         }
         System.out.println(x);
     }

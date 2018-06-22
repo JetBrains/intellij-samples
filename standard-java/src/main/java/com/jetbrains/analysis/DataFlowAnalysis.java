@@ -46,10 +46,15 @@ public class DataFlowAnalysis {
         System.out.println(intValue);
     }
 
-    private static List returnsImmutableResult() {
-
+    private static List<Integer> returnsImmutableResult() {
         return Collections.unmodifiableList(Arrays.asList(1, 2, 3));
     }
+
+    private void usesUnmodifiableList() {
+        returnsImmutableResult().add(4);
+    }
+
+
 
     public void knowsAboutEmptyArrayLists() {
         ArrayList<String> strings = new ArrayList<>();

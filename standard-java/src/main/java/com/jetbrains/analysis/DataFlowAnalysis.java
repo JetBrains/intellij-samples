@@ -11,9 +11,10 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@SuppressWarnings({"StatementWithEmptyBody", "unused", "Java9CollectionFactory"})
+@SuppressWarnings({"StatementWithEmptyBody", "unused", "Java9CollectionFactory", "MismatchedQueryAndUpdateOfCollection"})
 public class DataFlowAnalysis {
 
+    //<editor-fold desc="Other Data Flow Examples">
     public void showDataFlowWithInstanceOfExample(Object obj) {
         if (obj instanceof String || obj instanceof Number) {
             System.out.println("String or Number");
@@ -50,13 +51,13 @@ public class DataFlowAnalysis {
         return Collections.unmodifiableList(Arrays.asList(1, 2, 3));
     }
 
-    public void shouldKnowAboutEmptyArrayLists() {
+    public void knowsAboutEmptyArrayLists() {
         ArrayList<String> strings = new ArrayList<>();
 
         String s = strings.get(1);
     }
 
-    private void shouldUnrollStreamOf() {
+    private void unrollsStreamOf() {
         Optional<String> optionalOne = Optional.of("foo");
         Optional<String> optionalTwo = Optional.of("bar");
 
@@ -122,6 +123,7 @@ public class DataFlowAnalysis {
 
     private class Value {
     }
+    //</editor-fold>
 
     private void automaticallyRemoveDoubleNegation(Foo x) {
         if (!(x instanceof Foo)) {

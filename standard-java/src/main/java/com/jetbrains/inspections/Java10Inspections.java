@@ -48,7 +48,7 @@ public class Java10Inspections {
 
         /* There could be a lot of code between the declaration and the use of this variable*/
 
-        for (Person person : people) {
+        for (Person person: people) {
             System.out.println(person);
         }
 
@@ -78,7 +78,8 @@ public class Java10Inspections {
     }
 
     void removeMatches(Map<? extends String, ? extends Number> map, int max) {
-        for (Iterator<? extends Map.Entry<? extends String, ? extends Number>> iterator = map.entrySet().iterator(); iterator.hasNext(); ) {
+        for (Iterator<? extends Map.Entry<? extends String, ? extends Number>> iterator = map.entrySet()
+                                                                                             .iterator(); iterator.hasNext(); ) {
             Map.Entry<? extends String, ? extends Number> entry = iterator.next();
             if (max > 0 && matches(entry)) {
                 iterator.remove();
@@ -93,6 +94,20 @@ public class Java10Inspections {
              BufferedReader buf = new BufferedReader(isr)) {
             return buf.readLine();
         }
+    }
+
+    void shouldNotWarnThatInitializerIsRedundant(boolean b) {
+        var x = 0; // 2018.1 warns that initializer is redundant
+        if (b) {
+            x = 5;
+        } else {
+            x = 6;
+        }
+        System.out.println(x);
+    }
+
+    public void shouldNotSuggestRemovingArrayType() {
+        var x = new Integer[]{2, 4, 8};
     }
 
     private boolean matches(Map.Entry<? extends String, ? extends Number> entry) {

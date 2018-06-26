@@ -1,9 +1,6 @@
 package com.jetbrains.inspections;
 
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.StringJoiner;
+import java.util.*;
 
 import static java.lang.Math.PI;
 
@@ -71,6 +68,13 @@ public class Inspections20182 {
         return Integer.<String>getInteger("p");
     }
 
+    private void warnsAboutComparingOptionalToNull() {
+        final Optional<String> optional = getSomeOptionalValue();
+        if(optional != null) {
+            //do something
+        }
+    }
+
     //private helper methods to make examples clearer
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
         throw new ExceptionTwo();
@@ -82,6 +86,10 @@ public class Inspections20182 {
 
     private boolean firstCondition(Event event) {
         return true;
+    }
+
+    private Optional<String> getSomeOptionalValue() {
+        return Optional.empty();
     }
 
     //private classes for examples

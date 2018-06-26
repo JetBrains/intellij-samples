@@ -84,6 +84,14 @@ public class Inspections20182 {
         }
     }
 
+    private void warnOnListRemoveInsideCountedLoop(List<String> someList) {
+        for(int i=0; i<10; i++) {
+            if(booleanExpression()) {
+                someList.remove(i);
+            }
+        }
+    }
+
     //private helper methods to make examples clearer
 
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {

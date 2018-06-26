@@ -1,5 +1,7 @@
 package com.jetbrains.inspections;
 
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.StringJoiner;
 
@@ -51,6 +53,12 @@ public class Inspections20182 {
                 .add("a")
                 .add("b")
                 .toString();
+    }
+
+    private <T> LinkedList<T> suggestsAtomicOperationForLinkedListFromCollection(Collection<T> collection) {
+        LinkedList<T> list = new LinkedList<>();
+        list.addAll(collection);
+        return list;
     }
 
     //private helper methods to make examples clearer

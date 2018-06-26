@@ -1,5 +1,7 @@
 package com.jetbrains.inspections;
 
+import java.util.List;
+
 import static java.lang.Math.PI;
 
 @SuppressWarnings("unused")
@@ -19,6 +21,15 @@ public class Inspections20182 {
     private void staticImportedConstantsCanLookDifferentToClassConstants() {
         // see Editor>Colors & Fonts>Java>Class Fields and see two types of constants
         double x = PI * FACTOR;
+    }
+
+    private void canReplaceRemoveWithListClear(List<String> list) {
+        int from = 3;
+        int to = 8;
+
+        for (int i = from; i < to; i++) {
+            list.remove(from);
+        }
     }
 
 

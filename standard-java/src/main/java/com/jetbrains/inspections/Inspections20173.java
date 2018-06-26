@@ -1,17 +1,10 @@
 package com.jetbrains.inspections;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Pattern;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 @SuppressWarnings("unused")
-public class NewInspections {
+public class Inspections20173 {
     private List<String> mutableCollection = new ArrayList<>();
 
     private Map<String, Integer> mapWithDuplicateKeys = new HashMap<>() {{

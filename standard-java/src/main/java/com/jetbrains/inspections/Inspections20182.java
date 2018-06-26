@@ -67,6 +67,10 @@ public class Inspections20182 {
         }
     }
 
+    private Integer showsRedundantGenericParams() {
+        return Integer.<String>getInteger("p");
+    }
+
     //private helper methods to make examples clearer
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
         throw new ExceptionTwo();

@@ -4,9 +4,12 @@ import java.util.List;
 
 import static java.lang.Math.PI;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "StatementWithEmptyBody"})
 public class Inspections20182 {
     private static final int FACTOR = 2;
+    private static final int BIG_BUTTON_WIDTH = 10;
+    private static final int BUTTON_HEIGHT = 3;
+    private static final int[] BUTTON_Y = {5, 6, 7};
 
     private void addToExistingCatchBlock() {
         try {
@@ -32,7 +35,17 @@ public class Inspections20182 {
         }
     }
 
+    private void canExtractCommonConditionsFromIfStatements(Event event) {
+        if (firstCondition(event) && event.getType() == 3) {
+            //do something
+        } else if (firstCondition(event) && event.getType() == 4) {
+            //do something else
+        } else if (firstCondition(event) && event.getType() == 5) {
+            //do another thing
+        }
+    }
 
+    //private helper methods to make examples clearer
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
         throw new ExceptionTwo();
     }
@@ -41,9 +54,22 @@ public class Inspections20182 {
         throw new ExceptionOne();
     }
 
+    private boolean firstCondition(Event event) {
+        return true;
+    }
+
+    //private classes for examples
     private class ExceptionOne extends Exception {
     }
 
     private class ExceptionTwo extends Exception {
+    }
+
+    private class Event {
+        private int type;
+
+        public int getType() {
+            return type;
+        }
     }
 }

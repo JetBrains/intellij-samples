@@ -92,6 +92,11 @@ public class Inspections20182 {
         }
     }
 
+    //remove the quotes from theValue to see this in action
+    @MyAnnotation(value= "theValue")
+    private void wrapAsString() {
+    }
+
     //private helper methods to make examples clearer
 
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {

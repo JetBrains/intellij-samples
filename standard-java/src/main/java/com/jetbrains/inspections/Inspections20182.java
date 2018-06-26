@@ -1,6 +1,7 @@
 package com.jetbrains.inspections;
 
 import java.util.List;
+import java.util.StringJoiner;
 
 import static java.lang.Math.PI;
 
@@ -43,6 +44,13 @@ public class Inspections20182 {
         } else if (firstCondition(event) && event.getType() == 5) {
             //do another thing
         }
+    }
+
+    private void suggestsStringAppendForStringJoiner() {
+        String s = new StringJoiner("")
+                .add("a")
+                .add("b")
+                .toString();
     }
 
     //private helper methods to make examples clearer

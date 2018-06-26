@@ -61,6 +61,12 @@ public class Inspections20182 {
         return list;
     }
 
+    private void suggestsAvoidingCompareToForPrimitives(Foo foo, Bar bar) {
+        if (Integer.compare(foo.getValue(), bar.getValue()) == 0) {
+            //do something here
+        }
+    }
+
     //private helper methods to make examples clearer
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
         throw new ExceptionTwo();
@@ -84,8 +90,17 @@ public class Inspections20182 {
     private class Event {
         private int type;
 
-        public int getType() {
+        int getType() {
             return type;
         }
     }
+
+    interface Foo {
+        int getValue();
+    }
+
+    interface Bar {
+        int getValue();
+    }
+
 }

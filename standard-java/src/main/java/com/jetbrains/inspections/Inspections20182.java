@@ -1,6 +1,11 @@
 package com.jetbrains.inspections;
 
+import static java.lang.Math.PI;
+
+@SuppressWarnings("unused")
 public class Inspections20182 {
+    private static final int FACTOR = 2;
+
     private void addToExistingCatchBlock() {
         try {
             methodCanThrowExceptionOne();
@@ -11,7 +16,10 @@ public class Inspections20182 {
         }
     }
 
-
+    private void staticImportedConstantsCanLookDifferentToClassConstants() {
+        // see Editor>Colors & Fonts>Java>Class Fields and see two types of constants
+        double x = PI * FACTOR;
+    }
 
 
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {

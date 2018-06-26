@@ -75,11 +75,20 @@ public class Inspections20182 {
         }
     }
 
+    private void canSimplifyIfElse() {
+        boolean enable;
+        if (booleanExpression()) {
+            enable = true;
+        } else {
+            enable = anotherBooleanExpression();
+        }
+    }
+
     //private helper methods to make examples clearer
+
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
         throw new ExceptionTwo();
     }
-
     private void methodCanThrowExceptionOne() throws ExceptionOne {
         throw new ExceptionOne();
     }
@@ -90,6 +99,14 @@ public class Inspections20182 {
 
     private Optional<String> getSomeOptionalValue() {
         return Optional.empty();
+    }
+
+    private boolean anotherBooleanExpression() {
+        return false;
+    }
+
+    private boolean booleanExpression() {
+        return false;
     }
 
     //private classes for examples

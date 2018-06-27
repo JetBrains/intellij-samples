@@ -1,5 +1,7 @@
 package com.jetbrains.inspections;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
 import static java.lang.Math.PI;
@@ -138,8 +140,12 @@ public class Inspections20182 {
         return params.get(1);
     }
 
-    //private helper methods to make examples clearer
+    private void suggestsLocalVariableTypeCanBeMoreSpecific() {
+        Object obj = getString();
+        System.out.println(((String)obj).trim());
+    }
 
+    //private helper methods to make examples clearer
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
         throw new ExceptionTwo();
     }
@@ -162,6 +168,11 @@ public class Inspections20182 {
 
     private boolean booleanExpression() {
         return false;
+    }
+
+    @NotNull
+    private String getString() {
+        return "";
     }
 
     //private classes for examples

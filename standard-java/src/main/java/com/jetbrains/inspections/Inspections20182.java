@@ -134,7 +134,9 @@ public class Inspections20182 {
         map.forEach(otherMap::putIfAbsent);
     }
 
-
+    private String canIntroduceLocalVariableForReturnExpression(List<String> params) {
+        return params.get(1);
+    }
 
     //private helper methods to make examples clearer
 

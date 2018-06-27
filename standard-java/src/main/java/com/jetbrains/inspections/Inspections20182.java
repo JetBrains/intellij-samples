@@ -97,6 +97,16 @@ public class Inspections20182 {
     private void wrapAsString() {
     }
 
+    private static Long executeCountQuery(List<? extends Long> totals) {
+        Long total = 0L;
+
+        for (Long element : totals) {
+            total += element == null ? 0 : element;
+        }
+
+        return total;
+    }
+
     //private helper methods to make examples clearer
 
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {

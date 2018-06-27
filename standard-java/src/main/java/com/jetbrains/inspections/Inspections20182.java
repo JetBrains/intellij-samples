@@ -2,6 +2,8 @@ package com.jetbrains.inspections;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.util.*;
 
 import static java.lang.Math.PI;
@@ -156,6 +158,11 @@ public class Inspections20182 {
                                 e);
         }
         return event;
+    }
+
+    //requires "Implicit usage of platform's default charset" inspection (not enabled by default)
+    private void suggestsUtF8CharsetWhenUsingPlatformDefaultCharset(OutputStream os) {
+        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(os);
     }
 
     //private helper methods to make examples clearer

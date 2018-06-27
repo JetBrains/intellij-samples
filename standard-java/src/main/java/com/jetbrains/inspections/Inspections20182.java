@@ -107,6 +107,9 @@ public class Inspections20182 {
         return total;
     }
 
+    //remove the T from A to see this working
+    class A<T> extends B<T>{}
+
     //private helper methods to make examples clearer
 
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
@@ -155,4 +158,6 @@ public class Inspections20182 {
         int getValue();
     }
 
+    private class B<T> {
+    }
 }

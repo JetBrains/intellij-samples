@@ -142,7 +142,20 @@ public class Inspections20182 {
 
     private void suggestsLocalVariableTypeCanBeMoreSpecific() {
         Object obj = getString();
-        System.out.println(((String)obj).trim());
+        System.out.println(((String) obj).trim());
+    }
+
+    private Event getEvent(Class<? extends Event> eventClass) throws Exception {
+        Event event;
+        try {
+            event = eventClass.getConstructor().newInstance();
+        } catch (Exception e) {
+            throw new Exception("The argument event class"
+                                        + eventClass.getClass().getName() // will always print java.lang.Class, not actual event class
+                                        + " could not be instantiated with a default constructor",
+                                e);
+        }
+        return event;
     }
 
     //private helper methods to make examples clearer

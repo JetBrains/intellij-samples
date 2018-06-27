@@ -153,7 +153,8 @@ public class Inspections20182 {
             event = eventClass.getConstructor().newInstance();
         } catch (Exception e) {
             throw new Exception("The argument event class"
-                                        + eventClass.getClass().getName() // will always print java.lang.Class, not actual event class
+                                        + eventClass.getClass()
+                                                    .getName() // will always print java.lang.Class, not actual event class
                                         + " could not be instantiated with a default constructor",
                                 e);
         }
@@ -163,6 +164,14 @@ public class Inspections20182 {
     //requires "Implicit usage of platform's default charset" inspection (not enabled by default)
     private void suggestsUtF8CharsetWhenUsingPlatformDefaultCharset(OutputStream os) {
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(os);
+    }
+
+    private boolean moreBooleanExpressionsCanBeSimplified(boolean a, boolean b) {
+        if (a && b) {
+            return true;
+        } else {
+            return a;
+        }
     }
 
     //private helper methods to make examples clearer

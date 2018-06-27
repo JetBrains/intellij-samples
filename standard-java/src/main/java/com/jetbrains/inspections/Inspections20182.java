@@ -117,6 +117,12 @@ public class Inspections20182 {
 //        target.transform(stringValue);
     }
 
+    private void canUnrollDecreasingLoops() {
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+        }
+    }
+
     //private helper methods to make examples clearer
 
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {

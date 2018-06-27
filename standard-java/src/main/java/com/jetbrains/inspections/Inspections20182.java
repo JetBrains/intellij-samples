@@ -123,6 +123,19 @@ public class Inspections20182 {
         }
     }
 
+    private void canReplaceMapForEachWithEntrySetLoop(Map<String, Integer> map) {
+        map.forEach((k, v) -> {
+            if (k.isEmpty()) return;
+            System.out.println("Key: " + k + "; value: " + v);
+        });
+    }
+
+    private void canReplaceMapForEachWithEntrySetLoop(Map<String, Integer> map, Map<String, Integer> otherMap) {
+        map.forEach(otherMap::putIfAbsent);
+    }
+
+
+
     //private helper methods to make examples clearer
 
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {

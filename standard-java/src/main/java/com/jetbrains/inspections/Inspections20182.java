@@ -107,13 +107,14 @@ public class Inspections20182 {
         return total;
     }
 
-    public void suggestsChangingTheFieldOrVariableType(String[] args) {
-        String field = "";
-        Foo.doSomething(field);
-    }
-
     //remove the T from A to see this working
     class A<T> extends B<T> {
+    }
+
+    private void suggestsChangingTheFieldOrVariableType(final AnotherClass target) {
+        String stringValue = "";
+        //uncomment to see suggestions
+//        target.transform(stringValue);
     }
 
     //private helper methods to make examples clearer
@@ -159,10 +160,6 @@ public class Inspections20182 {
 
     interface Foo {
         int getValue();
-
-        static void doSomething(Number number) {
-
-        }
     }
 
     interface Bar {
@@ -170,5 +167,10 @@ public class Inspections20182 {
     }
 
     private class B<T> {
+    }
+
+    class AnotherClass {
+        void transform(Number arg) {
+        }
     }
 }

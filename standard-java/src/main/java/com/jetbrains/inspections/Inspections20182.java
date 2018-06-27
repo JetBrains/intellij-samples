@@ -70,7 +70,7 @@ public class Inspections20182 {
 
     private void warnsAboutComparingOptionalToNull() {
         final Optional<String> optional = getSomeOptionalValue();
-        if(optional != null) {
+        if (optional != null) {
             //do something
         }
     }
@@ -85,36 +85,43 @@ public class Inspections20182 {
     }
 
     private void warnOnListRemoveInsideCountedLoop(List<String> someList) {
-        for(int i=0; i<10; i++) {
-            if(booleanExpression()) {
+        for (int i = 0; i < 10; i++) {
+            if (booleanExpression()) {
                 someList.remove(i);
             }
         }
     }
 
     //remove the quotes from theValue to see this in action
-    @MyAnnotation(value= "theValue")
+    @MyAnnotation(value = "theValue")
     private void wrapAsString() {
     }
 
-    private static Long executeCountQuery(List<? extends Long> totals) {
+    private static Long suggestsUsingAPrimitiveInsteadOfWrapper(List<? extends Long> totals) {
         Long total = 0L;
 
-        for (Long element : totals) {
+        for (Long element: totals) {
             total += element == null ? 0 : element;
         }
 
         return total;
     }
 
+    public void suggestsChangingTheFieldOrVariableType(String[] args) {
+        String field = "";
+        Foo.doSomething(field);
+    }
+
     //remove the T from A to see this working
-    class A<T> extends B<T>{}
+    class A<T> extends B<T> {
+    }
 
     //private helper methods to make examples clearer
 
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
         throw new ExceptionTwo();
     }
+
     private void methodCanThrowExceptionOne() throws ExceptionOne {
         throw new ExceptionOne();
     }
@@ -152,6 +159,10 @@ public class Inspections20182 {
 
     interface Foo {
         int getValue();
+
+        static void doSomething(Number number) {
+
+        }
     }
 
     interface Bar {

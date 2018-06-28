@@ -79,13 +79,14 @@ public class Inspections20182 {
         }
     }
 
-    private void canSimplifyIfElse() {
+    private boolean canSimplifyIfElse() {
         boolean enable;
         if (booleanExpression()) {
             enable = true;
         } else {
             enable = anotherBooleanExpression();
         }
+        return enable;
     }
 
     private void warnOnListRemoveInsideCountedLoop(List<String> someList) {

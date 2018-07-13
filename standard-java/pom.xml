@@ -139,7 +139,7 @@
 
     </dependencies>
     <properties>
-        <kotlin.version>1.2.50</kotlin.version>
+        <kotlin.version>1.2.51</kotlin.version>
         <org.springframework-version>4.3.4.RELEASE</org.springframework-version>
     </properties>
 </project>

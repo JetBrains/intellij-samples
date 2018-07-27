@@ -5,7 +5,8 @@ public class Deprecation {
 
     private void deprecationWarnings() {
         Thread.currentThread().stop();
-        Thread.currentThread().stop(new RuntimeException());
+
+        Thread.currentThread().countStackFrames();
 
         final MyClass myClass = new MyClass();
         myClass.deprecatedMethod();

@@ -1,4 +1,7 @@
+import org.example.greeting.GreetingPlugin
+
 apply plugin: 'groovy'
+apply plugin: GreetingPlugin
 
 group 'com.jetbrains'
 version '1.0-SNAPSHOT'
@@ -13,6 +16,10 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:3.0.0-alpha-3'
     compile 'javax.xml.bind:jaxb-api:2.3.0' // needed by Groovy
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'
-
-
 }
+
+hello {
+    message = "Hi"
+    recipient = "IntelliJ IDEA 2018.2"
+}
+

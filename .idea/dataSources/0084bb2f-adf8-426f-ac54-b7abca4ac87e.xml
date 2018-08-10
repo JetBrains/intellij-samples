@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="trishagee@localhost">
-  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.9">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.10">
     <root id="1"/>
     <database id="2" parent="1" name="trishagee">
       <ObjectId>16385</ObjectId>
@@ -66,11 +66,13 @@
     </table>
     <routine id="19" parent="14" name="pretty_display_string">
       <ObjectId>16410</ObjectId>
+      <SourceTextLength>118</SourceTextLength>
       <StateNumber>988</StateNumber>
       <RoutineKind>function</RoutineKind>
     </routine>
     <routine id="20" parent="14" name="pretty_display_string">
       <ObjectId>16409</ObjectId>
+      <SourceTextLength>105</SourceTextLength>
       <StateNumber>989</StateNumber>
       <RoutineKind>function</RoutineKind>
     </routine>
@@ -93,9 +95,11 @@
     <view id="25" parent="15" name="animal_sighting">
       <ObjectId>16461</ObjectId>
       <StateNumber>1014</StateNumber>
+      <SourceTextLength>157</SourceTextLength>
     </view>
     <routine id="26" parent="15" name="archive">
       <ObjectId>16465</ObjectId>
+      <SourceTextLength>189</SourceTextLength>
       <StateNumber>1022</StateNumber>
       <RoutineKind>function</RoutineKind>
     </routine>

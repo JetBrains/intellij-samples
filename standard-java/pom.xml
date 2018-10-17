@@ -34,7 +34,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+                    <compilerArgs>
+                        <arg>--enable-preview</arg>
+                    </compilerArgs>
+                    <source>12</source>
+                    <target>12</target>
+                </configuration>
                 <executions>
                     <execution>
                         <id>default-compile</id>
@@ -59,10 +67,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <source>1.11</source>
-                    <target>1.11</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -139,6 +143,7 @@
 
     </dependencies>
     <properties>
+        <java.version>12</java.version>
         <kotlin.version>1.2.51</kotlin.version>
         <org.springframework-version>4.3.4.RELEASE</org.springframework-version>
     </properties>

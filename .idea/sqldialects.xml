@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="dbSrc:///5ee2c87b/0084bb2f-adf8-426f-ac54-b7abca4ac87e" dialect="PostgreSQL" />
-    <file url="dbSrc:///5ee2c87b/c264bb84-2937-4a55-a0bd-cee38323c3c4" dialect="SQLite" />
-    <file url="dbSrc:///5ee2c87b/cd317dc9-8fce-462a-9107-0d8b42e935c6" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/standard-java/src/main/resources/tables.ddl" dialect="MySQL" />
   </component>
 </project>

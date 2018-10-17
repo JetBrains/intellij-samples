@@ -13,6 +13,7 @@
           <option name="pluginClasspaths">
             <array />
           </option>
+          <option name="coroutinesState" value="warn" />
         </compilerArguments>
       </configuration>
     </facet>
@@ -26,7 +27,6 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="NewPersistenceUnit" />
         </datasource-mapping>
@@ -43,7 +43,7 @@
       <sourceFolder url="file://$MODULE_DIR$/standard-java/src/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/standard-java/target" />
     </content>
-    <orderEntry type="jdk" jdkName="11 EA" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:4.3.8.Final" level="project" />
@@ -84,6 +84,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains:annotations:16.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations:16.0.3" level="project" />
   </component>
 </module>

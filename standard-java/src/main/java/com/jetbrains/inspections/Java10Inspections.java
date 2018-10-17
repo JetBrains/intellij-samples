@@ -7,6 +7,7 @@ import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
@@ -48,7 +49,7 @@ public class Java10Inspections {
 
         /* There could be a lot of code between the declaration and the use of this variable*/
 
-        for (Person person: people) {
+        for (Person person : people) {
             System.out.println(person);
         }
 
@@ -121,5 +122,49 @@ public class Java10Inspections {
     private List<Person> getEveryone() {
         return List.of();
     }
+
+    //note: this can go to and from the Streams API
+    List<String> suggestUsingCollectorsToUnmodifiableList(List<Integer> input) {
+        List<String> list = new ArrayList<>();
+        for (Integer integer : input) {
+            if (integer != null) {
+                String toString = integer.toString();
+                list.add(toString);
+            }
+        }
+        return Collections.unmodifiableList(list);
+    }
+
+    List<String> doesNotSuggestUsingCollectorsToUnmodifiableListIfContainsNulls(List<Integer> input) {
+        List<String> list = new ArrayList<>();
+        for (Integer integer : input) {
+            if (integer != null) {
+                String toString = integer.toString();
+                list.add(toString);
+            } else {
+                list.add(null);
+            }
+        }
+        return Collections.unmodifiableList(list);
+    }
+
+    List<String> notAllowedToCollectNullsToUnmodifiableList(List<Integer> input) {
+        return input.stream()
+                    .map(integer -> integer == null ? null : integer.toString()) //not allowed nulls if collecting into unmodifiableList
+                    .collect(Collectors.toUnmodifiableList());
+    }
+
+    List<String> notAllowedToAddNullsToUnmodifiableList(List<Integer> input) {
+        List<String> collect = input.stream()
+                                    .map(Object::toString)
+                                    .collect(Collectors.toUnmodifiableList());
+        collect.add("Can't add things to an unmodifiable list");
+        return collect;
+    }
+
+    List<String> suggestingUsingCopyOf(Collection<String> collection) {
+        return Collections.unmodifiableList(new ArrayList<>(collection));
+    }
+
 
 }

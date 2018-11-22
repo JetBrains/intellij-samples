@@ -5,14 +5,14 @@ apply plugin: GreetingPlugin
 
 group 'com.jetbrains'
 version '1.0-SNAPSHOT'
-sourceCompatibility = 8
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-//    compile 'org.codehaus.groovy:groovy-all:2.5.0'
+//    compile 'org.codehaus.groovy:groovy-all:2.5.4'
     compile 'org.codehaus.groovy:groovy-all:3.0.0-alpha-3'
     compile 'javax.xml.bind:jaxb-api:2.3.0' // needed by Groovy
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'

@@ -4,17 +4,7 @@ import com.jetbrains.inspections.entities.Converter;
 import com.jetbrains.inspections.entities.Counter;
 import com.jetbrains.inspections.entities.Person;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -442,6 +432,12 @@ public class Java8Inspections {
             return Optional.of(optional.get());
         }
         return getAlternativeOptional();
+    }
+
+    public Optional<String> identifyUnnecessarySortCalls(Stream<String> strings) {
+        return strings.filter(Objects::nonNull)
+                      .sorted(Comparator.comparing(String::length))
+                      .min(Comparator.comparing(String::length));
     }
 
 

@@ -124,19 +124,19 @@ public class DataFlowAnalysis {
     }
 
     private void conditionIsCoveredByFurtherCondition(int minValue, int maxValue, int defaultValue) {
-        if (minValue > maxValue || defaultValue < minValue || defaultValue > maxValue) {
+        if (minValue< maxValue || defaultValue < minValue || defaultValue > maxValue) {
             throw new IllegalArgumentException("These values aren't valid");
         }
     }
 
     private int meaninglessSameArgumentValues(int a, int b) {
-        if (a != 100) {
-            return Math.max(a, a);
-        } else if (a < b) {
-            return Math.max(b, a);
-        } else {
-            return Math.max(a, 100);
+        int max = Math.max(a, a);
+
+        if (a == 100) {
+            max = Math.max(a, 100);
         }
+
+        return max;
     }
 
     private void removeUnreachableSwitchBranches(final int day) {

@@ -3,6 +3,7 @@ package com.jetbrains.inspections;
 import com.jetbrains.inspections.entities.Converter;
 import com.jetbrains.inspections.entities.Counter;
 import com.jetbrains.inspections.entities.Person;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 import java.util.function.Function;
@@ -439,6 +440,33 @@ public class Java8Inspections {
                       .sorted(Comparator.comparing(String::length))
                       .min(Comparator.comparing(String::length));
     }
+
+    public Optional<String> identifyReveredMaxMin(Stream<String> strings) {
+        return strings.filter(Objects::nonNull)
+                      .min(Comparator.comparing(String::length).reversed());
+    }
+
+    @NotNull
+    public String[] nullabilityAnalysisForStreamChains() {
+        return Stream.of("a")
+                     .map(s -> s.matches("\\w") ? s.toLowerCase() : null)
+                     .toArray(String[]::new);
+    }
+
+    public String suggestCollectorsJoining() {
+        return String.join(",",
+                           IntStream.range(0, 10)
+                                    .mapToObj(String::valueOf)
+                                    .collect(toList())
+        );
+    }
+
+    public void simplificationsForEntrySet(Map<Integer, String> map) {
+        Stream<Integer> integerStream = map.entrySet()
+                                           .stream()
+                                           .map(Map.Entry::getKey);
+    }
+
 
 
     //helpers

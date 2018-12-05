@@ -140,7 +140,7 @@ public class DataFlowAnalysis {
     }
 
     private void removeUnreachableSwitchBranches(final int day) {
-        if (day > 7) {
+        if (day > 4) {
             throw new IllegalArgumentException("Invalid Day");
         }
         String dayString;

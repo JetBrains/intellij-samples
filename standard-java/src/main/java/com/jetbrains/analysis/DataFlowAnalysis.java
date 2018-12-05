@@ -123,6 +123,54 @@ public class DataFlowAnalysis {
         return null;
     }
 
+    private void conditionIsCoveredByFurtherCondition(int minValue, int maxValue, int defaultValue) {
+        if (minValue > maxValue || defaultValue < minValue || defaultValue > maxValue) {
+            throw new IllegalArgumentException("These values aren't valid");
+        }
+    }
+
+    private int meaninglessSameArgumentValues(int a, int b) {
+        if (a != 100) {
+            return Math.max(a, a);
+        } else if (a < b) {
+            return Math.max(b, a);
+        } else {
+            return Math.max(a, 100);
+        }
+    }
+
+    private void removeUnreachableSwitchBranches(final int day) {
+        if (day > 4) {
+            throw new IllegalArgumentException("Invalid Day");
+        }
+        String dayString;
+        switch (day) {
+            case 1:
+                dayString = "Monday";
+                break;
+            case 2:
+                dayString = "Tuesday";
+                break;
+            case 3:
+                dayString = "Wednesday";
+                break;
+            case 4:
+                dayString = "Thursday";
+                break;
+            case 5:
+                dayString = "Friday";
+                break;
+            case 6:
+                dayString = "Saturday";
+                break;
+            case 7:
+                dayString = "Saturday";
+                break;
+            default:
+                dayString = "Invalid";
+        }
+    }
+
     //private helper methods
     private Optional<String> getAnOptional() {
         return Optional.empty();
@@ -136,5 +184,6 @@ public class DataFlowAnalysis {
     private class Value {
     }
 
-    interface Foo {}
+    interface Foo {
+    }
 }

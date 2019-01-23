@@ -2,10 +2,25 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/springtips/caching/CachingConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/profileConfigs/CustomProfileConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/GenericsAutowiringConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/ImportedConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/MainConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/mvc/MyMvcConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/profileConfigs/ScannedConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/xmlScan/XmlScannedConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/xmlScan/XmlScannedConfiguration2.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/importedXml.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/springtips/configuration/importResource.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-config.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -29,7 +44,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.3.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:4.3.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.1.3.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
   </component>

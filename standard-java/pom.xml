@@ -37,11 +37,6 @@
                 <version>3.8.0</version>
                 <configuration>
                     <release>${java.version}</release>
-                    <compilerArgs>
-                        <arg>--enable-preview</arg>
-                    </compilerArgs>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
                 </configuration>
                 <executions>
                     <execution>
@@ -136,14 +131,12 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
+            <version>16.0.3</version>
             <scope>compile</scope>
         </dependency>
-
-
     </dependencies>
     <properties>
-        <java.version>12</java.version>
+        <java.version>11</java.version>
         <kotlin.version>1.2.51</kotlin.version>
         <org.springframework-version>4.3.4.RELEASE</org.springframework-version>
     </properties>

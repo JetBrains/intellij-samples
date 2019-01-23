@@ -10,12 +10,12 @@ public class Java12 {
                   "    </body>\n" +
                   "</html>\n";
 
-    String splitExample = (```<html>
-                                 <body>
-                                    <p>Split here.</p>
-                                 </body>
-                              </html>
-                            ```).align();
+//    String splitExample = (```<html>
+//                                 <body>
+//                                    <p>Split here.</p>
+//                                 </body>
+//                              </html>
+//                            ```).align();
 
     String script = "function hello() {\n" +
                     "   print(\'\"Hello World\"\');\n" +
@@ -29,7 +29,7 @@ public class Java12 {
     //note that it doesn't mess with the whitespace when formatting the file
 
     String pastedMultiLineStringLiteral = "";
-    String pastedMultiLineRawStringLiteral = ` `;
+//    String pastedMultiLineRawStringLiteral = ` `;
 
 
     public static void main(String[] args) throws IOException {

@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../groovy/src/main/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../groovy/src/main/resources" type="java-resource" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: javax.xml.bind:jaxb-api:2.3.0" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-ant:3.0.0-alpha-3" level="project" />
@@ -34,11 +34,11 @@
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.ant:ant:1.10.3" level="project" />
     <orderEntry type="library" name="Gradle: bsf:bsf:2.4.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.groovy:groovy-dateutil:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.groovy:groovy-dateutil:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: info.picocli:picocli:3.0.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.ant:ant-junit:1.10.3" level="project" />
     <orderEntry type="library" name="Gradle: com.thoughtworks.qdox:qdox:1.12.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.ant:ant-junit:1.10.3" level="project" />
     <orderEntry type="library" name="Gradle: jline:jline:2.14.6" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-launcher:1.2.0" level="project" />

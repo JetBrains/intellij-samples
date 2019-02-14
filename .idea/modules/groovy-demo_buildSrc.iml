@@ -7,7 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/../../groovy/buildSrc/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../groovy/buildSrc/out" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -20,12 +20,18 @@ public class Java12 {
             default:
                 type = PortType.UNKNOWN;
         }
-
         return type;
     }
 
+    private String createMissingSwitchBranch(PortType portType) {
+        return switch (portType) {
+            case HTTP -> "User";
+            default -> "N/A";
+        };
+    }
+
     public enum PortType {
-        HTTP, DATABASE, UNUSED, UNKNOWN, FTP, BUSY, SAFE;
+        HTTP, DATABASE, UNUSED, UNKNOWN, FTP, BUSY, SAFE
     }
 
 }

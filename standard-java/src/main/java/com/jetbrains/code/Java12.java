@@ -4,23 +4,28 @@ package com.jetbrains.code;
 public class Java12 {
 
 
-    private int replaceSimpleSwitch(String category) {
-        int value;
-        switch (category) {
-            case "Low":
-                value = 1;
+    private PortType replaceSimpleSwitch(int port) {
+        PortType type;
+        switch (port) {
+            case 20:
+                type = PortType.FTP;
                 break;
-            case "Medium":
-                value = 2;
+            case 80:
+            case 8080:
+                type = PortType.HTTP;
                 break;
-            case "High":
-                value = 3;
+            case 27017:
+                type = PortType.DATABASE;
                 break;
             default:
-                value = 0;
-                break;
+                type = PortType.UNKNOWN;
         }
-        return value;
+
+        return type;
+    }
+
+    public enum PortType {
+        HTTP, DATABASE, UNUSED, UNKNOWN, FTP, BUSY, SAFE;
     }
 
 }

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.jetbrains_buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/com.jetbrains_buildSrc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.jetbrains_buildSrc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.jetbrains_buildSrc_main.iml" group="com.jetbrains_buildSrc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.jetbrains_buildSrc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.jetbrains_buildSrc_test.iml" group="com.jetbrains_buildSrc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-demo.iml" group="groovy-demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-demo_buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-demo_buildSrc.iml" group="groovy-demo/groovy-demo_buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-demo_buildSrc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-demo_buildSrc_main.iml" group="groovy-demo/groovy-demo_buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-demo_buildSrc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-demo_buildSrc_test.iml" group="groovy-demo/groovy-demo_buildSrc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-demo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-demo_main.iml" group="groovy-demo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-demo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-demo_test.iml" group="groovy-demo" />
       <module fileurl="file://$PROJECT_DIR$/spring-tricks/springtricks.iml" filepath="$PROJECT_DIR$/spring-tricks/springtricks.iml" />

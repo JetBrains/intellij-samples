@@ -15,8 +15,8 @@
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-ant:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-bsf:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-groovysh:3.0.0-alpha-3" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-console:3.0.0-alpha-3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-docgenerator:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-groovydoc:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-cli-picocli:3.0.0-alpha-3" level="project" />
@@ -38,8 +38,8 @@
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-launcher:1.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-engine:1.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.2.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.groovy:groovy-dateutil:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: org.apiguardian:apiguardian-api:1.0.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.groovy:groovy-dateutil:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.ant:ant:1.10.3" level="project" />
     <orderEntry type="library" name="Gradle: bsf:bsf:2.4.0" level="project" />

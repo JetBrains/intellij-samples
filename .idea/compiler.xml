@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="standard-java" />
         <module name="code-samples" />
         <module name="springtricks" />
-        <module name="standard-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +17,8 @@
       <module name="code-samples_test" target="1.8" />
       <module name="com.jetbrains_buildSrc_main" target="1.10" />
       <module name="com.jetbrains_buildSrc_test" target="1.10" />
+      <module name="groovy-demo_buildSrc_main" target="1.10" />
+      <module name="groovy-demo_buildSrc_test" target="1.10" />
       <module name="groovy-demo_main" target="1.8" />
       <module name="groovy-demo_test" target="1.8" />
       <module name="springtricks" target="11" />

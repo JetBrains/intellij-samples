@@ -34,8 +34,8 @@
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy:3.0.0-alpha-3" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.ant:ant:1.10.3" level="project" />
     <orderEntry type="library" name="Gradle: bsf:bsf:2.4.0" level="project" />
-    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.groovy:groovy-dateutil:3.0.0-alpha-3" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Gradle: info.picocli:picocli:3.0.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.ant:ant-junit:1.10.3" level="project" />
     <orderEntry type="library" name="Gradle: com.thoughtworks.qdox:qdox:1.12.1" level="project" />

@@ -1,6 +1,7 @@
 package com.jetbrains.analysis;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 import java.util.stream.Stream;
@@ -124,7 +125,7 @@ public class DataFlowAnalysis {
     }
 
     private void conditionIsCoveredByFurtherCondition(int minValue, int maxValue, int defaultValue) {
-        if (minValue< maxValue || defaultValue < minValue || defaultValue > maxValue) {
+        if (minValue < maxValue || defaultValue < minValue || defaultValue > maxValue) {
             throw new IllegalArgumentException("These values aren't valid");
         }
     }
@@ -169,6 +170,28 @@ public class DataFlowAnalysis {
             default:
                 dayString = "Invalid";
         }
+    }
+
+    @NotNull
+    private String preciseWarningForNullInTernaryOperator(int x, @Nullable String data) {
+        return x > 0 ? data : "";
+    }
+
+    private void improvedAnalysisOfMathematicalOperations(int x) {
+        if (x + 1 > 0) {
+            System.out.println(x);
+            if (x < 0) {
+                System.out.println("Impossible!");
+            }
+        }
+        if (x * 2 == 15) {
+            System.out.println("Impossible!");
+        }
+    }
+
+    private void detectArrayIndexOutOfBoundsForMultidimensionalArrays(int index) {
+        int[][] multiDimensionalArray = {{1, 2, 3}, {4, 5}};
+        System.out.println(multiDimensionalArray[index][2]);
     }
 
     //private helper methods

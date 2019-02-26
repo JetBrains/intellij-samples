@@ -9,10 +9,10 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @SuppressWarnings({"unused", "Convert2MethodRef", "OptionalUsedAsFieldOrParameterType"})
 public class Java11Inspections {
@@ -48,13 +48,21 @@ public class Java11Inspections {
                    .collect(Collectors.toUnmodifiableList());
     }
 
+    // NOTE: no inspection
+    public List<String> usePredicateNot(Stream<String> stream) {
+        return stream.filter(s -> !s.isEmpty())
+                     .collect(Collectors.toUnmodifiableList());
+//        return stream.filter(Predicate.not(String::isEmpty))
+//                     .collect(Collectors.toUnmodifiableList());
+    }
+
     public static void main(String[] args) throws IOException {
         try (FileWriter writer = new FileWriter("hello.txt")) { //suggestion turned off by default
             writer.write("Hello World!");
         }
     }
 
-
+    @FunctionalInterface
     private interface Processor {
         void process(String str);
     }

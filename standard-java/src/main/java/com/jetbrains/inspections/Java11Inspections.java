@@ -35,32 +35,6 @@ public class Java11Inspections {
         BiConsumer<Processor, String> consumer6 = (@NotNull Processor x, String y) -> x.process(y);
     }
 
-    void optionalIsEmptyDataFlowSupport(List<String> list) {
-        if (list.isEmpty()) {
-            return;
-        }
-        Optional<String> min = list.stream()
-                                   .map(String::trim)
-                                   .min(String.CASE_INSENSITIVE_ORDER);
-        if (min.isEmpty()) { // Always false
-            return;
-        }
-        System.out.println(min.get());
-    }
-
-    void invertingOptionalChoosesCorrectMethod(Optional<String> opt) {
-        if (opt.isPresent()) { //.not postfix for isPresent
-            System.out.println("Optional Value");
-            System.out.println(opt.get());
-        }
-    }
-
-    void notPresentReplacedWithIsEmpty(Optional<String> opt) {
-        if (!opt.isPresent()) {
-            return;
-        }
-    }
-
     void suggestFilesReadWriteString() throws IOException {
         byte[] bytes = "Hello World!".getBytes(StandardCharsets.UTF_8);
         Files.write(Paths.get("/path/to/file"), bytes);

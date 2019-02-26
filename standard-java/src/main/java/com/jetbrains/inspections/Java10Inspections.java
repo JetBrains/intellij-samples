@@ -30,7 +30,7 @@ public class Java10Inspections {
         List<Person> people = new ArrayList<Person>();
     }
 
-    private void suggestionNotProvidedIfDiamondUsed() {
+    private void suggestionProvidedIfDiamondUsedAndTypeMovedToRight() {
         ArrayList<Person> people = new ArrayList<>();
     }
 
@@ -42,14 +42,14 @@ public class Java10Inspections {
     }
 
     private void minimizeTheScopeOfLocalVariables() {
-        Collection<Person> people = new ArrayList<Person>();
+        ArrayList<Person> list = new ArrayList<Person>();
 
-        people.add(new Person("First"));
-        people.add(new Person("Second"));
+        list.add(new Person("First"));
+        list.add(new Person("Second"));
 
         /* There could be a lot of code between the declaration and the use of this variable*/
 
-        for (Person person : people) {
+        for (Person person : list) {
             System.out.println(person);
         }
 
@@ -111,6 +111,7 @@ public class Java10Inspections {
         var x = new Integer[]{2, 4, 8};
     }
 
+    //<editor-fold desc="Helper methods">
     private boolean matches(Map.Entry<? extends String, ? extends Number> entry) {
         return false;
     }
@@ -122,6 +123,7 @@ public class Java10Inspections {
     private List<Person> getEveryone() {
         return List.of();
     }
+    //</editor-fold>
 
     //note: this can go to and from the Streams API
     List<String> suggestUsingCollectorsToUnmodifiableList(List<Integer> input) {

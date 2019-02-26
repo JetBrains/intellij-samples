@@ -137,12 +137,19 @@ public class Java10Inspections {
         return Collections.unmodifiableList(list);
     }
 
+    List<String> suggestUsingCollectorsToUnmodifiableListForStreamOperation(List<Integer> input) {
+        return Collections.unmodifiableList(input.stream()
+                                                 .filter(Objects::nonNull)
+                                                 .map(Object::toString)
+                                                 .collect(Collectors.toList()));
+    }
+
+    //??
     List<String> doesNotSuggestUsingCollectorsToUnmodifiableListIfContainsNulls(List<Integer> input) {
         List<String> list = new ArrayList<>();
         for (Integer integer : input) {
             if (integer != null) {
-                String toString = integer.toString();
-                list.add(toString);
+                list.add(integer.toString());
             } else {
                 list.add(null);
             }

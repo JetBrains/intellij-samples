@@ -22,7 +22,7 @@
       <module name="groovy-demo_main" target="1.8" />
       <module name="groovy-demo_test" target="1.8" />
       <module name="springtricks" target="11" />
-      <module name="standard-java" target="11" />
+      <module name="standard-java" target="12" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

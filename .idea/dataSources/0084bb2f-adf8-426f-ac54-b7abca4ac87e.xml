@@ -126,8 +126,8 @@
     <key id="31" parent="18" name="species_pkey">
       <ObjectId>16396</ObjectId>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>species_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>species_pkey</UnderlyingIndexName>
     </key>
     <argument id="32" parent="19" name="str">
       <DataType>integer|0s</DataType>
@@ -176,8 +176,8 @@
     <key id="42" parent="23" name="sighting_id_pk">
       <ObjectId>16425</ObjectId>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>sighting_id_pk</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>sighting_id_pk</UnderlyingIndexName>
     </key>
     <foreign-key id="43" parent="23" name="sighting_species_id_fk">
       <ObjectId>16456</ObjectId>
@@ -213,8 +213,8 @@
     <key id="49" parent="24" name="species_pkey">
       <ObjectId>16405</ObjectId>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>species_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>species_pkey</UnderlyingIndexName>
     </key>
     <column id="50" parent="25" name="name">
       <DataType>varchar(20)|0s</DataType>

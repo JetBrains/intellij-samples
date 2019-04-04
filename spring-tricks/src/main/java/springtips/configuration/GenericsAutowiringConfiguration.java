@@ -20,18 +20,16 @@ public class GenericsAutowiringConfiguration {
 
     @Bean
     Repository<Employee> employeeRepository() {
-        return new Repository<Employee>() {
-        };
+        return new Repository<>() {};
     }
 
     @Bean
     Repository<Department> departmentRepositoryRepository() {
-        return new Repository<Department>() {
-        };
+        return new Repository<>() {};
     }
 
 
-    public interface Repository<T> {
+    interface Repository<T> {
     }
 
 

@@ -1,6 +1,6 @@
 package com.jetbrains.code;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "UnnecessaryLocalVariable"})
 public class Java12 {
 
 

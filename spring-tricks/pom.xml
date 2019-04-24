@@ -11,7 +11,7 @@
     <description>Sample Project for 40 Tips and Tricks for Spring in IntelliJ IDEA</description>
     <properties>
         <spring.version>4.3.5.RELEASE</spring.version>
-        <spring-security.version>5.1.3.RELEASE</spring-security.version>
+        <spring-security.version>5.1.5.RELEASE</spring-security.version>
         <junit.version>4.12</junit.version>
     </properties>
 

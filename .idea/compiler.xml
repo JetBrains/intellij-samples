@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="standard-java" />
         <module name="code-samples" />
-        <module name="springtricks" />
+        <module name="spring-tricks" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,11 +17,11 @@
       <module name="code-samples_test" target="1.8" />
       <module name="com.jetbrains_buildSrc_main" target="1.10" />
       <module name="com.jetbrains_buildSrc_test" target="1.10" />
-      <module name="groovy-demo_buildSrc_main" target="12" />
-      <module name="groovy-demo_buildSrc_test" target="12" />
-      <module name="groovy-demo_main" target="1.8" />
-      <module name="groovy-demo_test" target="1.8" />
-      <module name="springtricks" target="11" />
+      <module name="groovy.buildSrc.main" target="1.8" />
+      <module name="groovy.buildSrc.test" target="1.8" />
+      <module name="groovy.main" target="1.8" />
+      <module name="groovy.test" target="1.8" />
+      <module name="spring-tricks" target="11" />
       <module name="standard-java" target="12" />
     </bytecodeTargetLevel>
   </component>

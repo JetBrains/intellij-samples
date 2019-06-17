@@ -5,7 +5,6 @@
     <content url="file://$MODULE_DIR$/../../groovy/buildSrc">
       <excludeFolder url="file://$MODULE_DIR$/../../groovy/buildSrc/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../groovy/buildSrc/build" />
-      <excludeFolder url="file://$MODULE_DIR$/../../groovy/buildSrc/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

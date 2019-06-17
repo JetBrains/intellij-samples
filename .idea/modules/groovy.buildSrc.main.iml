@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="buildSrc:test" external.linked.project.path="$MODULE_DIR$/../../groovy/buildSrc" external.root.project.path="$MODULE_DIR$/../../groovy" external.system.id="GRADLE" external.system.module.group="" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_12">
-    <output-test url="file://$MODULE_DIR$/../../groovy/buildSrc/build/classes/java/test" />
+<module external.linked.project.id="buildSrc:main" external.linked.project.path="$MODULE_DIR$/../../groovy/buildSrc" external.root.project.path="$MODULE_DIR$/../../groovy" external.system.id="GRADLE" external.system.module.group="" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../groovy/buildSrc/build/classes/java/main" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../groovy/buildSrc/src/test" />
+    <content url="file://$MODULE_DIR$/../../groovy/buildSrc/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../groovy/buildSrc/src/main/java" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="groovy-demo_buildSrc_main" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -103,21 +104,21 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-5.3.1-all/3xjuolr1tdlny82gse8vgfuf8/gradle-5.3.1/lib/groovy-all-1.0-2.5.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
           <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-5.3.1-all/3xjuolr1tdlny82gse8vgfuf8/gradle-5.3.1/lib/gradle-installation-beacon-5.3.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
           <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-5.3.1-all/3xjuolr1tdlny82gse8vgfuf8/gradle-5.3.1/src/installation-beacon" />
         </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-5.3.1-all/3xjuolr1tdlny82gse8vgfuf8/gradle-5.3.1/lib/groovy-all-1.0-2.5.4.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -139,5 +140,4 @@
       </library>
     </orderEntry>
   </component>
-  <component name="TestModuleProperties" production-module="groovy-demo_buildSrc_main" />
 </module>

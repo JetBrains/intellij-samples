@@ -4,5 +4,6 @@
 .idea/workspace.xml
 spring-tricks/target/
 standard-java/target/
-groovy/out
-groovy/build
+groovy/.gradle
+groovy/buildSrc/.gradle
+groovy/buildSrc/build

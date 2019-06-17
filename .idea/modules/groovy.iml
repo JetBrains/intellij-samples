@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="groovy" external.linked.project.path="$MODULE_DIR$/../../groovy" external.root.project.path="$MODULE_DIR$/../../groovy" external.system.id="GRADLE" external.system.module.group="com.jetbrains" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../groovy">
+      <excludeFolder url="file://$MODULE_DIR$/../../groovy/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../groovy/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -3,6 +3,7 @@ package com.jetbrains.inspections;
 import java.io.FileWriter;
 import java.io.IOException;
 
+@SuppressWarnings("unused")
 public class DuplicateCodeInspection {
     public static void main(String[] args) {
         StringBuilder stringBuilder = new StringBuilder();
@@ -19,7 +20,6 @@ public class DuplicateCodeInspection {
     }
 
     // Note that if variable names are different it still counts as duplicate code
-    @SuppressWarnings("unused")
     public void duplicate(String[] params) {
         StringBuilder stringBuilder = new StringBuilder();
         for (String param : params) {

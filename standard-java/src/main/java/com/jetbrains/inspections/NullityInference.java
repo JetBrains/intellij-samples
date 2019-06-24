@@ -3,6 +3,7 @@ package com.jetbrains.inspections;
 import com.jetbrains.CallMe;
 
 
+@SuppressWarnings("unused")
 public class NullityInference {
     public void testAnnotationInference(Object nullityUnknown) {
         if (CallMe.neverReturnsNull() == null) {

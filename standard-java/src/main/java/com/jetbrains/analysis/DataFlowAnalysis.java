@@ -1,5 +1,6 @@
 package com.jetbrains.analysis;
 
+import com.jetbrains.CallMe;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -12,6 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @SuppressWarnings({"StatementWithEmptyBody", "unused", "Java9CollectionFactory", "MismatchedQueryAndUpdateOfCollection"})
 public class DataFlowAnalysis {
 
+    //<editor-fold desc="Other Data Flow Examples">
     public void showDataFlowWithInstanceOfExample(Object obj) {
         if (obj instanceof String || obj instanceof Number) {
             System.out.println("String or Number");
@@ -193,8 +195,15 @@ public class DataFlowAnalysis {
         int[][] multiDimensionalArray = {{1, 2, 3}, {4, 5}};
         System.out.println(multiDimensionalArray[index][2]);
     }
+    //</editor-fold>
 
-    //private helper methods
+    public void findCauseOfProblem() {
+        if (CallMe.neverReturnsNull() == null) {
+            System.out.println("This shouldn't be null but we got here anyway");
+        }
+    }
+
+    //<editor-fold desc="Private helpers">
     private Optional<String> getAnOptional() {
         return Optional.empty();
     }
@@ -209,4 +218,5 @@ public class DataFlowAnalysis {
 
     interface Foo {
     }
+    //</editor-fold>
 }

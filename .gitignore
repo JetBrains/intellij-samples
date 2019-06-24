@@ -3,7 +3,6 @@
 .idea/shelf/
 .idea/workspace.xml
 spring-tricks/target/
-standard-java/target/
 groovy/.gradle
 groovy/buildSrc/.gradle
 groovy/buildSrc/build

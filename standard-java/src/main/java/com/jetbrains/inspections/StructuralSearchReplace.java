@@ -8,12 +8,17 @@ public class StructuralSearchReplace {
 
     private Logger logger = Logger.getLogger(StructuralSearchReplace.class.getName());
 
-    public void logSomething() {
+    public void logInfo() {
         logger.log(Level.INFO, "A log message");
     }
 
-    public void logSomethingElse() {
-        logger.log(Level.WARNING, "Another log message", new RuntimeException("Something went wrong"));
+    public void logWarningWithException() {
+        logger.log(Level.WARNING, "Another log message",
+                   new RuntimeException("Something went wrong"));
+    }
+
+    public void logFineWithLazyMessage() {
+        logger.log(Level.FINE, () -> "Reached this point");
     }
 
 }

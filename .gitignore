@@ -7,3 +7,4 @@ standard-java/target/
 groovy/.gradle
 groovy/buildSrc/.gradle
 groovy/buildSrc/build
+groovy/build

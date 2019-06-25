@@ -135,7 +135,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <java.version>12</java.version>
+        <java.version>13</java.version>
         <kotlin.version>1.3.40</kotlin.version>
     </properties>
 </project>

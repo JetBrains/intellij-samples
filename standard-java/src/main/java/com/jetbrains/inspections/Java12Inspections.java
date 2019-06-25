@@ -1,7 +1,7 @@
-package com.jetbrains.code;
+package com.jetbrains.inspections;
 
 @SuppressWarnings({"unused", "UnnecessaryLocalVariable"})
-public class Java12 {
+public class Java12Inspections {
 
 
     private PortType replaceSimpleSwitch(int port) {

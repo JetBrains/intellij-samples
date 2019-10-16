@@ -1,6 +1,7 @@
 .idea/libraries
-.idea/usage.statistics.xml
 .idea/shelf/
+.idea/dataSources/
+.idea/usage.statistics.xml
 .idea/workspace.xml
 spring-tricks/target/
 groovy/.gradle

@@ -15,8 +15,8 @@
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-ant:3.0.0-beta-1" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-groovysh:3.0.0-beta-1" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-console:3.0.0-beta-1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.4.1" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-docgenerator:3.0.0-beta-1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.4.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.4.1" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-groovydoc:3.0.0-beta-1" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-cli-picocli:3.0.0-beta-1" level="project" />

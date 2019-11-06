@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="trishagee@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.16">
     <root id="1"/>
     <database id="2" parent="1" name="trishagee">
       <ObjectId>16385</ObjectId>
-      <Visible>1</Visible>
     </database>
     <database id="3" parent="1" name="postgres">
       <ObjectId>12641</ObjectId>
@@ -24,7 +23,6 @@
     <schema id="8" parent="2" name="public">
       <ObjectId>2200</ObjectId>
       <IntrospectionTimestamp>2016-11-16.16:44:58.408</IntrospectionTimestamp>
-      <Visible>1</Visible>
     </schema>
     <schema id="9" parent="2" name="pg_catalog">
       <ObjectId>11</ObjectId>
@@ -45,13 +43,11 @@
       <ObjectId>16386</ObjectId>
       <IntrospectionTimestamp>2016-11-16.16:44:58.408</IntrospectionTimestamp>
       <IntrospectionStateNumber>1009</IntrospectionStateNumber>
-      <Visible>1</Visible>
     </schema>
     <schema id="15" parent="2" name="animals">
       <ObjectId>16387</ObjectId>
       <IntrospectionTimestamp>2016-11-16.16:44:52.862</IntrospectionTimestamp>
       <IntrospectionStateNumber>1022</IntrospectionStateNumber>
-      <Visible>1</Visible>
     </schema>
     <schema id="16" parent="2" name="outer_space">
       <ObjectId>16388</ObjectId>

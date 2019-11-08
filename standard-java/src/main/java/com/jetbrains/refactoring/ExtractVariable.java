@@ -18,7 +18,11 @@ class ExtractVariable {
         return message != null ? whitespace.matcher(message).start() : -1;
     }
 
-    // helper classes
+    private void simpleExtractVariable() {
+        System.out.println("Hello " + order.getCustomer().getFirstName());
+    }
+
+    //<editor-fold desc="Helper Classes">
     private class Order {
         private Customer customer = new Customer();
 
@@ -26,4 +30,5 @@ class ExtractVariable {
             return customer;
         }
     }
+    //</editor-fold>
 }

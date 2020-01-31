@@ -1,18 +1,12 @@
 package com.jetbrains.code;
 
 @SuppressWarnings("unused")
-public class Java13 {
+public class TextBlocks {
     String html = "<html>\n" +
                   "    <body>\n" +
                   "        <p>Hello World.</p>\n" +
                   "    </body>\n" +
                   "</html>\n";
-
-    String splitExample = "<html>\n" +
-                          "    <body>\n" +
-                          "        <p>Split here.</p>\n" +
-                          "    </body>\n" +
-                          "</html>\n";
 
     String script = "function hello() {\n" +
                     "   print('\"Hello World\"');\n" +
@@ -27,10 +21,5 @@ public class Java13 {
     //note that it doesn't mess with the whitespace when formatting the file
 
     String pastedMultiLineTextBlock = "";
-
-    String command = "\"C:\\Program Files\\foo\" bar";
-
-    public static void main(String[] args) {
-    }
 
 }

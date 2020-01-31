@@ -1,7 +1,7 @@
 package com.jetbrains.inspections;
 
 @SuppressWarnings({"unused", "UnnecessaryLocalVariable"})
-public class Java12Inspections {
+public class SwitchExpressions {
 
 
     private PortType replaceSimpleSwitch(int port) {
@@ -26,12 +26,14 @@ public class Java12Inspections {
     private String createMissingSwitchBranch(PortType portType) {
         return switch (portType) {
             case HTTP -> "User";
+            case DATABASE -> "System";
+            case FTP -> "B2B";
             default -> "N/A";
         };
     }
 
     public enum PortType {
-        HTTP, DATABASE, UNUSED, UNKNOWN, FTP, BUSY, SAFE
+        HTTP, DATABASE, UNUSED, UNKNOWN, FTP
     }
 
 }

@@ -34,8 +34,8 @@
     <orderEntry type="library" name="Gradle: org.apache.ant:ant:1.10.5" level="project" />
     <orderEntry type="library" name="Gradle: info.picocli:picocli:3.9.5" level="project" />
     <orderEntry type="library" name="Gradle: com.thoughtworks.qdox:qdox:1.12.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.ant:ant-junit:1.10.5" level="project" />
     <orderEntry type="library" name="Gradle: jline:jline:2.14.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.ant:ant-junit:1.10.5" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-launcher:1.4.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.ant:ant-antlr:1.10.5" level="project" />

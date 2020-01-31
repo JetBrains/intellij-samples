@@ -6,9 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="standard-java" />
-        <module name="code-samples" />
         <module name="spring-tricks" />
+        <module name="standard-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,7 +21,7 @@
       <module name="groovy.main" target="1.8" />
       <module name="groovy.test" target="1.8" />
       <module name="spring-tricks" target="11" />
-      <module name="standard-java" target="13" />
+      <module name="standard-java" target="14" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

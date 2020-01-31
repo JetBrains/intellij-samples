@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="ChinookDB">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.16">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.17">
     <root id="1"/>
     <schema id="2" parent="1"/>
     <table id="3" parent="2" name="Album"/>

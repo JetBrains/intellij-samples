@@ -3,16 +3,32 @@ package com.jetbrains.code;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class RecordTest {
 
     @Test
-    public void showRecords() {
+    public void twoRecordsWithDifferentValuesAreNotEqual() {
         Record trisha = new Record(23, "Trisha");
+        // note the "pretty" output
         System.out.println(trisha);
         Record mala = new Record(23, "Mala");
-
         Assert.assertNotEquals(trisha, mala);
+    }
+
+    @Test
+    public void twoRecordsWithTheSameValuesAreEqual() {
+        Record trisha = new Record(23, "Trisha");
         Record trisha2 = new Record(23, "Trisha");
-        Assert.assertEquals(trisha, trisha2);
+        assertEquals(trisha, trisha2);
+    }
+
+    @Test
+    public void gettersDoNotHaveGetInTheName() {
+        Record trisha = new Record(23, "Trisha");
+
+        // note that code completion suggests the property names
+        assertEquals(23, trisha.id());
+        assertEquals("Trisha", trisha.name());
     }
 }

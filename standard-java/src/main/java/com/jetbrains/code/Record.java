@@ -1,3 +1,8 @@
 package com.jetbrains.code;
 
-public record Record(int age, String name) { }
+// if you want to change a property name you should use refactoring
+public record Record(int id, String name) { }
+
+// generate getter does the right thing with the name
+// there is no generate setter
+

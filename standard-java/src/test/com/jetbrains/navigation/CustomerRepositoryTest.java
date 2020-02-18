@@ -18,7 +18,7 @@ public class CustomerRepositoryTest {
         Customer customer = new Customer();
         repository.save(customer);
 
-        //assert customer saved
+        //TODO: assert customer saved
     }
 
     private static class CustomerRepositoryStub implements CustomerRepository {

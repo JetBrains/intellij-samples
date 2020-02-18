@@ -20,7 +20,7 @@ import static java.util.stream.Collectors.toList;
 public class Java8Inspections {
     private final Map<Integer, List<String>> integerStringMap = new HashMap<>();
 
-    private final String[] stringArray = new String[]{"IntelliJ IDEA", "AppCode", "CLion", "0xDBE", "Upsource"};
+    private final String[] stringArray = new String[]{"IntelliJ IDEA", "AppCode", "CLion", "Upsource"};
     private List<Converter> converters;
 
     public void lambdas() {
@@ -32,11 +32,11 @@ public class Java8Inspections {
             }
         };
 
-        //Expand lambda expression body to {...}
-        Function<Function, Function> f2 = function -> function.compose(function);
-
         //Remove redundant types
         Function<Function, Function> f3 = (Function function) -> function.compose(function);
+
+        //Expand lambda expression body to {...}
+        Function<Function, Function> f2 = function -> function.compose(function);
 
         //Statement lambda can be replaced with expression lambda
         Function<Function, Function> f4 = (Function function) -> {
@@ -47,7 +47,7 @@ public class Java8Inspections {
         sort(stringArray, (s1, s2) -> s1.compareToIgnoreCase(s2));
 
         //Replace with forEach on foo
-        ArrayList<String> foo = new ArrayList<>();
+        ArrayList<String> foo = getStrings();
         for (String s : foo) {
             if (s != null) {
                 out.println(s);
@@ -108,7 +108,7 @@ public class Java8Inspections {
     }
 
     private List<String> replaceWithCollect() {
-        List<String> result = new ArrayList<>();
+        List<String> result = getStrings();
 
         for (String line : stringArray) {
             if (line != null) {
@@ -121,7 +121,7 @@ public class Java8Inspections {
     }
 
     private List<String> replaceWithCollectAndMap() {
-        List<String> result = new ArrayList<>();
+        List<String> result = getStrings();
 
         for (String line : stringArray) {
             if (line != null) {
@@ -134,7 +134,7 @@ public class Java8Inspections {
     }
 
     private List<String> getListOfAllNonEmptyStringValues(Map<String, List<String>> map) {
-        List<String> result = new ArrayList<>();
+        List<String> result = getStrings();
         for (Map.Entry<String, List<String>> entry : map.entrySet()) {
             if (entry.getKey()
                      .isEmpty()) {
@@ -236,7 +236,7 @@ public class Java8Inspections {
 
     //Streams: toArray
     public String[] replaceWithToArray(List<String> data) {
-        List<String> result = new ArrayList<>();
+        List<String> result = getStrings();
         for (String str : data) {
             if (!str.isEmpty()) {
                 result.add(str);
@@ -247,7 +247,7 @@ public class Java8Inspections {
 
     //Streams: sorting
     public List<String> getSortedListOfNames(List<Person> persons) {
-        List<String> names = new ArrayList<>();
+        List<String> names = getStrings();
         for (Person person : persons) {
             names.add(person.getName());
         }
@@ -397,7 +397,12 @@ public class Java8Inspections {
 
 
 
-    //helpers
+    //<editor-fold desc="Helper methods">
+    @NotNull
+    private ArrayList<String> getStrings() {
+        return new ArrayList<>();
+    }
+
     private void doSomething(boolean hasNoNulls) {
 
     }
@@ -413,7 +418,7 @@ public class Java8Inspections {
     private boolean stringMatchesSomeCriteria(String s) {
         return false;
     }
-
+    //</editor-fold>
 
     private class CustomError {
         public String render() {

@@ -1,8 +1,6 @@
 package com.jetbrains.editing;
 
-/**
- * Created by hadihariri on 09/09/16.
- */
+@SuppressWarnings("unused")
 public class MultiLineStrings {
 
     public void multiLineStrings() {

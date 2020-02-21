@@ -16,6 +16,7 @@ import static java.lang.System.out;
 import static java.util.Arrays.sort;
 import static java.util.stream.Collectors.toList;
 
+/** @noinspection rawtypes*/
 @SuppressWarnings({"unused", "unchecked"})
 public class Java8Inspections {
     private final Map<Integer, List<String>> integerStringMap = new HashMap<>();
@@ -110,15 +111,16 @@ public class Java8Inspections {
     private List<String> replaceWithCollect() {
         List<String> result = getStrings();
 
-        for (String line : stringArray) {
-            if (line != null) {
-                for (String word : line.split("\\s")) {
-                    result.add(word);
-                }
+        for (String str : stringArray) {
+            if (str != null) {
+
             }
         }
+
         return result;
     }
+
+    //<editor-fold desc="Helper methods">
 
     private List<String> replaceWithCollectAndMap() {
         List<String> result = getStrings();
@@ -137,7 +139,7 @@ public class Java8Inspections {
         List<String> result = getStrings();
         for (Map.Entry<String, List<String>> entry : map.entrySet()) {
             if (entry.getKey()
-                     .isEmpty()) {
+                    .isEmpty()) {
                 continue;
             }
             List<String> list = entry.getValue();
@@ -197,17 +199,17 @@ public class Java8Inspections {
 
     private List<Counter> findTopTenAlt(List<Counter> counters) {
         return counters.stream()
-                       .sorted((o1, o2) -> o1.getCount() - o2.getCount())
-                       .limit(10)
-                       .collect(toList());
+                .sorted((o1, o2) -> o1.getCount() - o2.getCount())
+                .limit(10)
+                .collect(toList());
 
     }
 
     private List<Counter> findTopTen(List<Counter> counters) {
         return counters.stream()
-                       .sorted((o1, o2) -> o1.compareTo(o2))
-                       .limit(10)
-                       .collect(toList());
+                .sorted((o1, o2) -> o1.compareTo(o2))
+                .limit(10)
+                .collect(toList());
 
     }
 
@@ -257,7 +259,7 @@ public class Java8Inspections {
 
     public long countNumberOfItems(List<String> strings) {
         return strings.stream()
-                      .count();
+                .count();
     }
 
     //2017.3
@@ -272,19 +274,19 @@ public class Java8Inspections {
 
     public Stream<Object> simplifyStreamAPICallChain1() {
         return Collections.nCopies(10, "")
-                          .stream()
-                          .map(s -> doMapping());
+                .stream()
+                .map(s -> doMapping());
     }
 
     public boolean simplifyStreamAPICallChain2() {
         final Stream<String> stream = Stream.of("a", "b", "c");
         return stream.filter(this::stringMatchesSomeCriteria)
-                     .count() > 0;
+                .count() > 0;
     }
 
     public Stream<Object> simplifyStreamAPICallChain3(Object[] array) {
         return IntStream.range(1, 10)
-                        .mapToObj(value -> array[value]);
+                .mapToObj(value -> array[value]);
     }
 
     public String useJoiningForStringBuilders(Character[] value) {
@@ -330,74 +332,72 @@ public class Java8Inspections {
         }
 
         final boolean hasNoNulls = list.stream()
-                                       .allMatch(Objects::nonNull);
+                .allMatch(Objects::nonNull);
         doSomething(hasNoNulls);
 
         final Optional<Object> first = Stream.empty()
-                                             .findFirst();
+                .findFirst();
         doSomething(first.isPresent());
 
         final Optional<Object> any = Stream.empty()
-                                           .findAny();
+                .findAny();
         doSomething(any.isPresent());
 
         //min, max, reduce
         final Optional<Object> min = Stream.empty()
-                                           .min(Comparator.comparing(Object::toString));
+                .min(Comparator.comparing(Object::toString));
         doSomething(min.isPresent());
 
         //sum & count
         final long count = IntStream.empty()
-                                    .count();
+                .count();
         doSomething(count);
 
         final int sum = IntStream.empty()
-                                 .sum();
+                .sum();
         doSomething(sum);
     }
 
     public void nullabilityAnalysis(String[] stringArray) {
         Arrays.stream(stringArray)
-              .map(s -> s.isEmpty() ? s : null)
-              .map(String::trim)
-              .collect(Collectors.toList());
+                .map(s -> s.isEmpty() ? s : null)
+                .map(String::trim)
+                .collect(Collectors.toList());
     }
 
     public Optional<String> identifyUnnecessarySortCalls(Stream<String> strings) {
         return strings.filter(Objects::nonNull)
-                      .sorted(Comparator.comparing(String::length))
-                      .min(Comparator.comparing(String::length));
+                .sorted(Comparator.comparing(String::length))
+                .min(Comparator.comparing(String::length));
     }
 
     public Optional<String> identifyReveredMaxMin(Stream<String> strings) {
         return strings.filter(Objects::nonNull)
-                      .min(Comparator.comparing(String::length).reversed());
+                .min(Comparator.comparing(String::length).reversed());
     }
 
     @NotNull
     public String[] nullabilityAnalysisForStreamChains() {
         return Stream.of("a")
-                     .map(s -> s.matches("\\w") ? s.toLowerCase() : null)
-                     .toArray(String[]::new);
+                .map(s -> s.matches("\\w") ? s.toLowerCase() : null)
+                .toArray(String[]::new);
     }
 
     public String suggestCollectorsJoining() {
         return String.join(",",
-                           IntStream.range(0, 10)
-                                    .mapToObj(String::valueOf)
-                                    .collect(toList())
+                IntStream.range(0, 10)
+                        .mapToObj(String::valueOf)
+                        .collect(toList())
         );
     }
 
     public void simplificationsForEntrySet(Map<Integer, String> map) {
         Stream<Integer> integerStream = map.entrySet()
-                                           .stream()
-                                           .map(Map.Entry::getKey);
+                .stream()
+                .map(Map.Entry::getKey);
     }
 
 
-
-    //<editor-fold desc="Helper methods">
     @NotNull
     private ArrayList<String> getStrings() {
         return new ArrayList<>();
@@ -418,7 +418,6 @@ public class Java8Inspections {
     private boolean stringMatchesSomeCriteria(String s) {
         return false;
     }
-    //</editor-fold>
 
     private class CustomError {
         public String render() {
@@ -433,4 +432,31 @@ public class Java8Inspections {
             return loadNames;
         }
     }
+
+    //</editor-fold>
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

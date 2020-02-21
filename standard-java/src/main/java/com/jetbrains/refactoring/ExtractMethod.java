@@ -1,6 +1,5 @@
 package com.jetbrains.refactoring;
 
-
 public class ExtractMethod {
     public static void main(String[] args) {
         String s = "How to extract a method: ";
@@ -26,7 +25,8 @@ public class ExtractMethod {
         }
     }
 
-    public class StepPrinter {
+    @SuppressWarnings("unused")
+    public static class StepPrinter {
         public void printTheSteps(String... theSteps) {
             printSteps(theSteps);
         }

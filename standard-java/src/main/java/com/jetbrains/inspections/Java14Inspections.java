@@ -9,7 +9,9 @@ public class Java14Inspections {
     private void sendToWork(Person person) {
         if (person instanceof Employee) {
             Employee employee = (Employee) person;
-            employee.getToWork();
+            if (employee.isBusy()) {
+                employee.getToWork();
+            }
         }
     }
 }

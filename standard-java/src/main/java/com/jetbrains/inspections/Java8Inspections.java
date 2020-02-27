@@ -111,12 +111,13 @@ public class Java8Inspections {
     private List<String> replaceWithCollect() {
         List<String> result = getStrings();
 
-        for (String str : stringArray) {
-            if (str != null) {
-
+        for (String line : stringArray) {
+            if (line != null) {
+                for (String word : line.split("\\s")) {
+                    result.add(word);
+                }
             }
         }
-
         return result;
     }
 

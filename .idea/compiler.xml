@@ -15,10 +15,6 @@
       <module name="code-samples_test" target="1.8" />
       <module name="com.jetbrains_buildSrc_main" target="1.10" />
       <module name="com.jetbrains_buildSrc_test" target="1.10" />
-      <module name="groovy.buildSrc.main" target="1.8" />
-      <module name="groovy.buildSrc.test" target="1.8" />
-      <module name="groovy.main" target="1.8" />
-      <module name="groovy.test" target="1.8" />
       <module name="spring-tricks" target="11" />
       <module name="standard-java" target="14" />
     </bytecodeTargetLevel>

@@ -1,11 +1,11 @@
 package com.jetbrains.inspections.entities;
 
 public class Employee extends Person {
-    public void getToWork() {
+    public void workFromHome() {
 
     }
 
-    public boolean isBusy() {
+    public boolean isBasedInOffice() {
         return false;
     }
 }

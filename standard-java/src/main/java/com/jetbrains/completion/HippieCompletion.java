@@ -2,18 +2,17 @@ package com.jetbrains.completion;
 
 import org.intellij.lang.annotations.Language;
 
-/**
- * Created by hadihariri on 09/09/16.
- */
-
-
+@SuppressWarnings("unused")
 public class HippieCompletion {
 
-    String someJson = "{\"name\": \"Something\"}";
-    String data1 = "Textual Input";
-    String data2 = "Text Input";
-    String data3 = "Texting Input";
-    public void hipperCompletion() {
+    @Language("JSON")
+    private final String someJson = "{\"name\": \"Something\"}";
+
+    private final String data1 = "Textual Value";
+    private final String data2 = "Text Input";
+    private final String data3 = "Texting Input";
+
+    public void hippieCompletion() {
 
     }
 }

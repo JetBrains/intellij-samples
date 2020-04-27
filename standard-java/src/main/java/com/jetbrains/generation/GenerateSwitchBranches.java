@@ -3,14 +3,16 @@ package com.jetbrains.generation;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("unused")
 public class GenerateSwitchBranches {
     enum Nucleotide {
         ADENINE, CYTOSINE, GUANINE, THYMINE, URACIL
     }
 
     List<Nucleotide> transform(List<Nucleotide> seq) {
-        return seq.stream().map(this::getBasePair)
-                .collect(Collectors.toList());
+        return seq.stream()
+                  .map(this::getBasePair)
+                  .collect(Collectors.toList());
     }
 
     private Nucleotide getBasePair(Nucleotide nucleotide) {
@@ -19,10 +21,6 @@ public class GenerateSwitchBranches {
                 return Nucleotide.THYMINE;
             case CYTOSINE:
                 return Nucleotide.GUANINE;
-            case GUANINE:
-                return Nucleotide.CYTOSINE;
-            case THYMINE:
-                return Nucleotide.ADENINE;
             case URACIL:
                 return Nucleotide.ADENINE;
         }

@@ -1,12 +1,9 @@
 package com.jetbrains.navigation;
 
-import com.jetbrains.persistence.models.Customer;
+import com.jetbrains.entity.Customer;
 
 import java.util.List;
 
-/**
- * Created by hadihariri on 09/09/16.
- */
 public class MongoDBCustomerRepository implements CustomerRepository {
     @Override
     public void save(Customer customer) {

@@ -1,7 +1,7 @@
 package com.jetbrains.inspections;
 
-import com.jetbrains.persistence.models.Customer;
-import com.jetbrains.persistence.models.Order;
+import com.jetbrains.entity.Customer;
+import com.jetbrains.entity.Order;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -160,7 +160,7 @@ public class OptionalInspections {
 
     @NotNull
     private Stream<Optional<Customer>> findCustomersWithOutstandingOrders() {
-        return Stream.of(Optional.of(new Customer()));
+        return Stream.of(Optional.of(new Customer("Riley", "Last-Name")));
     }
     //</editor-fold>
 

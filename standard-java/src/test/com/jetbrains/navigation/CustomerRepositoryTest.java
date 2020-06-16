@@ -1,6 +1,6 @@
 package com.jetbrains.navigation;
 
-import com.jetbrains.persistence.models.Customer;
+import com.jetbrains.entity.Customer;
 import org.junit.Test;
 
 import java.util.List;
@@ -15,7 +15,7 @@ public class CustomerRepositoryTest {
 
     @Test
     public void shouldSaveCustomer() {
-        Customer customer = new Customer();
+        Customer customer = new Customer("First", "Last");
         repository.save(customer);
 
         //TODO: assert customer saved

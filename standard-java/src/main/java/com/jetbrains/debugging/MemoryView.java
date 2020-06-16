@@ -1,6 +1,6 @@
 package com.jetbrains.debugging;
 
-import com.jetbrains.persistence.models.Customer;
+import com.jetbrains.entity.Customer;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -33,7 +33,7 @@ public class MemoryView {
         cars.add("Toyota");
 
         for (int i = 0; i < 100; i++) {
-            customers.add(new Customer());
+            customers.add(new Customer(String.valueOf(i), "Last-Name"));
             if (i % 5 == 0) {
                 cars.add(format("A New Car %d", i));
             }

@@ -1,6 +1,6 @@
 package com.jetbrains.code;
 
-import com.jetbrains.persistence.models.Order;
+import com.jetbrains.entity.Order;
 
 import java.util.Collection;
 import java.util.Objects;

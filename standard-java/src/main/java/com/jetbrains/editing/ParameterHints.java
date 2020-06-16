@@ -1,6 +1,6 @@
 package com.jetbrains.editing;
 
-import com.jetbrains.persistence.models.Customer;
+import com.jetbrains.entity.Customer;
 
 import java.util.stream.IntStream;
 

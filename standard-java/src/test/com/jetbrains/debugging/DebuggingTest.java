@@ -1,8 +1,9 @@
 package com.jetbrains.debugging;
 
+import com.jetbrains.entity.OrderItem;
+import com.jetbrains.entity.Product;
 import com.jetbrains.inspections.Java9Inspections;
-import com.jetbrains.persistence.models.OrderItem;
-import com.jetbrains.persistence.models.Product;
+
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -34,15 +35,10 @@ public class DebuggingTest {
 
     @Test
     public void shouldOnlyRenderOnDemandRendererWhenClicked() {
-        final OrderItem orderItem = new OrderItem();
-        orderItem.setId(4738);
-        orderItem.setQuantity(2);
+        final OrderItem orderItem = new OrderItem(4738, 2);
 
-        final Product product = new Product();
-        product.setId(43789);
-        product.setTitle("Book");
-        product.setPrice(new BigDecimal("15.99"));
-        product.setOrderItemsById(List.of(orderItem));
+        final Product product = new Product(43789, "Book",
+                new BigDecimal("15.99"), List.of(orderItem));
 
         System.out.println(product);
     }

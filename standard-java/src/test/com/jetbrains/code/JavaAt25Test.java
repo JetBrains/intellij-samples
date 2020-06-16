@@ -1,6 +1,7 @@
 package com.jetbrains.code;
 
 import org.junit.Test;
+import org.junit.Ignore;
 
 public class JavaAt25Test {
     @Test
@@ -9,6 +10,7 @@ public class JavaAt25Test {
     }
 
     @Test
+    @Ignore
     public void shouldFail() {
         System.out.println(getEmailAddress().toString());
 

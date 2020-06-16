@@ -6,7 +6,6 @@ import com.jetbrains.persistence.models.Product;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 
 @SuppressWarnings("ALL")

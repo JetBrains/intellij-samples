@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy.buildSrc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy.buildSrc.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy.buildSrc.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-tricks/spring-tricks.iml" filepath="$PROJECT_DIR$/spring-tricks/spring-tricks.iml" />
       <module fileurl="file://$PROJECT_DIR$/standard-java.iml" filepath="$PROJECT_DIR$/standard-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />

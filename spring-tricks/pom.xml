@@ -10,9 +10,9 @@
 
     <description>Sample Project for 40 Tips and Tricks for Spring in IntelliJ IDEA</description>
     <properties>
-        <spring.version>5.2.3.RELEASE</spring.version>
-        <spring-security.version>5.2.5.RELEASE</spring-security.version>
-        <junit.version>4.12</junit.version>
+        <spring.version>5.2.7.RELEASE</spring.version>
+        <spring-security.version>5.3.3.RELEASE</spring-security.version>
+        <junit.version>4.13</junit.version>
     </properties>
 
     <dependencies>
@@ -65,7 +65,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <release>11</release>
                 </configuration>

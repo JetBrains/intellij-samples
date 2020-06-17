@@ -1,7 +1,7 @@
 package com.jetbrains.code;
 
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class JavaAt25Test {
     @Test
@@ -10,7 +10,7 @@ public class JavaAt25Test {
     }
 
     @Test
-    @Ignore
+    @Disabled
     public void shouldFail() {
         System.out.println(getEmailAddress().toString());
 

@@ -4,7 +4,7 @@ import com.jetbrains.entity.OrderItem;
 import com.jetbrains.entity.Product;
 import com.jetbrains.inspections.Java9Inspections;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.List;

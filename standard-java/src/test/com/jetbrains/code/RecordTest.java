@@ -1,9 +1,9 @@
 package com.jetbrains.code;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class RecordTest {
 
@@ -13,7 +13,7 @@ public class RecordTest {
         // note the "pretty" output
         System.out.println(trisha);
         Record mala = new Record(23, "Mala");
-        Assert.assertNotEquals(trisha, mala);
+        assertNotEquals(trisha, mala);
     }
 
     @Test

@@ -48,7 +48,6 @@ public class Java11Inspections {
                    .collect(Collectors.toUnmodifiableList());
     }
 
-    // NOTE: no inspection
     public List<String> usePredicateNot(Stream<String> stream) {
         return stream.filter(s -> !s.isEmpty())
                      .collect(Collectors.toUnmodifiableList());

@@ -1,9 +1,5 @@
 package com.jetbrains.inspections;
 
-import com.jetbrains.entity.Customer;
-import com.jetbrains.entity.Order;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -95,38 +91,6 @@ public class OptionalInspections {
         System.out.println(min.get());
     }
 
-    // Java 9
-    // NOTE: no inspection
-    @SuppressWarnings("Convert2MethodRef")
-    private void useOptionalProperlyWithOrElse(Optional<String> anOptional) {
-        if (anOptional.isPresent()) {
-            System.out.println(anOptional.get());
-        } else {
-            System.out.println("Nothing found!");
-        }
-//        anOptional.ifPresentOrElse(
-//                s -> System.out.println(s),
-//                () -> System.out.println("Nothing found!")
-//        );
-    }
-
-    // NOTE: no inspection
-    private Optional<Customer> useOptionalWithOr() {
-        return getCurrentCustomer().or(this::getNextCustomer);
-    }
-
-    // NOTE: no inspection
-    private Stream<Customer> useOptionalWithStream(Stream<Order> orders) {
-        Stream<Optional<Customer>> streamOfOptionals = findCustomersWithOutstandingOrders();
-        return streamOfOptionals.flatMap(customer -> customer.stream());
-    }
-
-    // Java 10
-    // NOTE: no inspection
-    private String getOptionalValueOrThrowDefaultException(Optional<String> anOptional) {
-        return anOptional.orElseThrow();
-    }
-
     // Java 11
     void invertingOptionalChoosesCorrectMethod(Optional<String> opt) {
         if (opt.isPresent()) { //.not postfix for isPresent
@@ -150,18 +114,6 @@ public class OptionalInspections {
         return Optional.empty();
     }
 
-    private Optional<Customer> getNextCustomer() {
-        return Optional.empty();
-    }
-
-    private Optional<Customer> getCurrentCustomer() {
-        return Optional.empty();
-    }
-
-    @NotNull
-    private Stream<Optional<Customer>> findCustomersWithOutstandingOrders() {
-        return Stream.of(Optional.of(new Customer("Riley", "Last-Name")));
-    }
     //</editor-fold>
 
 

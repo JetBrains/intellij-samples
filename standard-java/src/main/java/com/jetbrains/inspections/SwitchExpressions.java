@@ -1,8 +1,7 @@
 package com.jetbrains.inspections;
 
-@SuppressWarnings({"unused", "UnnecessaryLocalVariable"})
+@SuppressWarnings({"unused"})
 public class SwitchExpressions {
-
 
     private PortType replaceSimpleSwitch(int port) {
         PortType type;

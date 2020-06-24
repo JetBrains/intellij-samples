@@ -9,7 +9,7 @@ public class TextBlocks {
                   "</html>\n";
 
     String script = "function hello() {\n" +
-                    "   print('\"Hello World\"');\n" +
+                    "   print(\"Hello World\");\n" +
                     "}\n" +
                     "\n" +
                     "hello();\n";

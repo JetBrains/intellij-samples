@@ -4,7 +4,7 @@ import com.jetbrains.inspections.entities.Employee;
 import com.jetbrains.inspections.entities.Person;
 
 @SuppressWarnings("unused")
-public class Java14Inspections {
+public class PatternMatchingForInstanceOf {
 
     private void workFromHome(Person person) {
         if (person instanceof Employee) {

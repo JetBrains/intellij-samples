@@ -39,6 +39,14 @@ public class LocalTypes {
         // do something with the values in peopleByRole
     }
 
+    private void localInterfaces() {
+        interface MyInterface {
+            void doSomething(Person person);
+        }
+
+        // do something with MyInterface
+    }
+
 
     //<editor-fold desc="Helper methods">
     @NotNull

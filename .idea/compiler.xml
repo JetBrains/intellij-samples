@@ -17,7 +17,7 @@
       <module name="com.jetbrains_buildSrc_main" target="1.10" />
       <module name="com.jetbrains_buildSrc_test" target="1.10" />
       <module name="spring-tricks" target="11" />
-      <module name="standard-java" target="14" />
+      <module name="standard-java" target="15" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

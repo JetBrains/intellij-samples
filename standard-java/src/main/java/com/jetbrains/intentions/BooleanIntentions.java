@@ -1,14 +1,13 @@
 package com.jetbrains.intentions;
 
-import static java.lang.System.out;
-
+@SuppressWarnings("unused")
 public class BooleanIntentions {
-    public void deMorgans(boolean p, boolean q, boolean r) {
+    public void replaceNotAndWithOr(boolean p, boolean q, boolean r) {
         //Replace '&&' with '||'
         if (!p && !q && !r) {
-            out.println("p and q and r are *all* false");
+            System.out.println("p and q and r are *all* false");
         } else {
-            out.println("at least one of p, q or r is true");
+            System.out.println("at least one of p, q or r is true");
         }
     }
 

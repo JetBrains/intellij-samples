@@ -2,10 +2,12 @@ package com.jetbrains.refactoring;
 
 import com.jetbrains.entity.Customer;
 
+import java.util.List;
 import java.util.regex.Pattern;
 
 @SuppressWarnings("unused")
-class ExtractVariable {
+class IntroduceVariable {
+    private static final int MAX_LIMIT = 10;
     private final Order order = new Order();
 
     private final String fullName = order.getCustomer().firstName() +
@@ -21,13 +23,35 @@ class ExtractVariable {
         System.out.println("Hello " + order.getCustomer().firstName());
     }
 
-    //<editor-fold desc="Helper Classes">
+    private void introduceVariableInABranch(List<Order> orders) {
+        if (orders.size() < MAX_LIMIT) {
+            if (isSpecialOccasion()) {
+                sendLocalisedMessage("ALL_GOOD", orders.size());
+                sendLocalisedMessage("ORDER_SIZE", orders.size());
+            } else {
+                sendLocalisedMessage("TOO_MANY", orders.size());
+                sendLocalisedMessage("ORDER_SIZE", orders.size());
+            }
+        } else {
+            sendLocalisedMessage("ALL_GOOD", orders.size());
+            sendLocalisedMessage("ORDER_SIZE", orders.size());
+        }
+    }
+
+    //<editor-fold desc="Helper Classes and methods">
     private class Order {
         private Customer customer = new Customer("Chris", "Last-Name");
-
         public Customer getCustomer() {
             return customer;
         }
+
+    }
+
+    private void sendLocalisedMessage(String messageKey, int size) {
+    }
+
+    private boolean isSpecialOccasion() {
+        return false;
     }
     //</editor-fold>
 }

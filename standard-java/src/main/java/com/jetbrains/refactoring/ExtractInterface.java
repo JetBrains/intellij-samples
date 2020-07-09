@@ -1,11 +1,12 @@
 package com.jetbrains.refactoring;
 
 
+@SuppressWarnings({"unused", "UnusedReturnValue"})
 public class ExtractInterface {
-    public class Alpha{}
-    public class Bravo{}
-    public class Charlie{}
-    public class Delta{}
+    public static class Alpha{}
+    public static class Bravo{}
+    public static class Charlie{}
+    public static class Delta{}
 
     public Bravo alphaBravo(Alpha a) {
         return new Bravo();
@@ -15,7 +16,7 @@ public class ExtractInterface {
         return new Delta();
     }
 
-    public class Echo {
+    public static class Echo {
         public Bravo alphaBravo(Alpha a) {
             return new Bravo();
         }

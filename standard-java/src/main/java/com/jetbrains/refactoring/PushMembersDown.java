@@ -1,8 +1,9 @@
 package com.jetbrains.refactoring;
 
 
+@SuppressWarnings("unused")
 public class PushMembersDown {
-    public class A {
+    public static class A {
         //Push these members down to subclasses
         public void a() {
             System.out.println("a");
@@ -20,21 +21,21 @@ public class PushMembersDown {
             System.out.println("d");
         }
 
-        class B extends A {
+        static class B extends A {
             public void ab() {
                 a();
                 b();
             }
         }
 
-        class C extends A {
+        static class C extends A {
             public void cd() {
                 c();
                 d();
             }
         }
 
-        class D extends A {
+        static class D extends A {
             public void da() {
                 d();
                 a();

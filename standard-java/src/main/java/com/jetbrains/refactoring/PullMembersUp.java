@@ -1,10 +1,11 @@
 package com.jetbrains.refactoring;
 
 
+@SuppressWarnings("unused")
 public class PullMembersUp {
-    public class A {
+    public static class A {
 
-        class B extends A {
+        static class B extends A {
             public void ab() {
                 a();
                 b();
@@ -24,7 +25,7 @@ public class PullMembersUp {
             }
         }
 
-        class C extends A {
+        static class C extends A {
             public void bc() {
                 b();
                 c();
@@ -44,7 +45,7 @@ public class PullMembersUp {
             }
         }
 
-        class D extends A {
+        static class D extends A {
             public void ca() {
                 c();
                 a();

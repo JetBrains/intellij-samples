@@ -1,0 +1,209 @@
+{
+  "json": [
+    {
+      "openStreetMapId": 2852153005,
+      "location": {
+        "coordinates": [
+          "-73.616748",
+          "45.4699795"
+        ],
+        "type": "Point"
+      },
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "internet_access": "yes",
+      "name": "Chimera",
+      "smoking": "no"
+    },
+    {
+      "openStreetMapId": 2852194101,
+      "location": {
+        "coordinates": [
+          "139.653888",
+          "35.857822"
+        ],
+        "type": "Point"
+      },
+      "addr": "housenumber",
+      "addr": "postcode",
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "description": "1F",
+      "name": "TULLY"
+    },
+    {
+      "openStreetMapId": 2852206601,
+      "location": {
+        "coordinates": [
+          "-118.1454277",
+          "33.7718616"
+        ],
+        "type": "Point"
+      },
+      "addr": "city",
+      "addr": "housenumber",
+      "amenity": "cafe",
+      "atm": "no",
+      "cuisine": "coffee_shop",
+      "drive_through": "no",
+      "internet_access": "wlan",
+      "name": "Viento",
+      "outdoor_seating": "no",
+      "smoking": "no",
+      "takeaway": "yes",
+      "website": "http"
+    },
+    {
+      "openStreetMapId": 2852233247,
+      "location": {
+        "coordinates": [
+          "-118.2891759",
+          "34.1620448"
+        ],
+        "type": "Point"
+      },
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "name": "Starbucks"
+    },
+    {
+      "openStreetMapId": 2852968457,
+      "location": {
+        "coordinates": [
+          "-0.2234857",
+          "51.7761647"
+        ],
+        "type": "Point"
+      },
+      "amenity": "cafe",
+      "brand": "Costa",
+      "cuisine": "coffee_shop",
+      "name": "Costa"
+    },
+    {
+      "openStreetMapId": 2853418234,
+      "location": {
+        "coordinates": [
+          "26.5969615",
+          "60.9432323"
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "openStreetMapId": 2853492533,
+      "location": {
+        "coordinates": [
+          "-75.9100991",
+          "42.0991421"
+        ],
+        "type": "Point"
+      },
+      "addr": "city",
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "name": "Laveggio",
+      "opening_hours": "Monday"
+    },
+    {
+      "openStreetMapId": 2853567971,
+      "location": {
+        "coordinates": [
+          "27.7078701",
+          "60.5841884"
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "openStreetMapId": 2853577413,
+      "location": {
+        "coordinates": [
+          "-80.6982446",
+          "28.3553383"
+        ],
+        "type": "Point"
+      },
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "name": "Starbucks"
+    },
+    {
+      "openStreetMapId": 2853786000,
+      "location": {
+        "coordinates": [
+          "-80.5847325",
+          "28.151327"
+        ],
+        "type": "Point"
+      },
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "name": "Starbucks"
+    },
+    {
+      "openStreetMapId": 2854386382,
+      "location": {
+        "coordinates": [
+          "-122.467022",
+          "38.2926316"
+        ],
+        "type": "Point"
+      },
+      "addr": "city"
+    },
+    {
+      "openStreetMapId": 2854533162,
+      "location": {
+        "coordinates": [
+          "26.6184982",
+          "60.9417759"
+        ],
+        "type": "Point"
+      },
+      "addr": "city"
+    },
+    {
+      "openStreetMapId": 2854542849,
+      "location": {
+        "coordinates": [
+          "126.645625",
+          "37.4609083"
+        ],
+        "type": "Point"
+      },
+      "addr": "housenumber",
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "internet_access": "wlan",
+      "name": "카페베네",
+      "smoking": "outside"
+    },
+    {
+      "openStreetMapId": 2865978014,
+      "location": {
+        "coordinates": [
+          "175.2331396",
+          "-37.750416"
+        ],
+        "type": "Point"
+      },
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "name": "Coffee Club"
+    },
+    {
+      "openStreetMapId": 2865978023,
+      "location": {
+        "coordinates": [
+          "175.232925",
+          "-37.7505822"
+        ],
+        "type": "Point"
+      },
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "name": "Robert Harris"
+    }
+  ]
+}

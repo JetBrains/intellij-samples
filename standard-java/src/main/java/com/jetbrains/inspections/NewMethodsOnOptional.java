@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toUnmodifiableList;
 
-@SuppressWarnings({"OptionalUsedAsFieldOrParameterType", "unused"})
+@SuppressWarnings({"OptionalUsedAsFieldOrParameterType", "unused", "Convert2MethodRef", "UnnecessaryLocalVariable"})
 public class NewMethodsOnOptional {
     private String canUseIsEmpty(Optional<String> opt) {
         if (!opt.isPresent()) {
@@ -18,13 +18,6 @@ public class NewMethodsOnOptional {
         }
 
         return opt.get();
-    }
-
-    void invertingOptionalChoosesCorrectMethod(Optional<String> opt) {
-        if (opt.isPresent()) { //.not postfix for isPresent
-            System.out.println("Optional Value");
-            System.out.println(opt.get());
-        }
     }
 
     private String getOptionalValueOrThrowDefaultException(Optional<String> anOptional) {

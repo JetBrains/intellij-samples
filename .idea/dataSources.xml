@@ -1,47 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ChinookDB" uuid="c264bb84-2937-4a55-a0bd-cee38323c3c4">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="H2" uuid="2ab7c0f0-cafb-441e-8a14-91a8d2bffd7d">
+      <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/main/resources/Chinook_Sqlite.sqlite</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="NewPersistenceUnit/Hibernate" uuid="cd317dc9-8fce-462a-9107-0d8b42e935c6">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/src/main/java/com/jetbrains/persistience/META-INF/persistence.xml</remarks>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost/crm</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.35/mysql-connector-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.35/mysql-connector-java-5.1.35-bin.jar</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.35/mysql-connector-java-5.1.35-bin.jar</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.35/mysql-connector-license.txt</url>
-        </library>
-      </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="trishagee@localhost" uuid="0084bb2f-adf8-426f-ac54-b7abca4ac87e">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/trishagee</jdbc-url>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:mem:test</jdbc-url>
     </data-source>
   </component>
 </project>

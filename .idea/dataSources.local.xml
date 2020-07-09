@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="ChinookDB" uuid="c264bb84-2937-4a55-a0bd-cee38323c3c4">
-      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" dbms="SQLITE" exact-version="3.8.11" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-provider>no-auth</auth-provider>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema" qname="" />
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
-    <data-source name="NewPersistenceUnit/Hibernate" uuid="cd317dc9-8fce-462a-9107-0d8b42e935c6">
-      <database-info product="MySQL" version="5.7.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )" dbms="MYSQL" exact-version="5.7.11">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
-      <user-name>root</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema" qname="information_schema" />
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
-    <data-source name="trishagee@localhost" uuid="0084bb2f-adf8-426f-ac54-b7abca4ac87e">
-      <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)" dbms="POSTGRES" exact-version="9.5.3">
+    <data-source name="H2" uuid="2ab7c0f0-cafb-441e-8a14-91a8d2bffd7d">
+      <database-info product="H2" version="1.4.200 (2019-10-14)" jdbc-version="4.1" driver-name="H2 JDBC Driver" driver-version="1.4.200 (2019-10-14)" dbms="H2" exact-version="1.4.200" exact-driver-version="1.4">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <user-name>trishagee</user-name>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="trishagee">
-            <node kind="schema">
-              <name qname="animals" />
-              <name qname="plants" />
-              <name qname="public" />
-            </node>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
           </node>
         </introspection-scope>
       </schema-mapping>

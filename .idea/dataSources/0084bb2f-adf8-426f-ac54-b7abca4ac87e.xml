@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="trishagee@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.17">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.19">
     <root id="1"/>
     <database id="2" parent="1" name="trishagee">
       <ObjectId>16385</ObjectId>
@@ -90,8 +90,8 @@
     </table>
     <view id="25" parent="15" name="animal_sighting">
       <ObjectId>16461</ObjectId>
-      <StateNumber>1014</StateNumber>
       <SourceTextLength>157</SourceTextLength>
+      <StateNumber>1014</StateNumber>
     </view>
     <routine id="26" parent="15" name="archive">
       <ObjectId>16465</ObjectId>

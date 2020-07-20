@@ -1,21 +1,14 @@
 package com.jetbrains.refactoring;
 
-/**
- * Created by hadihariri on 09/09/16.
- */
+@SuppressWarnings("unused")
 public class InvertBoolean {
-    private boolean isValid = false;
+    private final boolean isValid = false;
 
     public void usingBooleans() {
-
         if (!isValid) {
-            System.out.println("Something takes place here");
+            System.out.println("Input is NOT valid");
         } else {
-            System.out.println("Something else takes place here");
+            System.out.println("All good");
         }
     }
-
-
-
-
 }

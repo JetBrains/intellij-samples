@@ -2,7 +2,11 @@ package com.jetbrains.completion;
 
 @SuppressWarnings("unused")
 public class CodeCompletion {
-    // type private void completion and show completion without shortcuts
+    // type 'private void methodName' and show completion without shortcuts
+
+    private static Square createSquare() {
+        return new Square();
+    }
 
     private interface Shape {
         void draw();

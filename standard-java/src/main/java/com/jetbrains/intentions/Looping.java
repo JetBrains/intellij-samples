@@ -2,8 +2,22 @@ package com.jetbrains.intentions;
 
 import java.util.List;
 
+import static java.lang.System.out;
+
 @SuppressWarnings("unused")
 public class Looping {
+
+    private void reverseForLoop() {
+        for (int i = 0; i < 10; i++) {
+            out.println(i);
+        }
+    }
+
+    private void replaceForWithWhile() {
+        for (int i = 0; i < 10; i++) {
+            out.println(i);
+        }
+    }
 
     private void unrollLoopOfIntValues() {
         int[] ints = {1, 2, 3};

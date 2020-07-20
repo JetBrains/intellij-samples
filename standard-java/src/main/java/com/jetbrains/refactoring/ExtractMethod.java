@@ -16,10 +16,6 @@ public class ExtractMethod {
         System.out.println(s);
 
         //Extract this loop
-        printSteps(steps);
-    }
-
-    private static void printSteps(String[] steps) {
         for(String step : steps) {
             System.out.println(step);
         }
@@ -28,7 +24,9 @@ public class ExtractMethod {
     @SuppressWarnings("unused")
     public static class StepPrinter {
         public void printTheSteps(String... theSteps) {
-            printSteps(theSteps);
+            for(String step : theSteps) {
+                System.out.println(step);
+            }
         }
     }
 }

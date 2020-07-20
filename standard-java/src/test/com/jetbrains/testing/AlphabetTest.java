@@ -1,9 +1,10 @@
 package com.jetbrains.testing;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class AlphabetTest {
     private String s = "supercalifragilisticexpialidocious!~";

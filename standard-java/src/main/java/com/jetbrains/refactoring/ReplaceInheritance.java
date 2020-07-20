@@ -1,8 +1,6 @@
 package com.jetbrains.refactoring;
 
-/**
- * Created by hadihariri on 09/09/16.
- */
+@SuppressWarnings("unused")
 public class ReplaceInheritance extends SuperClass {
 
     void currentClassMethod() {

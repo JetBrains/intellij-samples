@@ -2,6 +2,7 @@ package com.jetbrains.refactoring;
 
 
 public class ExtractDelegate {
+    // this needs a better example.
     public static void main(String[] args) {
         String s = "How to extract a delegate: ";
 

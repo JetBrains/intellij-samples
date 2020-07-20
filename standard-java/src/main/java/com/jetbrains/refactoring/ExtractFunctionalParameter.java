@@ -1,17 +1,16 @@
 package com.jetbrains.refactoring;
 
-
+@SuppressWarnings("unused")
 public class ExtractFunctionalParameter {
     public static void main(String[] args) {
-        doStuff();
+        convertToDouble();
     }
 
-    private static void doStuff() {
+    private static void convertToDouble() {
         long i = 0;
         String s = "d";
         Double d = stringToDouble(i + s);
     }
-
 
     @FunctionalInterface
     public interface MyFunction<A, B, C, D> {
@@ -19,10 +18,10 @@ public class ExtractFunctionalParameter {
     }
 
     private static double stringToDouble(String s) {
-        return Double.valueOf(s);
+        return Double.parseDouble(s);
     }
 
-    class MyClass {
+    static class MyClass {
         public String getS() {
             return s;
         }

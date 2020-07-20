@@ -14,13 +14,13 @@ class IntroduceVariable {
                                     " " +
                                     order.getCustomer().lastName();
 
+    private void simpleExtractVariable() {
+        System.out.println("Hello " + order.getCustomer().firstName());
+    }
+
     private int automaticallyConvertTernaryToIfStatementWhenNeeded(String message) {
         Pattern whitespace = Pattern.compile("\\s");
         return message != null ? whitespace.matcher(message).start() : -1;
-    }
-
-    private void simpleExtractVariable() {
-        System.out.println("Hello " + order.getCustomer().firstName());
     }
 
     private void introduceVariableInABranch(List<Order> orders) {
@@ -39,8 +39,8 @@ class IntroduceVariable {
     }
 
     //<editor-fold desc="Helper Classes and methods">
-    private class Order {
-        private Customer customer = new Customer("Chris", "Last-Name");
+    private static class Order {
+        private final Customer customer = new Customer("Chris", "Last-Name");
         public Customer getCustomer() {
             return customer;
         }

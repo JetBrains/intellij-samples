@@ -5,14 +5,24 @@ import com.jetbrains.entity.Customer;
 public class DataTypeRendering {
 
     public static void main(String[] args) {
+        CustomType customType = new CustomType("J", "Smith", "j.smith@nothing.com");
 
-        Customer customer = new Customer("Pat", "Last-Name");
-
-//        customer.setFirstName("Jane");
-//        customer.setLastName("Smith");
-//        customer.setEmail("jane.smith@gmail.com");
-
-        System.out.println(customer.firstName());
+        System.out.println(customType.firstName());
     }
 
+    private static class CustomType {
+        private final String firstName;
+        private final String lastName;
+        private final String email;
+
+        public CustomType(String firstName, String lastName, String email) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+        }
+
+        public String firstName() {
+            return firstName;
+        }
+    }
 }

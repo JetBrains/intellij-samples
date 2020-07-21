@@ -26,6 +26,12 @@ public class Looping {
         }
     }
 
+    private void unrollDecreasingLoops() {
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+        }
+    }
+
     // now (2020.2) uses dataflow analysis to get the loop size
     private void unrollList(List<String> list) {
         if (list.size() == 2) {

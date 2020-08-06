@@ -12,6 +12,10 @@ public class LiveTemplates {
     public List<Person> getEmployed(final List<Person> people) {
         List<Person> employees = new ArrayList<>();
 
+        for (Person employee : employees) {
+            System.out.println("employee = " + employee);
+        }
+
         return employees;
     }
 

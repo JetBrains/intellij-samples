@@ -11,13 +11,12 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("unused")
 public class JavaAt25 {
     private void weLoveCollections() {
         final List<String> strings = new ArrayList<>();
         final Map<Integer, String> map = new HashMap<>();
         final Set<Integer> integers = new HashSet<>();
-
-
     }
 
     private void weLoveCollectionsFactories() {

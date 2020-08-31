@@ -2,6 +2,7 @@ package com.jetbrains.inspections.entities;
 
 import com.jetbrains.code.Location;
 
+@SuppressWarnings("unused")
 public class Person implements Cloneable {
     private boolean employed;
     private boolean customer;

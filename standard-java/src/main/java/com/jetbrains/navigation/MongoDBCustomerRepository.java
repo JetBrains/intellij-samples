@@ -7,7 +7,7 @@ import java.util.List;
 public class MongoDBCustomerRepository implements CustomerRepository {
     @Override
     public void save(Customer customer) {
-
+        // implementation details for MongoDB
     }
 
     @Override

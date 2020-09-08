@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/spring-tricks/spring-tricks.iml" filepath="$PROJECT_DIR$/spring-tricks/spring-tricks.iml" />
       <module fileurl="file://$PROJECT_DIR$/standard-java.iml" filepath="$PROJECT_DIR$/standard-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>

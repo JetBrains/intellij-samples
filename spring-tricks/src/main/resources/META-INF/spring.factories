@@ -1,2 +1,0 @@
-org.springframework.context.ApplicationListener=\
-  springtips.configuration.springFactories.MyApplicationListener

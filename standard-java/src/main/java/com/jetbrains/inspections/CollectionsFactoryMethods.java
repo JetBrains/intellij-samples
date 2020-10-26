@@ -11,12 +11,16 @@ import java.util.Set;
 import static java.util.Arrays.asList;
 
 @SuppressWarnings("unused")
-public class Java9Inspections {
-    private static final List<String> EXAMPLE_LIST =
+public class CollectionsFactoryMethods {
+    // did you know you can get IntelliJ IDEA to wrap these in an unmodifiableList?
+    private static final List<String> EXAMPLE_SIMPLE_LIST =
+            Arrays.asList("aaa", "bbb", "ccc", "ddd", "eee");
+
+    private static final List<String> EXAMPLE_UNMODIFIABLE_LIST =
             Collections.unmodifiableList(Arrays.asList("aaa", "bbb", "ccc", "ddd", "eee"));
 
-    private static final Set<String> EXAMPLE_SET
-            = Collections.unmodifiableSet(new HashSet<>(asList("HAPPY", "SAD")));
+    private static final Set<String> EXAMPLE_SET =
+            Collections.unmodifiableSet(new HashSet<>(asList("HAPPY", "SAD")));
 
     private static final Map<String, Integer> WORD_TO_SCORE = Collections.unmodifiableMap(new HashMap<>() {
         {
@@ -39,17 +43,4 @@ public class Java9Inspections {
         }
     });
 
-
-    private String useNewObjectsStaticMethod() {
-        String someValue = getSomeValue();
-
-        if (someValue != null) {
-            return someValue;
-        }
-        return "default";
-    }
-
-    private String getSomeValue() {
-        return null;
-    }
 }

@@ -2,7 +2,7 @@ package com.jetbrains.debugging;
 
 import com.jetbrains.entity.OrderItem;
 import com.jetbrains.entity.Product;
-import com.jetbrains.inspections.Java9Inspections;
+import com.jetbrains.inspections.CollectionsFactoryMethods;
 
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +24,7 @@ public class DebuggingTest {
         UnderTest underTest = new UnderTest();
         underTest.doSomething();
 
-        Java9Inspections java9Inspections = new Java9Inspections();
+        CollectionsFactoryMethods collectionsFactoryMethods = new CollectionsFactoryMethods();
 
         IgnoreException ignoreException = new IgnoreException();
 

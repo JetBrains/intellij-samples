@@ -10,6 +10,7 @@ import java.util.Set;
 
 import static java.util.Arrays.asList;
 
+// #ModernJava
 @SuppressWarnings("unused")
 public class CollectionsFactoryMethods {
     // did you know you can get IntelliJ IDEA to wrap these in an unmodifiableList?

@@ -12,6 +12,7 @@ import static java.util.stream.Collectors.toUnmodifiableList;
 
 @SuppressWarnings({"OptionalUsedAsFieldOrParameterType", "unused", "Convert2MethodRef", "UnnecessaryLocalVariable"})
 public class NewMethodsOnOptional {
+    // #ModernJava
     private String canUseIsEmpty(Optional<String> opt) {
         if (!opt.isPresent()) {
             throw new IllegalArgumentException("This should not be empty!");
@@ -20,22 +21,24 @@ public class NewMethodsOnOptional {
         return opt.get();
     }
 
+    // Java 10
     private String getOptionalValueOrThrowDefaultException(Optional<String> anOptional) {
-        return anOptional.orElseThrow(() -> new RuntimeException("This is really bad!"));
+        return anOptional.orElseThrow();
     }
 
+    // Java 9
     private void optionalIfPresentOrElse(Optional<String> anOptional) {
-        anOptional.ifPresentOrElse(
-                s -> doSomethingWith(s),
-                () -> doSomethingElse()
-        );
+        anOptional.ifPresentOrElse(s -> doSomethingWith(s),
+                                   () -> doSomethingElse());
     }
 
+    // Java 9
     private Optional<Customer> useOptionalWithOr() {
         Optional<Customer> optionalCustomer = getCurrentCustomer().or(this::getNextCustomer);
         return optionalCustomer;
     }
 
+    // Java 9
     private List<Customer> useOptionalWithStream(Stream<Order> orders) {
         Stream<Optional<Customer>> streamOfOptionals = findCustomersWithOutstandingOrders();
         return streamOfOptionals.flatMap(customer -> customer.stream())

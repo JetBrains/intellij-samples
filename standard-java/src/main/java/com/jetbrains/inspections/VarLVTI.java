@@ -16,6 +16,7 @@ import static java.util.stream.Collectors.groupingBy;
 @SuppressWarnings("unused")
 public class VarLVTI {
     /* Examples of best practice, as per http://openjdk.java.net/projects/amber/LVTIstyle.html */
+    // #ModernJava
     private void considerVarWhenInitializerProvidesSufficientInformationToReader() throws IOException {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         BufferedReader reader = Files.newBufferedReader(Paths.get("/"));
@@ -23,6 +24,7 @@ public class VarLVTI {
         ByteArrayOutputStream stuff = doTheThing();
     }
 
+    // #ModernJava
     private void takeCareWhenUsingVarWithDiamondOrGenericMethods() {
         List<String> safeList = List.of("One");
         List<String> unsafeList = List.of();
@@ -30,6 +32,7 @@ public class VarLVTI {
         ArrayList<String> intelliJIDEAMovesTheTypeToTheRight = new ArrayList<>();
     }
 
+    // #ModernJava
     private Optional<String> varCanBreakUpChainedOrNestedExpressionsWithLocalVariables(List<String> strings) {
         return strings.stream()
                       .collect(groupingBy(s -> s, counting()))
@@ -40,6 +43,7 @@ public class VarLVTI {
     }
 
     // Developer knowledge required
+    // #ModernJava
     private void chooseVariableNamesThatProvideUsefulInformation() {
         List<Person> tmp = getEveryone();
 
@@ -64,6 +68,7 @@ public class VarLVTI {
 
     /* End of best practice examples */
 
+    // #ModernJava
     void varCanSimplifyGenericTypes(Map<? extends String, ? extends Number> map, int max) {
         for (Iterator<? extends Map.Entry<? extends String, ? extends Number>> iterator = map.entrySet()
                                                                                              .iterator();
@@ -76,6 +81,7 @@ public class VarLVTI {
         }
     }
 
+    // #ModernJava
     private String varCanSimplifyTryWithResources(Socket socket, String charsetName) throws IOException {
         try (InputStream is = socket.getInputStream();
              InputStreamReader isr = new InputStreamReader(is, charsetName);

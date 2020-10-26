@@ -8,6 +8,7 @@ import static java.util.Collections.unmodifiableList;
 @SuppressWarnings("unused")
 public class StreamsAPI {
 
+    // #ModernJava
     public List<String> replaceUnmodifiableListWrapperWithUnmodifiableListCollector(List<String> strings) {
         // inspection only works in Java 10 and above
         return unmodifiableList(strings.stream()

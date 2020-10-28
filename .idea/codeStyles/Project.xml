@@ -3,10 +3,14 @@
     <H2CodeStyleSettings version="5">
       <option name="USE_GENERAL_STYLE" value="false" />
     </H2CodeStyleSettings>
+    <JavaCodeStyleSettings>
+      <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="10" />
+    </JavaCodeStyleSettings>
     <codeStyleSettings language="JAVA">
       <option name="ALIGN_MULTILINE_CHAINED_METHODS" value="true" />
       <option name="ALIGN_MULTILINE_PARAMETERS_IN_CALLS" value="true" />
       <option name="ALIGN_MULTILINE_BINARY_OPERATION" value="true" />
+      <option name="CALL_PARAMETERS_WRAP" value="5" />
       <option name="METHOD_CALL_CHAIN_WRAP" value="1" />
       <arrangement>
         <groups>

@@ -23,7 +23,7 @@ public class Person implements Cloneable {
         return employed;
     }
 
-    public void goTo(Location location) throws TooSickToMoveException{
+    public void goTo(Location location) throws TooSickToMoveException {
 
     }
 

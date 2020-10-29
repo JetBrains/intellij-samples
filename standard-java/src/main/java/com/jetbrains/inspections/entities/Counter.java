@@ -2,7 +2,7 @@ package com.jetbrains.inspections.entities;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Counter implements Comparable<Counter>{
+public class Counter implements Comparable<Counter> {
     public final static Counter EMPTY = new Counter();
     private int count;
 
@@ -16,6 +16,6 @@ public class Counter implements Comparable<Counter>{
 
     @Override
     public int compareTo(@NotNull Counter o) {
-        return count-o.count;
+        return count - o.count;
     }
 }

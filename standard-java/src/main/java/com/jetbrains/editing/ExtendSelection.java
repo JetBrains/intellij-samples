@@ -1,6 +1,9 @@
 package com.jetbrains.editing;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
@@ -9,8 +12,8 @@ import static java.util.stream.Collectors.groupingBy;
 public class ExtendSelection {
     private Set<Map.Entry<String, Long>> exampleCodeForExtendAndShrinkSelection() {
         return getStrings().stream()
-                .collect(groupingBy(stringValue -> stringValue, counting()))
-                .entrySet();
+                           .collect(groupingBy(stringValue -> stringValue, counting()))
+                           .entrySet();
     }
 
     private List<String> getStrings() {

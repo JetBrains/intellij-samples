@@ -4,7 +4,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
+import java.util.StringJoiner;
 
 @SuppressWarnings({"unused", "StatementWithEmptyBody"})
 public class Inspections20182 {
@@ -43,10 +45,10 @@ public class Inspections20182 {
             event = eventClass.getConstructor().newInstance();
         } catch (Exception e) {
             throw new Exception("The argument event class"
-                    + eventClass.getClass()
-                                .getName() // will always print java.lang.Class, not actual event class
-                    + " could not be instantiated with a default constructor",
-                    e);
+                                + eventClass.getClass()
+                                            .getName() // will always print java.lang.Class, not actual event class
+                                + " could not be instantiated with a default constructor",
+                                e);
         }
         return event;
     }

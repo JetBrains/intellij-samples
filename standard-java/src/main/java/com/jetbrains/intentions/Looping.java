@@ -42,13 +42,13 @@ public class Looping {
     }
 
     // can unroll and the collapse back into loop
-    private void unrollValues(){
+    private void unrollValues() {
         for (int i = 0; i < 5; i++) {
             System.out.println(i);
         }
     }
 
-    public void collapseIntoLoop () {
+    public void collapseIntoLoop() {
         System.out.println("Hello");
         System.out.println("Hello");
         System.out.println("Hello");

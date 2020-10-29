@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class ListAndLoopInspections {
     private void warnOnListRemoveInsideCountedLoop(List<String> someList) {
         for (int i = 0; i < 10; i++) {

@@ -10,6 +10,6 @@ public class StringRefactoring {
 
     private void replaceCalculationWithResult() {
         // Alt + Enter on 100 * 4
-        String message2 = String.format("This is a value %d", 100*4);
+        String message2 = String.format("This is a value %d", 100 * 4);
     }
 }

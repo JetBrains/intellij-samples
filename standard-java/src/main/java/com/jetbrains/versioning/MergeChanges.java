@@ -1,6 +1,7 @@
 package com.jetbrains.versioning;
 
 
+@SuppressWarnings("unused")
 public class MergeChanges {
     private int anInt;
     private double aDouble;
@@ -12,7 +13,7 @@ public class MergeChanges {
         aDouble = 1.0;
         this.anInt = anInt;
         this.flag = false;
-        this.anInt = anInt+1;
+        this.anInt = anInt + 1;
         this.aFloat = 2F;
         this.string = s + ":";
     }

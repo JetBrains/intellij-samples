@@ -9,8 +9,8 @@ class StreamExample {
     public static void main(String[] args) {
         List<String> lines = Arrays.asList("pear", "apple", "clementine");
         List<String> result = lines.stream()
-                .filter(line -> !"apple".equals(line))
-                .collect(Collectors.toList());
+                                   .filter(line -> !"apple".equals(line))
+                                   .collect(Collectors.toList());
 
         result.forEach(System.out::println);
     }

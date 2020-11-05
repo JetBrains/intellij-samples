@@ -8,6 +8,31 @@ public class CodeCompletion {
         return new Square();
     }
 
+    void stringCompletionExamples(String aString) {
+        // type `aString` and see what sort of completions are available
+        String substring = aString.substring(2, 56);
+        aString.indexOf('3');
+
+
+        // 2020.3: go to Settings -> Editor -> Code Completion and check the "mark position in completion popup
+        String substring1 = aString.substring(3);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private interface Shape {
         void draw();
 

@@ -1,34 +1,43 @@
 package com.jetbrains.refactoring;
 
-import java.security.AuthProvider;
-
+@SuppressWarnings("FieldCanBeLocal")
 public class Rename {
-    enum Provider {
-        EC2, GCE, AZURE
+    @SuppressWarnings("unused")
+    static class FlavourProvider {
+
+        private final Flavour flavour;
+        private Decorator decorator;
+
+        public FlavourProvider(Flavour flavour) {
+            this.flavour = flavour;
+        }
+
+        public void setDecorator(Decorator decorator) {
+            this.decorator = decorator;
+        }
+
     }
 
-    static class CloudProvider {
-        private Provider provider;
-        private AuthProvider authProvider;
-
-        public CloudProvider(Provider provider) {
-            this.provider = provider;
-        }
-
-        public Provider getProvider() {
-            return this.provider;
-        }
-
-        public void setAuthProvider(AuthProvider authProvider) {
-            this.authProvider = authProvider;
-        }
+    enum Flavour {
+        RED, GREEN, BLUE
     }
 
     public static void main(String[] args) {
-        CloudProvider primary = new CloudProvider(Provider.EC2);
-        CloudProvider secondary = new CloudProvider(Provider.GCE);
+        FlavourProvider primary = new FlavourProvider(Flavour.RED);
+        FlavourProvider secondary = new FlavourProvider(Flavour.GREEN);
+        FlavourProvider tertiary = new FlavourProvider(Flavour.BLUE);
 
-        primary.setAuthProvider(null);
-        secondary.setAuthProvider(primary.authProvider);
+        primary.setDecorator(new Decorator("red"));
+        secondary.setDecorator(new Decorator("green"));
+        tertiary.setDecorator(new Decorator("blue"));
+    }
+
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
+    private static class Decorator {
+        private final String name;
+
+        public Decorator(String name) {
+            this.name = name;
+        }
     }
 }

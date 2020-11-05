@@ -15,10 +15,7 @@ public class Alphabet {
             return true;
         if (c == 'o')
             return true;
-        if (c == 'u')
-            return true;
-
-        return false;
+        return c == 'u';
     }
 
     public static int countConsonants(String s) {

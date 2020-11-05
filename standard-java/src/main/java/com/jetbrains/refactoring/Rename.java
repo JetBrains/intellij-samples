@@ -1,10 +1,8 @@
 package com.jetbrains.refactoring;
 
-@SuppressWarnings("FieldCanBeLocal")
 public class Rename {
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "FieldCanBeLocal"})
     static class FlavourProvider {
-
         private final Flavour flavour;
         private Decorator decorator;
 
@@ -15,7 +13,6 @@ public class Rename {
         public void setDecorator(Decorator decorator) {
             this.decorator = decorator;
         }
-
     }
 
     enum Flavour {
@@ -27,17 +24,12 @@ public class Rename {
         FlavourProvider secondary = new FlavourProvider(Flavour.GREEN);
         FlavourProvider tertiary = new FlavourProvider(Flavour.BLUE);
 
+        // Flavour RED needs to be labelled as some sort of red
         primary.setDecorator(new Decorator("red"));
         secondary.setDecorator(new Decorator("green"));
         tertiary.setDecorator(new Decorator("blue"));
     }
 
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
-    private static class Decorator {
-        private final String name;
-
-        public Decorator(String name) {
-            this.name = name;
-        }
+    private static record Decorator(String name) {
     }
 }

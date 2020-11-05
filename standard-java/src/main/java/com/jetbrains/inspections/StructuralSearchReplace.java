@@ -3,9 +3,10 @@ package com.jetbrains.inspections;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+//Search template: logger.log($level$, $message$, $args$); (import existing template of logging without if)
 @SuppressWarnings("unused")
 public class StructuralSearchReplace {
-    private final Logger logger = Logger.getLogger(StructuralSearchReplace.class.getName());
+    private final Logger logger = Logger.getLogger(StructuralSearch.class.getName());
 
     public void logInfoWithinCheck() {
         if (logger.isLoggable(Level.INFO)) {
@@ -28,4 +29,3 @@ public class StructuralSearchReplace {
 
 }
 
-//Search template: logger.log($level$, $message$, $args$); (import existing template of logging without if)

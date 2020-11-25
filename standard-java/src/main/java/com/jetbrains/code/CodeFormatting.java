@@ -1,5 +1,7 @@
 package com.jetbrains.code;
 
+import java.util.List;
+
 @SuppressWarnings("unused")
 public class CodeFormatting {
     public void forceIfStatementsToHaveBraces(int someValue) {
@@ -15,5 +17,10 @@ public class CodeFormatting {
           System.out.println("Third line");
         for (int i = 0; i < 3; i++)
         System.out.println("I have no idea where the indentation is supposed to be");
+    }
+
+    // Use Alt+Enter and select "Put parameters on separate lines"
+    public void methodWithLotsOfParameters(int param1, String param2, long param3, List<String> param4) {
+        // do some business logic here
     }
 }

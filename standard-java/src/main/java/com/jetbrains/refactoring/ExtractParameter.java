@@ -1,13 +1,17 @@
 package com.jetbrains.refactoring;
 
-import java.lang.reflect.Parameter;
-
-
+@SuppressWarnings("unused")
 public class ExtractParameter {
-    public void extractParameter(Parameter p) {
-        //Extract parameter via Ctrl/Cmd+Alt+P
-        Parameter parameter = getClass().getEnclosingMethod().getParameters()[0];
+    public void methodThatCallsExtractParameterMethod() {
+        // IntelliJ IDEA will automatically change this when the extractParameter method is changed
+        extractParameter("The String");
+    }
 
-        System.out.println(parameter.getName());
+    void extractParameter(String stringValue) {
+        // Extract parameter: Ctrl+Alt+P/Cmd+Option+P
+        // Note that IntelliJ IDEA will automatically remove the now-redundant stringValue param
+        int stringLength = stringValue.length();
+
+        System.out.println(stringLength);
     }
 }

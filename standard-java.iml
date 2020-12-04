@@ -21,7 +21,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_15_PREVIEW">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_X">
     <output url="file://$MODULE_DIR$/standard-java/target/classes" />
     <output-test url="file://$MODULE_DIR$/standard-java/target/test-classes" />
     <content url="file://$MODULE_DIR$/standard-java">

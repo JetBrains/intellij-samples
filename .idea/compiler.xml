@@ -16,7 +16,7 @@
       <module name="code-samples_test" target="1.8" />
       <module name="com.jetbrains_buildSrc_main" target="1.10" />
       <module name="com.jetbrains_buildSrc_test" target="1.10" />
-      <module name="standard-java" target="15" />
+      <module name="standard-java" target="16" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

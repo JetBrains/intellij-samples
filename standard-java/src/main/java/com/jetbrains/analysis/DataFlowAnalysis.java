@@ -127,7 +127,7 @@ public class DataFlowAnalysis {
     }
 
     private void conditionIsCoveredByFurtherCondition(int minValue, int maxValue, int defaultValue) {
-        if (minValue < maxValue || defaultValue < minValue || defaultValue > maxValue) {
+        if (minValue > maxValue || defaultValue < minValue || defaultValue > maxValue) {
             throw new IllegalArgumentException("These values aren't valid");
         }
     }

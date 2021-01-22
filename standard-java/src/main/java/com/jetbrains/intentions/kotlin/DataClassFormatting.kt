@@ -1,4 +1,4 @@
-package com.jetbrains.refactoring.kotlin
+package com.jetbrains.intentions.kotlin
 
 // Alt+Enter after ( -> put parameters in one line
 data class Person(

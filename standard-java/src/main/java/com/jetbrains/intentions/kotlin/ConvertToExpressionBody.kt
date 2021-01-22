@@ -1,4 +1,4 @@
-package com.jetbrains.refactoring.kotlin
+package com.jetbrains.intentions.kotlin
 
 
 // step 1, initial

@@ -1,0 +1,6 @@
+{
+  "name": "Build with Maven",
+  "description": "Build and test the code samples project with Apache Maven.",
+  "iconName": "maven",
+  "categories": ["Java", "Maven"]
+}

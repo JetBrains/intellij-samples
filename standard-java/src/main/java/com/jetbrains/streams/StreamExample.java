@@ -2,7 +2,11 @@ package com.jetbrains.streams;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+//import java.util.stream.Collectors;
+import java.util.stream.*;
+
+import static java.util.stream.Collectors.*;
+
 
 class StreamExample {
 
@@ -19,6 +23,10 @@ class StreamExample {
         List<String> list = Arrays.stream(args).collect(Collectors.toList());
         list.sort(null);
         return list;
+    }
+
+    public void autocompleteList(Stream<String> stream) {
+        List<String> list = stream.toList();
     }
 
 }

@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 //Search template: logger.log($level$, $message$, $args$); (import existing template of logging without if)
 @SuppressWarnings("unused")
 public class StructuralSearchReplace {
-    private final Logger logger = Logger.getLogger(StructuralSearch.class.getName());
+    private final Logger logger = Logger.getLogger("StructuralSearch");
 
     public void logInfoWithinCheck() {
         if (logger.isLoggable(Level.INFO)) {

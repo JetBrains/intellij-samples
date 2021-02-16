@@ -4,8 +4,8 @@ package com.jetbrains.versioning;
 @SuppressWarnings("unused")
 public class MergeChanges {
     private int anInt;
-    private double aDouble;
-    private boolean flag;
+    private final double aDouble;
+    private final boolean flag;
     private String string;
     private float aFloat;
 
@@ -64,7 +64,7 @@ public class MergeChanges {
         else if (anInt % 3 == 0)
             this.anInt += anInt / 3;
         else
-            anInt++;
+            this.anInt++;
     }
 
     @Override

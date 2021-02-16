@@ -10,7 +10,7 @@ public class MergeChanges {
     private float aFloat;
 
     public MergeChanges(int anInt, String s) {
-        aDouble = 1.0;
+        this.aDouble = 1.0;
         this.anInt = anInt;
         this.flag = false;
         this.anInt = anInt + 1;
@@ -29,7 +29,7 @@ public class MergeChanges {
         this.string += string + ",";
     }
 
-    public float getaFloatFactor() {
+    public float getAFloatFactor() {
         int i = (int) aFloat;
 
         for (int j = 0; j < Math.sqrt(j); j++) {
@@ -41,7 +41,7 @@ public class MergeChanges {
 
     }
 
-    public float getaFloat() {
+    public float getAFloat() {
         return aFloat * 3;
     }
 
@@ -65,5 +65,16 @@ public class MergeChanges {
             this.anInt += anInt / 3;
         else
             anInt++;
+    }
+
+    @Override
+    public String toString() {
+        return "MergeChanges{" +
+               "anInt=" + anInt +
+               ", aDouble=" + aDouble +
+               ", flag=" + flag +
+               ", string='" + string + '\'' +
+               ", aFloat=" + aFloat +
+               '}';
     }
 }

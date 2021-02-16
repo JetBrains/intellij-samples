@@ -4,8 +4,8 @@ package com.jetbrains.versioning;
 @SuppressWarnings("unused")
 public class MergeChanges {
     private int anInt;
-    private double aDouble;
-    private boolean flag;
+    private final double aDouble;
+    private final boolean flag;
     private String string;
     private float aFloat;
 
@@ -64,6 +64,19 @@ public class MergeChanges {
         else if (anInt % 3 == 0)
             this.anInt += anInt / 3;
         else
-            anInt++;
+            this.anInt++;
+    }
+
+    @SuppressWarnings("StringBufferReplaceableByString")
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("MergeChanges{");
+        sb.append("anInt=").append(anInt);
+        sb.append(", aDouble=").append(aDouble);
+        sb.append(", flag=").append(flag);
+        sb.append(", string='").append(string).append('\'');
+        sb.append(", aFloat=").append(aFloat);
+        sb.append('}');
+        return sb.toString();
     }
 }

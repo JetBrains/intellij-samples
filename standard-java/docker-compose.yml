@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+
+  examples-mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=supersecurepassword
+      - MYSQL_DATABASE=Examples
+      - MYSQL_USER=app-user
+      - MYSQL_PASSWORD=app-password
+    ports:
+      - 3306:3306

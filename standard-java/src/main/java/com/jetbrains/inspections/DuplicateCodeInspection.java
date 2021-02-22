@@ -12,12 +12,12 @@ public class DuplicateCodeInspection {
     }
 
     // Note that if variable names are different it still counts as duplicate code
-    public StringBuilder duplicate(String[] params) {
+    public void duplicate(String[] params) {
         StringBuilder stringBuilder = new StringBuilder();
         for (String param : params) {
             stringBuilder.append(param).append(", ");
         }
 
-        return stringBuilder;
+        System.out.println(stringBuilder);
     }
 }

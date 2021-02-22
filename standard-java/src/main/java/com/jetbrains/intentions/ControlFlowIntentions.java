@@ -2,13 +2,15 @@ package com.jetbrains.intentions;
 
 import static java.lang.System.out;
 
-public class ControlFlow {
-    public void mergeNestedIfs(boolean a, boolean b, int x) {
+@SuppressWarnings("unused")
+public class ControlFlowIntentions {
+    public int mergeNestedIfs(boolean a, boolean b, int x) {
         if (a) {
             if (b) {
                 x = 1;
             }
         }
+        return x;
     }
 
     public int mergeParallelIfs(int a, int b) {

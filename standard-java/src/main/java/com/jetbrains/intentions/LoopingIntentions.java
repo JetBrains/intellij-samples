@@ -5,7 +5,14 @@ import java.util.List;
 import static java.lang.System.out;
 
 @SuppressWarnings("unused")
-public class Looping {
+public class LoopingIntentions {
+
+    private void replaceWithIndexedLoop() {
+        List<String> values = List.of("values");
+        for (String value : values) {
+            out.println(value);
+        }
+    }
 
     private void reverseForLoop() {
         for (int i = 0; i < 10; i++) {

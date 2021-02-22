@@ -18,11 +18,6 @@ class IntroduceVariable {
         System.out.println("Hello " + order.getCustomer().firstName());
     }
 
-    private int automaticallyConvertTernaryToIfStatementWhenNeeded(String message) {
-        Pattern whitespace = Pattern.compile("\\s");
-        return message != null ? whitespace.matcher(message).start() : -1;
-    }
-
     private void introduceVariableInABranch(List<Order> orders) {
         if (orders.size() < MAX_LIMIT) {
             if (isSpecialOccasion()) {
@@ -36,6 +31,11 @@ class IntroduceVariable {
             sendLocalisedMessage("ALL_GOOD", orders.size());
             sendLocalisedMessage("ORDER_SIZE", orders.size());
         }
+    }
+
+    private int automaticallyConvertTernaryToIfStatementWhenNeeded(String message) {
+        Pattern whitespace = Pattern.compile("\\s");
+        return message != null ? whitespace.matcher(message).start() : -1;
     }
 
     //<editor-fold desc="Helper Classes and methods">

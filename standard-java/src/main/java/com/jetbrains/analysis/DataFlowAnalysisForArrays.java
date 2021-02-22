@@ -7,7 +7,7 @@ class DataFlowAnalysisForArrays {
     private static final int[] DAYS_IN_MONTH =
             {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    private boolean validateMonth(com.jetbrains.analysis.DataFlowAnalysisForArrays.CustomDate date) {
+    private boolean validateMonth(CustomDate date) {
         if (date.getMonth() < 1 || date.getMonth() > 12) {
             return false;
         }
@@ -22,9 +22,7 @@ class DataFlowAnalysisForArrays {
         }
     }
 
-
-
-
+    //<editor-fold desc="Helper methods">
     private boolean isLeapYear(@NotNull CustomDate date) {
         return date.getYear() % 4 == 0;
     }
@@ -52,4 +50,5 @@ class DataFlowAnalysisForArrays {
             return day;
         }
     }
+    //</editor-fold>
 }

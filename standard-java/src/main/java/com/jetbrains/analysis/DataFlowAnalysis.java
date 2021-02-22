@@ -13,6 +13,23 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @SuppressWarnings({"StatementWithEmptyBody", "unused", "Java9CollectionFactory", "MismatchedQueryAndUpdateOfCollection"})
 public class DataFlowAnalysis {
 
+    public String exampleDataFlowAnalysis(int value) {
+        if (value < 0) {
+            throw new IllegalArgumentException("Can't be negative");
+        }
+        if (value > 10 && value < 25) {
+            return "Mid level";
+        } else if (value < 50) {
+            return "Probably not terrible";
+        } else if (value > 75) {
+            return "You're in trouble";
+        } else if (value == 3) {
+            System.out.println("Special value");
+        }
+        // press Ctrl Shift P twice to see what "value" can be
+        return "Levels normal: "+ value;
+    }
+
     //<editor-fold desc="Other Data Flow Examples">
     public void showDataFlowWithInstanceOfExample(Object obj) {
         if (obj instanceof String || obj instanceof Number) {

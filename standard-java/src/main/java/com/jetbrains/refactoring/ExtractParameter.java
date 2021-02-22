@@ -8,7 +8,7 @@ public class ExtractParameter {
     }
 
     void extractParameter(String stringValue) {
-        // Extract parameter: Ctrl+Alt+P/Cmd+Option+P
+        // Extract parameter: Ctrl+Alt+P/Cmd+Option+P on stringLength
         // Note that IntelliJ IDEA will automatically remove the now-redundant stringValue param
         int stringLength = stringValue.length();
 

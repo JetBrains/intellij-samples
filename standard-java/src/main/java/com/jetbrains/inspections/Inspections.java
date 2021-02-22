@@ -1,21 +1,18 @@
 package com.jetbrains.inspections;
 
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.util.List;
 import java.util.regex.Pattern;
 
-@SuppressWarnings("MismatchedQueryAndUpdateOfStringBuilder")
+import static java.lang.Integer.MAX_VALUE;
+import static java.lang.Integer.MIN_VALUE;
+
+@SuppressWarnings({"MismatchedQueryAndUpdateOfStringBuilder", "unused"})
 public class Inspections {
 
     public boolean canReplaceEqualsWithObjectEquals(MyClass myClass) {
         return myClass.equals(new MyClass());
-    }
-
-    public boolean suspiciousEqualsCallOnStringBuilder(CharSequence charSequence) {
-        final StringBuilder stringBuilder = new StringBuilder();
-        return stringBuilder.equals(charSequence);
-    }
-
-    public boolean suspiciousEqualsCallOnString(CharSequence charSequence) {
-        return "Some String".equals(charSequence);
     }
 
     public void removeEmptyIfStatement(String someValue) {
@@ -50,16 +47,59 @@ public class Inspections {
         }
     }
 
-    public boolean canSimplifyIfElse() {
-        boolean enable;
-        if (booleanExpression()) {
-            enable = true;
-        } else {
-            enable = anotherBooleanExpression();
-        }
-        return enable;
+    public void canReplaceStaticImportWithQualifiers() {
+        System.out.println(MAX_VALUE);
+        System.out.println(MIN_VALUE);
     }
 
+    private void suggestsAvoidingCompareToForPrimitives(Foo foo, Bar bar) {
+        if (Integer.compare(foo.getValue(), bar.getValue()) == 0) {
+            //do something here
+        }
+    }
+
+    private void suggestsLocalVariableTypeCanBeMoreSpecific() {
+        Object obj = getString();
+        System.out.println(((String) obj).trim());
+    }
+
+    private void suggestsChangingTheFieldOrVariableType(final AnotherClass target) {
+        String stringValue = "";
+        //uncomment to see suggestions
+//        target.transform(stringValue);
+    }
+
+    private Event getEvent(Class<? extends Event> eventClass) throws Exception {
+        Event event;
+        try {
+            event = eventClass.getConstructor().newInstance();
+        } catch (Exception e) {
+            throw new Exception("The argument event class"
+                                + eventClass.getClass()
+                                            .getName() // will always print java.lang.Class, not actual event class
+                                + " could not be instantiated with a default constructor",
+                                e);
+        }
+        return event;
+    }
+
+    //remove the quotes from theValue to see this in action
+    @MyAnnotation(value = "theValue")
+    private void wrapAsString() {
+    }
+
+    private Integer showsRedundantGenericParams() {
+        return Integer.<String>getInteger("p");
+    }
+
+    //requires "Implicit usage of platform's default charset" inspection (not enabled by default)
+    private void suggestsUtF8CharsetWhenUsingPlatformDefaultCharset(OutputStream os) {
+        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(os);
+    }
+
+    private String canIntroduceLocalVariableForReturnExpression(List<String> params) {
+        return params.get(1);
+    }
 
     //<editor-fold desc="Helper methods and classes">
     private void methodCanThrowExceptionTwo() throws ExceptionTwo {
@@ -82,6 +122,10 @@ public class Inspections {
         return false;
     }
 
+    private String getString() {
+        return "";
+    }
+
     private class ExceptionOne extends Exception {
 
     }
@@ -99,6 +143,18 @@ public class Inspections {
         int getType() {
             return type;
         }
+    }
+    class AnotherClass {
+        void transform(Number arg) {
+        }
+    }
+
+    interface Foo {
+        int getValue();
+    }
+
+    interface Bar {
+        int getValue();
     }
     //</editor-fold>
 }

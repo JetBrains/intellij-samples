@@ -1,9 +1,29 @@
 package com.jetbrains.inspections;
 
 
+@SuppressWarnings("unused")
 public class BooleanInspections {
+
+    private boolean moreBooleanExpressionsCanBeSimplified(boolean a, boolean b) {
+        if (a && b) {
+            return true;
+        } else {
+            return a;
+        }
+    }
+
+    public boolean canSimplifyIfElse() {
+        boolean enable;
+        if (booleanExpression()) {
+            enable = true;
+        } else {
+            enable = anotherBooleanExpression();
+        }
+        return enable;
+    }
+
     //Run inspection by name: "Boolean method is aways inverted"
-    class BooleanMethodIsAlwaysInverted {
+    static class BooleanMethodIsAlwaysInverted {
         public boolean isNotAcademic(String email) {
             if (email == null || email.isEmpty()) {
                 return true;
@@ -20,4 +40,16 @@ public class BooleanInspections {
         String email = "intellij@jetbrains.edu";
         boolean isEligible = !isNotAcademic(email);
     }
+
+    //<editor-fold desc="Helper methods">
+    private boolean anotherBooleanExpression() {
+        return false;
+    }
+
+    private boolean booleanExpression() {
+        return false;
+    }
+    //</editor-fold>
+
+
 }

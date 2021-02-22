@@ -91,6 +91,13 @@ public class OptionalInspections {
         System.out.println(min.get());
     }
 
+    private void warnsAboutComparingOptionalToNull() {
+        final Optional<String> optional = getOptional();
+        if (optional != null) {
+            //do something
+        }
+    }
+
     // Java 11
     void invertingOptionalChoosesCorrectMethod(Optional<String> opt) {
         if (opt.isPresent()) { //.not postfix for isPresent

@@ -34,4 +34,19 @@ class SudokuTest {
         // then
         assertEquals(1, sudoku.getValueAt(location));
     }
+
+    @Test
+    @DisplayName("Should not let me add more than 9 numbers")
+    void shouldNotLetMeAddMoreThan9Numbers() {
+        // given
+        Location location = location(1, 1);
+
+        // when
+        sudoku.addValueAt(1, location);
+
+        // then
+        assertEquals(1, sudoku.getValueAt(location));
+
+        fail("Not implemented");
+    }
 }

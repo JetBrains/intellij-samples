@@ -17,7 +17,7 @@ import static java.util.Arrays.sort;
 import static java.util.stream.Collectors.toList;
 
 /**
- * @noinspection rawtypes
+ * @noinspection MismatchedQueryAndUpdateOfCollection
  */
 @SuppressWarnings({"unused", "unchecked"})
 public class Java8Inspections {

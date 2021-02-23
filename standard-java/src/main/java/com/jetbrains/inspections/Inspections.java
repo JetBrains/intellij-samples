@@ -39,11 +39,11 @@ public class Inspections {
     public void canExtractCommonConditionsFromIfStatements(Event event) {
         // press Alt Enter on firstCondition -> extract if first...
         if (firstCondition(event) && event.getType() == 3) {
-            //do something
+            doSomething();
         } else if (firstCondition(event) && event.getType() == 4) {
-            //do something else
+            doSomethingElse();
         } else if (firstCondition(event) && event.getType() == 5) {
-            //do another thing
+            doSomethingDifferent();
         }
     }
 
@@ -54,7 +54,7 @@ public class Inspections {
 
     private void suggestsAvoidingCompareToForPrimitives(Foo foo, Bar bar) {
         if (Integer.compare(foo.getValue(), bar.getValue()) == 0) {
-            //do something here
+            doSomething();
         }
     }
 
@@ -124,6 +124,18 @@ public class Inspections {
 
     private String getString() {
         return "";
+    }
+
+    private void doSomething() {
+
+    }
+
+    private void doSomethingDifferent() {
+
+    }
+
+    private void doSomethingElse() {
+
     }
 
     private class ExceptionOne extends Exception {

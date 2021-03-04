@@ -4,7 +4,11 @@ import com.jetbrains.inspections.entities.Employee;
 import com.jetbrains.inspections.entities.Person;
 
 /**
- * Available as a #PreviewFeature in #JDK14 and #JDK15, standard feature in #JDK16
+ * <p>Pattern Matching for instanceof</p>
+ *
+ * #PreviewFeature First Preview #JDK14<br/>
+ * #PreviewFeature Second Preview #JDK15<br/>
+ * #StandardFeature #JDK16<br/>
  */
 @SuppressWarnings("unused")
 public class PatternMatchingForInstanceOf {

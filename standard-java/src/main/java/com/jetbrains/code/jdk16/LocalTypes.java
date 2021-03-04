@@ -12,7 +12,9 @@ import java.util.Set;
 import static java.util.stream.Collectors.toUnmodifiableSet;
 
 /**
- * Local records/enums/interfaces.
+ * Local records/enums/interfaces. This change was introduced as part of the Records JEP (in #JDK15) even
+ * though it's not just for records.
+ *
  * #PreviewFeature First Preview #JDK15
  * #StandardFeature #JDK16
  */

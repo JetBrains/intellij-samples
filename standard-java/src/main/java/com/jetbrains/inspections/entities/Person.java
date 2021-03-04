@@ -1,6 +1,6 @@
 package com.jetbrains.inspections.entities;
 
-import com.jetbrains.code.Location;
+import com.jetbrains.entity.Location;
 
 @SuppressWarnings("unused")
 public class Person implements Cloneable {

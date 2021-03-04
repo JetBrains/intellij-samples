@@ -1,7 +1,8 @@
 @file:Suppress("unused")
 
-package com.jetbrains.code
+package com.jetbrains.formatting
 
+import com.jetbrains.code.CustomerOrder
 import java.time.LocalDateTime
 
 // Use Alt+Enter and select "Put parameters on separate lines"

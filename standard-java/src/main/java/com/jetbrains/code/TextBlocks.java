@@ -34,6 +34,14 @@ public class TextBlocks {
                   "      \"smoking\": \"no\"\n" +
                   "    }";
 
+    String mixedTabsAndSpacesWhitespace = """
+            <html>
+            	<body>
+               		<p>Hello World.</p>
+                </body>
+            </html>
+            """;
+
     //note that it doesn't mess with the whitespace when formatting the file
 
     String pastedMultiLineTextBlock = "";

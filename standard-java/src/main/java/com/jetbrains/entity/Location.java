@@ -1,4 +1,4 @@
-package com.jetbrains.code;
+package com.jetbrains.entity;
 
 import com.jetbrains.inspections.entities.Person;
 

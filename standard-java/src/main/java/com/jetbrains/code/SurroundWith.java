@@ -1,5 +1,6 @@
 package com.jetbrains.code;
 
+import com.jetbrains.entity.Location;
 import com.jetbrains.inspections.entities.Person;
 
 public class SurroundWith {
@@ -7,12 +8,10 @@ public class SurroundWith {
 
     public static void main(String[] args) {
         Person person = new Person();
-        try {
-            if (person.isEmployed()) {
-                person.goTo(WORKPLACE);
-            }
-        } catch (Person.TooSickToMoveException e) {
-            person.rest();
+        // select the following and press Option+Cmd+T / Ctrl+Alt+T and select try-catch.
+        // It will automatically populate with the correct exception
+        if (person.isEmployed()) {
+            person.goTo(WORKPLACE);
         }
     }
 

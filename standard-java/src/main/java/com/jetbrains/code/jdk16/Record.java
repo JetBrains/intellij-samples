@@ -1,7 +1,10 @@
-package com.jetbrains.code;
+package com.jetbrains.code.jdk16;
 
 /**
  * Simple example of a record.
+ * #PreviewFeature First Preview #JDK14
+ * #PreviewFeature Second Preview #JDK15
+ * #StandardFeature #JDK16
  *
  * If you want to change a property name you should use refactoring
  *

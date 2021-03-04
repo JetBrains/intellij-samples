@@ -1,0 +1,8 @@
+<component name="DependencyValidationManager">
+  <state>
+    <deny_rule from_scope="Service" to_scope="UI" is_deny="true" />
+    <deny_rule from_scope="Data Access" to_scope="UI" is_deny="true" />
+    <deny_rule from_scope="Data Access" to_scope="Service" is_deny="true" />
+    <deny_rule from_scope="UI" to_scope="Data Access" is_deny="true" />
+  </state>
+</component>

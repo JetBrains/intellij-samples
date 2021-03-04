@@ -1,4 +1,4 @@
-package com.jetbrains.code;
+package com.jetbrains.code.jdk16;
 
 import org.junit.jupiter.api.Test;
 

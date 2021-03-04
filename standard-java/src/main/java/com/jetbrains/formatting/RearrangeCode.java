@@ -1,4 +1,4 @@
-package com.jetbrains.code;
+package com.jetbrains.formatting;
 
 import com.jetbrains.entity.Order;
 

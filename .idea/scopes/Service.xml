@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Service" pattern="src[standard-java]:com.jetbrains.domain.service..*" />
+</component>

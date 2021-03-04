@@ -18,6 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @SuppressWarnings({"StatementWithEmptyBody", "unused", "Java9CollectionFactory", "MismatchedQueryAndUpdateOfCollection"})
 public class DataFlowAnalysis {
 
+    // #LoveIntelliJ20
     public String exampleDataFlowAnalysis(int value) {
         if (value < 0) {
             throw new IllegalArgumentException("Can't be negative");

@@ -7,7 +7,7 @@ class DataFlowAnalysisForArrays {
     private static final int[] DAYS_IN_MONTH =
             {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    private boolean validateMonth(CustomDate date) {
+    public boolean validateMonth(CustomDate date) {
         if (date.getMonth() < 1 || date.getMonth() > 12) {
             return false;
         }
@@ -19,6 +19,17 @@ class DataFlowAnalysisForArrays {
             } else {
                 return date.getDay() < DAYS_IN_MONTH[date.getMonth()];
             }
+        }
+    }
+
+    public void shouldWarnAboutNegativeArraySizes() {
+        int[] ints = new int[-10];
+    }
+
+    public void shouldRecogniseArraySizeIsAlwaysPositive(int size) {
+        int[] ints = new int[size];
+        if (size < 0) {
+            System.out.println("How is this possible??");
         }
     }
 

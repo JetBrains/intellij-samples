@@ -1,5 +1,11 @@
-package com.jetbrains.code;
+package com.jetbrains.code.jdk15;
 
+/**
+ * Text Blocks. Followed on from Raw String Literals which targeted #JDK12 but was never previewed.
+ * #PreviewFeature First Preview #JDK13
+ * #PreviewFeature Second Preview #JDK14
+ * #StandardFeature #JDK15
+ */
 @SuppressWarnings("unused")
 public class TextBlocks {
     String html = "<html>\n" +

@@ -1,4 +1,4 @@
-package com.jetbrains.code.jdk.preview;
+package com.jetbrains.code.jdk16;
 
 import com.jetbrains.entity.Order;
 import com.jetbrains.inspections.entities.Person;
@@ -14,10 +14,22 @@ import static java.util.stream.Collectors.toUnmodifiableSet;
 /**
  * Local records/enums/interfaces.
  * #PreviewFeature First Preview #JDK15
- * #PreviewFeature Second Preview #JDK16
+ * #StandardFeature #JDK16
  */
 @SuppressWarnings("unused")
 public class LocalTypes {
+    // local records
+    private Set<Person> filterForPeopleWithFiveOrders(List<Person> people) {
+        record PersonAndOrders(Person person, List<Order> orders) {
+        }
+
+        return people.stream()
+                     .map(person -> new PersonAndOrders(person, getOrdersFor(person)))
+                     .filter(personAndOrders -> personAndOrders.orders().size() == 5)
+                     .map(PersonAndOrders::person)
+                     .collect(toUnmodifiableSet());
+    }
+
     // local enums
     private void organisePeople(List<Person> people) {
         enum Role {Employee, Customer, Both, None}

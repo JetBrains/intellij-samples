@@ -11,5 +11,24 @@ public class Outer {
         static void staticMethod() {
             // Outer.this is not accessible here
         }
+
+        // now static classes inside inner classes are allowed
+        static class StaticInnerClass {
+        }
     }
+
+    public static void main(String[] args) {
+        new Runnable() {
+            @Override
+            public void run() {
+
+            }
+
+            // now static methods inside anonymous inner classes
+            static void staticMethod() {
+
+            }
+        };
+    }
+
 }

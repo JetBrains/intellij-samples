@@ -17,4 +17,12 @@ public class StreamsAPI {
                                        .collect(Collectors.toList()));
     }
 
+    // #JDK16 #2021.1
+    public List<String> convertCollectorCallIntoToListCall(List<String> strings) {
+        return strings.stream()
+                      .filter(s -> s.startsWith("S"))
+                      .sorted()
+                      .collect(Collectors.toUnmodifiableList());
+    }
+
 }

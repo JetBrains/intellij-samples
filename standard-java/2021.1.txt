@@ -1,4 +1,3 @@
-    // patternmatching for instanceof
     // updated data flow analysis (haven't created code examples)
 
     // jpackage. for java 16? available from 14. Sort of for JavaFX but works independently

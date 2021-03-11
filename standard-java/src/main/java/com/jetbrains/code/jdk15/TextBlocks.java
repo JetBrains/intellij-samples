@@ -1,10 +1,12 @@
 package com.jetbrains.code.jdk15;
 
 /**
- * Text Blocks. Followed on from Raw String Literals which targeted #JDK12 but was never previewed.
- * #PreviewFeature First Preview #JDK13
- * #PreviewFeature Second Preview #JDK14
- * #StandardFeature #JDK15
+ * <p>Text Blocks. Followed on from Raw String Literals which targeted #JDK12 but was never previewed.</p>
+ * <ul>
+ *     <li>#PreviewFeature First Preview #JDK13</li>
+ *     <li>#PreviewFeature Second Preview #JDK14</li>
+ *     <li>#StandardFeature #JDK15</li>
+ * </ul>
  */
 @SuppressWarnings("unused")
 public class TextBlocks {
@@ -40,16 +42,19 @@ public class TextBlocks {
                   "      \"smoking\": \"no\"\n" +
                   "    }";
 
-    String mixedTabsAndSpacesWhitespace = """
-            <html>
-            	<body>
-               		<p>Hello World.</p>
-                </body>
-            </html>
+    private static final String mixedTabsAndSpacesWhitespace = """
+				<html>
+           	      <body>
+               	    <p>Hello World.</p>
+                  </body>
+                </html>
             """;
 
     //note that it doesn't mess with the whitespace when formatting the file
 
     String pastedMultiLineTextBlock = "";
 
+    public static void main(String[] args) {
+        System.out.println(mixedTabsAndSpacesWhitespace);
+    }
 }

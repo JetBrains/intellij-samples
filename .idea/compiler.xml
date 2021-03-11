@@ -6,16 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-tricks" />
+        <module name="kotlin" />
         <module name="standard-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="code-samples" target="1.8" />
-      <module name="code-samples_main" target="1.8" />
-      <module name="code-samples_test" target="1.8" />
-      <module name="com.jetbrains_buildSrc_main" target="1.10" />
-      <module name="com.jetbrains_buildSrc_test" target="1.10" />
+      <module name="kotlin" target="1.5" />
       <module name="standard-java" target="16" />
     </bytecodeTargetLevel>
   </component>

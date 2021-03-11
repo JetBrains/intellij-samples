@@ -1,0 +1,13 @@
+ - Records
+ - Pattern matching for instanceof
+ - New methods on stream
+ - Warnings for Value based classes
+ - Local Types
+ - Static methods on inner classes
+ - Sealed types
+
+ - Text blocks
+ - Switch expressions
+ - LVTI
+ - Convenience methods for collections
+ - New methods on Optional

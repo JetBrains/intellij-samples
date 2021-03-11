@@ -12,8 +12,8 @@ package com.jetbrains.code.jdk16;
  * @param name the descriptive name
  */
 record Record(int id, String name) {
-    // - Generate a constructor. Note: non-public constructors supported (Java 15)
-    // - Generate an accessor. Note: annotations supported (Java 15)
+    // - Generate a constructor. Note: non-public constructors supported (#JDK15)
+    // - Generate an accessor. Note: annotations supported (#JDK15)
     // - Generate getter does the right thing with the name
     // - There is no generate setter
 

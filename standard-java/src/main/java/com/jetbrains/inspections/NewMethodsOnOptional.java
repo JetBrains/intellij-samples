@@ -10,9 +10,13 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toUnmodifiableList;
 
+/**
+ * Since #JDK8, java.util.Optional has had more methods added (in #JDK9, #JDK10, and #JDK11). IntelliJ IDEA can help use
+ * some of these methods where it makes sense. It's helpful to be aware of them so we can use Optional more effectively.
+ */
 @SuppressWarnings({"OptionalUsedAsFieldOrParameterType", "unused", "Convert2MethodRef", "UnnecessaryLocalVariable"})
 public class NewMethodsOnOptional {
-    // #ModernJava
+    // #ModernJava #JDK11
     private String canUseIsEmpty(Optional<String> opt) {
         if (!opt.isPresent()) {
             throw new IllegalArgumentException("This should not be empty!");
@@ -21,24 +25,24 @@ public class NewMethodsOnOptional {
         return opt.get();
     }
 
-    // Java 10
+    // #JDK10
     private String getOptionalValueOrThrowDefaultException(Optional<String> anOptional) {
         return anOptional.orElseThrow();
     }
 
-    // Java 9
+    // #JDK9
     private void optionalIfPresentOrElse(Optional<String> anOptional) {
         anOptional.ifPresentOrElse(s -> doSomethingWith(s),
                                    () -> doSomethingElse());
     }
 
-    // Java 9
+    // #JDK9
     private Optional<Customer> useOptionalWithOr() {
         Optional<Customer> optionalCustomer = getCurrentCustomer().or(this::getNextCustomer);
         return optionalCustomer;
     }
 
-    // Java 9
+    // #JDK9
     private List<Customer> useOptionalWithStream(Stream<Order> orders) {
         Stream<Optional<Customer>> streamOfOptionals = findCustomersWithOutstandingOrders();
         return streamOfOptionals.flatMap(customer -> customer.stream())

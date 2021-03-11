@@ -98,7 +98,7 @@ public class OptionalInspections {
         }
     }
 
-    // Java 11
+    // #JDK11
     void invertingOptionalChoosesCorrectMethod(Optional<String> opt) {
         if (opt.isPresent()) { //.not postfix for isPresent
             System.out.println("Optional Value");
@@ -106,6 +106,7 @@ public class OptionalInspections {
         }
     }
 
+    // #JDK11
     void notPresentReplacedWithIsEmpty(Optional<String> opt) {
         if (!opt.isPresent()) {
             throw new IllegalArgumentException("This should be here!");

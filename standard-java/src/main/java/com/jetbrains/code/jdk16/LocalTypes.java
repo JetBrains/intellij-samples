@@ -12,18 +12,19 @@ import java.util.Set;
 import static java.util.stream.Collectors.toUnmodifiableSet;
 
 /**
- * Local records/enums/interfaces. This change was introduced as part of the Records JEP (in #JDK15) even
- * though it's not just for records.
+ * <p>Local records/enums/interfaces. This change was introduced as part of the Records JEP (in #JDK15) even
+ * though it's not just for records.</p>
  *
- * #PreviewFeature First Preview #JDK15
- * #StandardFeature #JDK16
+ * <ul>
+ *     <li>#PreviewFeature #JDK15</li>
+ *     <li>#StandardFeature #JDK16</li>
+ * </ul>
  */
 @SuppressWarnings("unused")
 public class LocalTypes {
     // local records
     private Set<Person> filterForPeopleWithFiveOrders(List<Person> people) {
-        record PersonAndOrders(Person person, List<Order> orders) {
-        }
+        record PersonAndOrders(Person person, List<Order> orders) { }
 
         return people.stream()
                      .map(person -> new PersonAndOrders(person, getOrdersFor(person)))

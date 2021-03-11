@@ -1,7 +1,11 @@
 package com.jetbrains.code.jdk16;
 
 /**
- * Static methods and classes are now allowed on inner classes, and anonymous inner classes, since #JDK16.
+ * <p>Static methods and classes are now allowed on inner classes, and anonymous inner classes, since #JDK16.</p>
+ *
+ * <ul>
+ *     <li>#StandardFeature #JDK16</li>
+ * </ul>
  */
 @SuppressWarnings("unused")
 public class StaticOnInnerClasses {

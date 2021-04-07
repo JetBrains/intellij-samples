@@ -56,12 +56,6 @@
             <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.jetbrains</groupId>
-            <artifactId>code-samples</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
     <properties>
         <kotlin.version>1.4.32</kotlin.version>

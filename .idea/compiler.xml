@@ -6,13 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="kotlin" />
         <module name="java-samples" />
+        <module name="kotlin-samples" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java-samples" target="16" />
-      <module name="kotlin" target="11" />
+      <module name="kotlin-samples" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

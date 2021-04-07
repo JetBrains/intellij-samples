@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/intellij-samples.iml" filepath="$PROJECT_DIR$/.idea/intellij-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/standard-java/java-samples.iml" filepath="$PROJECT_DIR$/standard-java/java-samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kotlin/kotlin.iml" filepath="$PROJECT_DIR$/kotlin/kotlin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin/kotlin-samples.iml" filepath="$PROJECT_DIR$/kotlin/kotlin-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-samples/web-samples.iml" filepath="$PROJECT_DIR$/web-samples/web-samples.iml" />
     </modules>
   </component>
 </project>

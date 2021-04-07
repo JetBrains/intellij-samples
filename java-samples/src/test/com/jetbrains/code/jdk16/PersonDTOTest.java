@@ -26,31 +26,31 @@ class PersonDTOTest {
     }
 
     @Test
-    @DisplayName("Should toString")
-    void shouldToString() {
+    @DisplayName("Should have the expected toString")
+    void shouldHaveTheExpectedToString() {
         // when
-        PersonDTO personDTO = new PersonDTO("A", "Person", LocalDate.now());
+        PersonDTO personDTO = new PersonDTO("A", "Person", LocalDate.of(1980, 3, 20));
 
         // then
-        assertEquals("PersonDTO{firstName='A', lastName='Person', dateOfBirth=2021-03-11}", personDTO.toString());
+        assertEquals("PersonDTO{firstName='A', lastName='Person', dateOfBirth=1980-03-20}", personDTO.toString());
     }
 
     @Test
-    @DisplayName("Should hashCode")
-    void shouldHashCode() {
+    @DisplayName("Should have the expected hashCode")
+    void shouldHaveTheExpectedHashCode() {
         // when
-        PersonDTO personDTO = new PersonDTO("A", "Person", LocalDate.now());
+        PersonDTO personDTO = new PersonDTO("A", "Person", LocalDate.of(1980, 3, 20));
 
         // then
-        assertEquals(990413815, personDTO.hashCode());
+        assertEquals(990329856, personDTO.hashCode());
     }
 
     @Test
-    @DisplayName("Should equals")
-    void shouldEquals() {
+    @DisplayName("Should be true that two person Objects with same values are equal")
+    void shouldBeTrueThatTwoPersonObjectsWithSameValuesAreEqual() {
         // when
-        PersonDTO person1 = new PersonDTO("A", "Person", LocalDate.now());
-        PersonDTO person2 = new PersonDTO("A", "Person", LocalDate.now());
+        PersonDTO person1 = new PersonDTO("A", "Person", LocalDate.of(1980, 3, 20));
+        PersonDTO person2 = new PersonDTO("A", "Person", LocalDate.of(1980, 3, 20));
 
         // then
         assertEquals(person1, person2);

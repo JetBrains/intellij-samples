@@ -1,10 +1,12 @@
 package com.jetbrains.flow;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.jetbrains.flow.Location.location;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class SudokuTest {
     private final Sudoku sudoku = new Sudoku();
@@ -37,6 +39,7 @@ class SudokuTest {
 
     @Test
     @DisplayName("Should not let me add more than 9 numbers")
+    @Disabled("Not implemented yet")
     void shouldNotLetMeAddMoreThan9Numbers() {
         // given
         Location location = location(1, 1);

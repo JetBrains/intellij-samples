@@ -35,6 +35,5 @@
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test:1.4.32" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test-common:1.4.32" level="project" />
-    <orderEntry type="library" name="Maven: com.jetbrains:code-samples:1.0-SNAPSHOT" level="project" />
   </component>
 </module>

@@ -35,19 +35,6 @@
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test:1.4.32" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test-common:1.4.32" level="project" />
-    <orderEntry type="module" module-name="standard-java" />
-    <orderEntry type="module-library">
-      <library name="Maven: com.jetbrains:annotation-inference:1.0">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../standard-java/lib/annotation-inference.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.11" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-library:2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest:2.2" level="project" />
+    <orderEntry type="library" name="Maven: com.jetbrains:code-samples:1.0-SNAPSHOT" level="project" />
   </component>
 </module>

@@ -7,17 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kotlin" />
-        <module name="standard-java" />
+        <module name="java-samples" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="java-samples" target="16" />
       <module name="kotlin" target="11" />
-      <module name="standard-java" target="16" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="standard-java" options="--enable-preview" />
+      <module name="java-samples" options="--enable-preview" />
     </option>
   </component>
 </project>

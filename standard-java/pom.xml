@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jetbrains</groupId>
-    <artifactId>code-samples</artifactId>
+    <artifactId>java-samples</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <testSourceDirectory>src/test</testSourceDirectory>

@@ -1,0 +1,67 @@
+Why do Developers Love IntelliJ IDEA?
+
+Integrated
+ - [ ] Compile, Run, Debug
+     - Hello.java
+     - Compile - Cmd Shift F9
+     - Of course you don't need to
+     - Run
+     - Debug: Ctrl Shift D; step over with F8; change a value
+ - [ ] Build Tools
+     - pom.xml
+     - code completion: change version number
+     - sync (e.g. update version of dependency)
+     - paste from maven to gradle
+ - [ ] VCS -> Cmd9: search (Cmd L); branch; merge; push; cherry pick (example-git-branch)
+ - [ ] Terminal
+     - mvn clean install - Cmd + Enter
+ - [ ] Databases
+     - database window
+     - Actor.java
+     - code completion in the SQL statement
+     - run in the console
+ - [ ] Other Languages
+ - [ ] Plugins
+
+Intelligent
+ - [ ] Inspections
+     - Inspections.java - just a sample
+ - [ ] Intentions
+     - BooleanIntentions
+     - LoopingIntentions
+ - [ ] New Language Features
+     - Java8Inspections
+     - SwitchExpressions
+     - VarLVTI
+ - [ ] Detect Duplicates
+     - DuplicateCodeInspection
+     - Extract Method
+ - [ ] Refactoring
+     - IntroduceVariable
+     - ExtractParameter
+     - ReplaceInheritance
+ - [ ] Data Flow Analysis
+     - DataFlowAnalysis
+ - [ ] Context is Queen
+
+Flow
+ - demo-sudoku
+ - [ ] Code Completion
+ - [ ] Complete statement
+ - [ ] Code generations
+ - [ ] Run anything
+ - [ ] Stop everything
+ - [ ] Refactor as you go
+ - [ ] Inspections and Intentions
+ - [ ] TDD loop
+ - [ ] Create the API as you go
+ - [ ] Search is supported everywhere
+ - [ ] Search everywhere
+
+
+
+
+
+Before
+ - start mysql from compose
+ - run in the data

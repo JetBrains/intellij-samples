@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/java-samples/pom.xml" />
+        <option value="$PROJECT_DIR$/kotlin-samples/pom.xml" />
       </list>
     </option>
   </component>

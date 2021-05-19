@@ -1,4 +1,4 @@
-package com.jetbrains.refactoring.kotlin
+package com.jetbrains.refactoring
 
 data class Person(val firstName: String, val lastName: String, val age: Int)
 

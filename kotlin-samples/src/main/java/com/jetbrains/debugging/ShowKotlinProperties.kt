@@ -1,4 +1,4 @@
-package com.jetbrains.debugging.kotlin
+package com.jetbrains.debugging
 
 class ShowKotlinProperties {
     val lazyInt: Int by lazy { 10 }

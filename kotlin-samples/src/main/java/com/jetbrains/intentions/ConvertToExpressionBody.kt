@@ -1,4 +1,4 @@
-package com.jetbrains.intentions.kotlin
+package com.jetbrains.intentions
 
 
 // You can convert a string concatenation expression into a template string.

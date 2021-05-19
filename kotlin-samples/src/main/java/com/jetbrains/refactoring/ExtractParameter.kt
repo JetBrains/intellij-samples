@@ -1,4 +1,4 @@
-package com.jetbrains.refactoring.kotlin
+package com.jetbrains.refactoring
 
 @Suppress("unused", "SameParameterValue")
 class ExtractParameter {

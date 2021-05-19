@@ -1,5 +1,3 @@
 package com.jetbrains.domain
 
-interface Drivable {
-
-}
+interface Drivable

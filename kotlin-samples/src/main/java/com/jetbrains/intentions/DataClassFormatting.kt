@@ -1,4 +1,4 @@
-package com.jetbrains.intentions.kotlin
+package com.jetbrains.intentions
 
 // Long parameter lists are easier to read with each parameter written
 // on a separate line. We transform the code to do that automatically

@@ -1,4 +1,4 @@
-package com.jetbrains.debugging.kotlin
+package com.jetbrains.debugging
 
 //This is supposed to error
 // when you run this you'll get an exception, with a hint to "Create breakpoint"

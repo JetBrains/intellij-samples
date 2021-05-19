@@ -4,11 +4,11 @@ import com.jetbrains.code.HelperMethods
 
 @Suppress("unused")
 class Feature {
-    val name = "FeatureName"
+    private val name = "FeatureName"
 
     fun getRepresentation() = "{}"
 
-    fun combine() {
+    private fun combine() {
         val feature = Feature()
         println(feature.name)
         println(feature.combine())

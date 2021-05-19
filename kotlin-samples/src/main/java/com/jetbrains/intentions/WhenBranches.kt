@@ -1,4 +1,4 @@
-package com.jetbrains.intentions.kotlin
+package com.jetbrains.intentions
 
 // When expression requires us to cover all the possible options for the parameter
 // We can generate all the branches automatically with "Add remaining branches" action

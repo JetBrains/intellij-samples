@@ -9,14 +9,19 @@ Integrated
      - Debug: Ctrl Shift D; step over with F8; change a value
  - [ ] Build Tools
      - pom.xml
+     - pulls in all the dependencies, builds with settings from build file, understands standard structure
      - code completion: change version number
      - sync (e.g. update version of dependency)
+     - run from the tool window (e.g. clean)
      - paste from maven to gradle
- - [ ] VCS -> Cmd9: search (Cmd L); branch; merge; push; cherry pick (example-git-branch)
+ - [ ] VCS -> Cmd9: search (Cmd L), e.g. "fixed"; branch; merge; push; cherry pick (example-git-branch)
  - [ ] Terminal
+     - git status
+     - cd java-samples
      - mvn clean install - Cmd + Enter
  - [ ] Databases
      - database window
+     - open the table and view it
      - Actor.java
      - code completion in the SQL statement
      - run in the console
@@ -26,9 +31,14 @@ Integrated
 Intelligent
  - [ ] Inspections
      - Inspections.java - just a sample
+     - F2, Alt+Enter
  - [ ] Intentions
      - BooleanIntentions
+       - Replace with ||
+       - invert
      - LoopingIntentions
+       - replace with indexed loop
+       - reversedirection
  - [ ] New Language Features
      - Java8Inspections
      - SwitchExpressions
@@ -42,6 +52,7 @@ Intelligent
      - ReplaceInheritance
  - [ ] Data Flow Analysis
      - DataFlowAnalysis
+       - Ctrl Shift P twice to get the values for value
  - [ ] Context is Queen
 
 Flow

@@ -387,7 +387,8 @@ public class Java8Inspections {
 
     public Optional<String> identifyReveredMaxMin(Stream<String> strings) {
         return strings.filter(Objects::nonNull)
-                      .min(Comparator.comparing(String::length).reversed());
+                      .min(Comparator.comparing(String::length)
+                                     .reversed());
     }
 
     @NotNull

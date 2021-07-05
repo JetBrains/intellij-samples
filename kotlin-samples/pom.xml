@@ -37,6 +37,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
+                <configuration>
+                    <release>${java.version}</release>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
                 <executions>
                     <execution>
                         <id>compile</id>
@@ -53,10 +58,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <source>11</source>
-                    <target>11</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -75,6 +76,6 @@
         </dependency>
     </dependencies>
     <properties>
-        <kotlin.version>1.4.30</kotlin.version>
+        <kotlin.version>1.5.20</kotlin.version>
     </properties>
 </project>

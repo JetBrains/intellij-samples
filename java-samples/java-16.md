@@ -25,7 +25,7 @@ IntelliJ
 #New methods on stream
 toList, map
 IntelliJ
-- suggests using toList
+- suggests using toList (StreamsAPI)
 - also suggests using toUnmodifiableList which has been available since Java 10
   
 #Warnings for Value based classes
@@ -37,6 +37,7 @@ IntelliJ
 
 #Preview: Sealed types
  - New in 15, second preview in 16 with some refinements
+This is STANDARD in 17, with NO CHANGES
 
 Older:
  - Text blocks

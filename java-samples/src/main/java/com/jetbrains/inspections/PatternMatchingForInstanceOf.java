@@ -3,11 +3,13 @@ package com.jetbrains.inspections;
 import com.jetbrains.inspections.entities.Employee;
 import com.jetbrains.inspections.entities.Person;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.Objects;
 
 /**
  * <p>Pattern Matching for instanceof</p>
- *
+ * <p>
  * #PreviewFeature First Preview #JDK14<br/>
  * #PreviewFeature Second Preview #JDK15<br/>
  * #StandardFeature #JDK16<br/>
@@ -43,6 +45,21 @@ public class PatternMatchingForInstanceOf {
         }
     }
 
+    public void combinesWithOtherSimplificationInspections() {
+        final List<Node> nodes = getNodes();
+        for (Iterator<Node> iterator = getNodes().iterator(); iterator.hasNext(); ) {
+            Node node = iterator.next();
+            if (node instanceof LetterNode) {
+                LetterNode letterNode = (LetterNode) node;
+                if (letterNode.isLatin()) {
+                    if (isLetterTrueFont(letterNode.nodeValue())) {
+                        iterator.remove();
+                    }
+                }
+            }
+        }
+    }
+
     public void examplesOfUpdatesToPatternMatchingInJava16(Person person) {
         if (person instanceof Employee employee) {
             // in #JDK16 you can change this pattern variable - IntelliJ IDEA marks mutated variables with underline
@@ -60,6 +77,17 @@ public class PatternMatchingForInstanceOf {
             }
         }
     }
+
+    //<editor-fold desc="Helper methods">
+    private boolean isLetterTrueFont(Object nodeValue) {
+        return false;
+    }
+
+    private List<Node> getNodes() {
+        return List.of();
+    }
+    //</editor-fold>
+
 }
 
 @SuppressWarnings("unused")
@@ -83,3 +111,16 @@ class LineItem {
         return Objects.hash(description, price);
     }
 }
+
+class Node {
+    public Object nodeValue() {
+        return null;
+    }
+}
+
+class LetterNode extends Node {
+    public boolean isLatin() {
+        return false;
+    }
+}
+

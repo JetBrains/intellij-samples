@@ -27,6 +27,7 @@ public class PatternMatchingForInstanceOf {
         if (person instanceof Employee) {
             // 2021.1 / #JDK16 this can be replaced with a pattern variable
             Employee employee = (Employee) person;
+            System.out.println(employee);
             employee = new Employee();
             if (employee.isBasedInOffice()) {
                 employee.workFromHome();

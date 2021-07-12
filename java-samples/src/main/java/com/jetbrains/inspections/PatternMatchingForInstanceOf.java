@@ -3,6 +3,7 @@ package com.jetbrains.inspections;
 import com.jetbrains.inspections.entities.Employee;
 import com.jetbrains.inspections.entities.Person;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -45,9 +46,9 @@ public class PatternMatchingForInstanceOf {
         }
     }
 
-    public void combinesWithOtherSimplificationInspections() {
-        final List<Node> nodes = getNodes();
-        for (Iterator<Node> iterator = getNodes().iterator(); iterator.hasNext(); ) {
+    public List<Node> combinesWithOtherSimplificationInspections() {
+        final ArrayList<Node> nodes = getNodes();
+        for (Iterator<Node> iterator = nodes.iterator(); iterator.hasNext(); ) {
             Node node = iterator.next();
             if (node instanceof LetterNode) {
                 LetterNode letterNode = (LetterNode) node;
@@ -58,6 +59,7 @@ public class PatternMatchingForInstanceOf {
                 }
             }
         }
+        return nodes;
     }
 
     public void examplesOfUpdatesToPatternMatchingInJava16(Person person) {
@@ -83,8 +85,8 @@ public class PatternMatchingForInstanceOf {
         return false;
     }
 
-    private List<Node> getNodes() {
-        return List.of();
+    private ArrayList<Node> getNodes() {
+        return new ArrayList<>();
     }
     //</editor-fold>
 

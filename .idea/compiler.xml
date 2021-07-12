@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="java-samples" target="16" />
+      <module name="java-samples" target="17" />
       <module name="kotlin-samples" target="11" />
     </bytecodeTargetLevel>
   </component>

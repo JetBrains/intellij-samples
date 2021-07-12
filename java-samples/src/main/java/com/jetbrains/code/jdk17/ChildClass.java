@@ -1,12 +1,9 @@
-package com.jetbrains.code.jdk.preview;
+package com.jetbrains.code.jdk17;
 
 /**
  * Sealed classes.
  * #PreviewFeature First Preview #JDK15
  * #PreviewFeature Second Preview #JDK16
  */
-public sealed class SealedClass
-        permits ChildClass {
+public final class ChildClass extends SealedClass {
 }
-
-

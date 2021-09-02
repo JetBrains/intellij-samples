@@ -30,6 +30,6 @@
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-library:2.2" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest:2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains:annotations:21.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations:22.0.0" level="project" />
   </component>
 </module>

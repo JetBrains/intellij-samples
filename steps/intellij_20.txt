@@ -5,14 +5,19 @@ Integrated
      - Hello.java
      - Compile - Cmd Shift F9
      - Of course you don't need to
-     - Run
+       - The editor shows you errors
+     - Run with Ctrl Shift R
      - Debug: Ctrl Shift D; step over with F8; change a value
+     - Comment style variables
+     - Add a watch (message)
+     - Resume with option cmd R
  - [ ] Build Tools
      - pom.xml
      - pulls in all the dependencies, builds with settings from build file, understands standard structure
      - code completion: change version number
      - sync (e.g. update version of dependency)
      - run from the tool window (e.g. clean)
+     - dependencies diagram (Ultimate)
      - paste from maven to gradle
  - [ ] VCS -> Cmd9: search (Cmd L), e.g. "fixed"; branch; merge; push; cherry pick (example-git-branch)
  - [ ] Terminal

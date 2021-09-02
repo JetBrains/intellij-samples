@@ -50,7 +50,7 @@ Intelligent
      - VarLVTI
  - [ ] Detect Duplicates
      - DuplicateCodeInspection
-     - Extract Method
+     - ExtractMethod
  - [ ] Refactoring
      - IntroduceVariable
      - ExtractParameter
@@ -59,6 +59,7 @@ Intelligent
      - DataFlowAnalysis
        - Ctrl Shift P twice to get the values for value
  - [ ] Context is Queen
+     - AltEnter
 
 Flow
  - demo-sudoku
@@ -79,5 +80,6 @@ Flow
 
 
 Before
- - start mysql from compose
+ - start mysql from compose; start MongoDB
  - run in the data
+ - create a MongoDB db/collection

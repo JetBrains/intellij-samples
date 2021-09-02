@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-212.5080.55">
     <data-source name="@localhost" uuid="de07e21d-256a-4e7b-a80c-698618221856">
-      <database-info product="MySQL" version="8.0.23" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="8.0.23" exact-driver-version="8.0">
+      <database-info product="MySQL" version="8.0.26" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.0.26" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
@@ -11,7 +11,24 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="sakila" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="MongoDB" uuid="cc01b978-9c36-4494-9d36-576be2c4d9d1">
+      <database-info product="Mongo DB" version="5.0.2" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.11" dbms="MONGO" exact-version="5.0.2" exact-driver-version="1.11" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="test_database" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

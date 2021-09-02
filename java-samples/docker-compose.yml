@@ -11,3 +11,7 @@ services:
       - MYSQL_PASSWORD=app-password
     ports:
       - 3306:3306
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"

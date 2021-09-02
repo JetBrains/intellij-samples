@@ -24,4 +24,12 @@ public class PatternMatchingSwitch {
             default -> o.toString();
         };
     }
+
+    static void testFooBar(String s) {
+        switch (s) {
+            case null -> System.out.println("Oops");
+            case "Foo", "Bar" -> System.out.println("Great");
+            default -> System.out.println("Ok");
+        }
+    }
 }

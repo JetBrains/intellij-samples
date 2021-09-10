@@ -8,22 +8,5 @@
     <schema id="3" parent="1" name="config"/>
     <schema id="4" parent="1" name="local"/>
     <schema id="5" parent="1" name="test_database"/>
-    <table id="6" parent="5" name="orders"/>
-    <column id="7" parent="6" name="_id">
-      <Position>1</Position>
-      <DataType>ObjectId|12s</DataType>
-    </column>
-    <column id="8" parent="6" name="qty">
-      <Position>2</Position>
-      <DataType>Int32|4s</DataType>
-    </column>
-    <column id="9" parent="6" name="status">
-      <Position>3</Position>
-      <DataType>String|12s</DataType>
-    </column>
-    <column id="10" parent="6" name="tags">
-      <Position>4</Position>
-      <DataType>Array|2003s</DataType>
-    </column>
   </database-model>
 </dataSource>

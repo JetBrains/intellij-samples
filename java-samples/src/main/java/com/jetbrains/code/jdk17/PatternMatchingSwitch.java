@@ -34,8 +34,20 @@ public class PatternMatchingSwitch {
         } else if (x instanceof Integer) {
             Integer integer = (Integer) x;
             System.out.println(integer + 1);
-        } else if (x instanceof List<?>) {
-            System.out.println(((List<?>) x).size());
+        } else if (x instanceof List<?> list) {
+            System.out.println(list.size());
+        } else {
+            throw new IllegalArgumentException("Unexpected type: " + x);
+        }
+    }
+
+    static void shouldSuggestMigratingMoreComplexExampleToPatternMatchingForSwitch(Object x) {
+        if (x instanceof String str && !str.isEmpty()) {
+            System.out.println(str);
+        } else if (x instanceof Integer integer && integer > 0) {
+            System.out.println(integer + 1);
+        } else if (x instanceof List<?> list && !list.isEmpty()) {
+            System.out.println(list.size());
         } else {
             throw new IllegalArgumentException("Unexpected type: " + x);
         }

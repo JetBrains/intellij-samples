@@ -31,5 +31,6 @@
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest:2.2" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:21.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:3.18.0" level="project" />
   </component>
 </module>

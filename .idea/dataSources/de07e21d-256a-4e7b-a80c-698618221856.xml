@@ -1057,5 +1057,1195 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
+    <table id="286" parent="7" name="actor"/>
+    <table id="287" parent="7" name="address"/>
+    <table id="288" parent="7" name="category"/>
+    <table id="289" parent="7" name="city"/>
+    <table id="290" parent="7" name="country"/>
+    <table id="291" parent="7" name="customer"/>
+    <table id="292" parent="7" name="film"/>
+    <table id="293" parent="7" name="film_actor"/>
+    <table id="294" parent="7" name="film_category"/>
+    <table id="295" parent="7" name="film_text"/>
+    <table id="296" parent="7" name="inventory"/>
+    <table id="297" parent="7" name="language"/>
+    <table id="298" parent="7" name="payment"/>
+    <table id="299" parent="7" name="rental"/>
+    <table id="300" parent="7" name="staff"/>
+    <table id="301" parent="7" name="store"/>
+    <view id="302" parent="7" name="actor_info">
+      <SourceTextLength>855</SourceTextLength>
+      <Definer>root@%</Definer>
+    </view>
+    <view id="303" parent="7" name="customer_list">
+      <SourceTextLength>582</SourceTextLength>
+      <Definer>root@%</Definer>
+    </view>
+    <view id="304" parent="7" name="film_list">
+      <SourceTextLength>881</SourceTextLength>
+      <Definer>root@%</Definer>
+    </view>
+    <view id="305" parent="7" name="nicer_but_slower_film_list">
+      <SourceTextLength>1103</SourceTextLength>
+      <Definer>root@%</Definer>
+    </view>
+    <view id="306" parent="7" name="sales_by_film_category">
+      <SourceTextLength>502</SourceTextLength>
+      <Definer>root@%</Definer>
+    </view>
+    <view id="307" parent="7" name="sales_by_store">
+      <SourceTextLength>731</SourceTextLength>
+      <Definer>root@%</Definer>
+    </view>
+    <view id="308" parent="7" name="staff_list">
+      <SourceTextLength>529</SourceTextLength>
+      <Definer>root@%</Definer>
+    </view>
+    <routine id="309" parent="7" name="film_in_stock">
+      <SourceTextLength>329</SourceTextLength>
+      <Definer>root@%</Definer>
+      <RoutineKind>procedure</RoutineKind>
+      <SqlAccess>reads-sql-data</SqlAccess>
+    </routine>
+    <routine id="310" parent="7" name="film_not_in_stock">
+      <SourceTextLength>337</SourceTextLength>
+      <Definer>root@%</Definer>
+      <RoutineKind>procedure</RoutineKind>
+      <SqlAccess>reads-sql-data</SqlAccess>
+    </routine>
+    <routine id="311" parent="7" name="get_customer_balance">
+      <SourceTextLength>1609</SourceTextLength>
+      <Definer>root@%</Definer>
+      <RoutineKind>function</RoutineKind>
+      <SqlAccess>reads-sql-data</SqlAccess>
+      <Deterministic>1</Deterministic>
+    </routine>
+    <routine id="312" parent="7" name="inventory_held_by_customer">
+      <SourceTextLength>233</SourceTextLength>
+      <Definer>root@%</Definer>
+      <RoutineKind>function</RoutineKind>
+      <SqlAccess>reads-sql-data</SqlAccess>
+    </routine>
+    <routine id="313" parent="7" name="inventory_in_stock">
+      <SourceTextLength>610</SourceTextLength>
+      <Definer>root@%</Definer>
+      <RoutineKind>function</RoutineKind>
+      <SqlAccess>reads-sql-data</SqlAccess>
+    </routine>
+    <routine id="314" parent="7" name="rewards_report">
+      <Comment>Provides a customizable report on best customers</Comment>
+      <SourceTextLength>1656</SourceTextLength>
+      <Definer>root@%</Definer>
+      <RoutineKind>procedure</RoutineKind>
+      <SqlAccess>reads-sql-data</SqlAccess>
+    </routine>
+    <column id="315" parent="286" name="actor_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="316" parent="286" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="317" parent="286" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="318" parent="286" name="last_update">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="319" parent="286" name="idx_actor_last_name">
+      <ColNames>last_name</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="320" parent="286" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>actor_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="321" parent="287" name="address_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="322" parent="287" name="address">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="323" parent="287" name="address2">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="324" parent="287" name="district">
+      <Position>4</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="325" parent="287" name="city_id">
+      <Position>5</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="326" parent="287" name="postal_code">
+      <Position>6</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="327" parent="287" name="phone">
+      <Position>7</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="328" parent="287" name="location">
+      <Position>8</Position>
+      <DataType>geometry|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="329" parent="287" name="last_update">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="330" parent="287" name="idx_fk_city_id">
+      <ColNames>city_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="331" parent="287" name="idx_location">
+      <ColNames>location</ColNames>
+      <Type>spatial</Type>
+    </index>
+    <key id="332" parent="287" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>address_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="333" parent="287" name="fk_address_city">
+      <ColNames>city_id</ColNames>
+      <RefTableName>city</RefTableName>
+      <RefColNames>city_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="334" parent="288" name="category_id">
+      <Position>1</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="335" parent="288" name="name">
+      <Position>2</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="336" parent="288" name="last_update">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <key id="337" parent="288" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>category_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="338" parent="289" name="city_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="339" parent="289" name="city">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="340" parent="289" name="country_id">
+      <Position>3</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="341" parent="289" name="last_update">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="342" parent="289" name="idx_fk_country_id">
+      <ColNames>country_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="343" parent="289" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>city_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="344" parent="289" name="fk_city_country">
+      <ColNames>country_id</ColNames>
+      <RefTableName>country</RefTableName>
+      <RefColNames>country_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="345" parent="290" name="country_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="346" parent="290" name="country">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="347" parent="290" name="last_update">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <key id="348" parent="290" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>country_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="349" parent="291" name="customer_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="350" parent="291" name="store_id">
+      <Position>2</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="351" parent="291" name="first_name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="352" parent="291" name="last_name">
+      <Position>4</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="353" parent="291" name="email">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="354" parent="291" name="address_id">
+      <Position>6</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="355" parent="291" name="active">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="356" parent="291" name="create_date">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="357" parent="291" name="last_update">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="358" parent="291" name="idx_fk_store_id">
+      <ColNames>store_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="359" parent="291" name="idx_last_name">
+      <ColNames>last_name</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="360" parent="291" name="idx_fk_address_id">
+      <ColNames>address_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="361" parent="291" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>customer_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="362" parent="291" name="fk_customer_store">
+      <ColNames>store_id</ColNames>
+      <RefTableName>store</RefTableName>
+      <RefColNames>store_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="363" parent="291" name="fk_customer_address">
+      <ColNames>address_id</ColNames>
+      <RefTableName>address</RefTableName>
+      <RefColNames>address_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <trigger id="364" parent="291" name="customer_create_date">
+      <SourceTextLength>27</SourceTextLength>
+      <Definer>root@%</Definer>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+    </trigger>
+    <column id="365" parent="292" name="film_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="366" parent="292" name="title">
+      <Position>2</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="367" parent="292" name="description">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="368" parent="292" name="release_year">
+      <Position>4</Position>
+      <DataType>year|0s</DataType>
+    </column>
+    <column id="369" parent="292" name="language_id">
+      <Position>5</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="370" parent="292" name="original_language_id">
+      <Position>6</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+    </column>
+    <column id="371" parent="292" name="rental_duration">
+      <Position>7</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;3&apos;</DefaultExpression>
+    </column>
+    <column id="372" parent="292" name="rental_rate">
+      <Position>8</Position>
+      <DataType>decimal(4,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>4.99</DefaultExpression>
+    </column>
+    <column id="373" parent="292" name="length">
+      <Position>9</Position>
+      <DataType>smallint unsigned|0s</DataType>
+    </column>
+    <column id="374" parent="292" name="replacement_cost">
+      <Position>10</Position>
+      <DataType>decimal(5,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>19.99</DefaultExpression>
+    </column>
+    <column id="375" parent="292" name="rating">
+      <Position>11</Position>
+      <DataType>enum(&apos;G&apos;, &apos;PG&apos;, &apos;PG-13&apos;, &apos;R&apos;, &apos;NC-17&apos;)|0e</DataType>
+      <DefaultExpression>&apos;G&apos;</DefaultExpression>
+    </column>
+    <column id="376" parent="292" name="special_features">
+      <Position>12</Position>
+      <DataType>set(&apos;Trailers&apos;, &apos;Commentaries&apos;, &apos;Deleted Scenes&apos;, &apos;Behind the Scenes&apos;)|0e</DataType>
+    </column>
+    <column id="377" parent="292" name="last_update">
+      <Position>13</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="378" parent="292" name="idx_title">
+      <ColNames>title</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="379" parent="292" name="idx_fk_language_id">
+      <ColNames>language_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="380" parent="292" name="idx_fk_original_language_id">
+      <ColNames>original_language_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="381" parent="292" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>film_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="382" parent="292" name="fk_film_language">
+      <ColNames>language_id</ColNames>
+      <RefTableName>language</RefTableName>
+      <RefColNames>language_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="383" parent="292" name="fk_film_language_original">
+      <ColNames>original_language_id</ColNames>
+      <RefTableName>language</RefTableName>
+      <RefColNames>language_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <trigger id="384" parent="292" name="ins_film">
+      <SourceTextLength>125</SourceTextLength>
+      <Definer>root@%</Definer>
+      <Turn>after-row</Turn>
+      <Events>I</Events>
+    </trigger>
+    <trigger id="385" parent="292" name="upd_film">
+      <SourceTextLength>310</SourceTextLength>
+      <Definer>root@%</Definer>
+      <Turn>after-row</Turn>
+      <Events>U</Events>
+    </trigger>
+    <trigger id="386" parent="292" name="del_film">
+      <SourceTextLength>66</SourceTextLength>
+      <Definer>root@%</Definer>
+      <Turn>after-row</Turn>
+      <Events>D</Events>
+    </trigger>
+    <column id="387" parent="293" name="actor_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="388" parent="293" name="film_id">
+      <Position>2</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="389" parent="293" name="last_update">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="390" parent="293" name="idx_fk_film_id">
+      <ColNames>film_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="391" parent="293" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>actor_id
+film_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="392" parent="293" name="fk_film_actor_actor">
+      <ColNames>actor_id</ColNames>
+      <RefTableName>actor</RefTableName>
+      <RefColNames>actor_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="393" parent="293" name="fk_film_actor_film">
+      <ColNames>film_id</ColNames>
+      <RefTableName>film</RefTableName>
+      <RefColNames>film_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="394" parent="294" name="film_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="395" parent="294" name="category_id">
+      <Position>2</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="396" parent="294" name="last_update">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="397" parent="294" name="fk_film_category_category">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="398" parent="294" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>film_id
+category_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="399" parent="294" name="fk_film_category_film">
+      <ColNames>film_id</ColNames>
+      <RefTableName>film</RefTableName>
+      <RefColNames>film_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="400" parent="294" name="fk_film_category_category">
+      <ColNames>category_id</ColNames>
+      <RefTableName>category</RefTableName>
+      <RefColNames>category_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="401" parent="295" name="film_id">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="402" parent="295" name="title">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="403" parent="295" name="description">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <index id="404" parent="295" name="idx_title_description">
+      <ColNames>title
+description</ColNames>
+      <Type>fulltext</Type>
+    </index>
+    <key id="405" parent="295" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>film_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="406" parent="296" name="inventory_id">
+      <Position>1</Position>
+      <DataType>mediumint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="407" parent="296" name="film_id">
+      <Position>2</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="408" parent="296" name="store_id">
+      <Position>3</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="409" parent="296" name="last_update">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="410" parent="296" name="idx_fk_film_id">
+      <ColNames>film_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="411" parent="296" name="idx_store_id_film_id">
+      <ColNames>store_id
+film_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="412" parent="296" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>inventory_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="413" parent="296" name="fk_inventory_film">
+      <ColNames>film_id</ColNames>
+      <RefTableName>film</RefTableName>
+      <RefColNames>film_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="414" parent="296" name="fk_inventory_store">
+      <ColNames>store_id</ColNames>
+      <RefTableName>store</RefTableName>
+      <RefColNames>store_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="415" parent="297" name="language_id">
+      <Position>1</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="416" parent="297" name="name">
+      <Position>2</Position>
+      <DataType>char(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="417" parent="297" name="last_update">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <key id="418" parent="297" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>language_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="419" parent="298" name="payment_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="420" parent="298" name="customer_id">
+      <Position>2</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="421" parent="298" name="staff_id">
+      <Position>3</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="422" parent="298" name="rental_id">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="423" parent="298" name="amount">
+      <Position>5</Position>
+      <DataType>decimal(5,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="424" parent="298" name="payment_date">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="425" parent="298" name="last_update">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="426" parent="298" name="idx_fk_customer_id">
+      <ColNames>customer_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="427" parent="298" name="idx_fk_staff_id">
+      <ColNames>staff_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="428" parent="298" name="fk_payment_rental">
+      <ColNames>rental_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="429" parent="298" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>payment_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="430" parent="298" name="fk_payment_customer">
+      <ColNames>customer_id</ColNames>
+      <RefTableName>customer</RefTableName>
+      <RefColNames>customer_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="431" parent="298" name="fk_payment_staff">
+      <ColNames>staff_id</ColNames>
+      <RefTableName>staff</RefTableName>
+      <RefColNames>staff_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="432" parent="298" name="fk_payment_rental">
+      <ColNames>rental_id</ColNames>
+      <RefTableName>rental</RefTableName>
+      <RefColNames>rental_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>set-null</OnDelete>
+    </foreign-key>
+    <trigger id="433" parent="298" name="payment_date">
+      <SourceTextLength>28</SourceTextLength>
+      <Definer>root@%</Definer>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+    </trigger>
+    <column id="434" parent="299" name="rental_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="435" parent="299" name="rental_date">
+      <Position>2</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="436" parent="299" name="inventory_id">
+      <Position>3</Position>
+      <DataType>mediumint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="437" parent="299" name="customer_id">
+      <Position>4</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="438" parent="299" name="return_date">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="439" parent="299" name="staff_id">
+      <Position>6</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="440" parent="299" name="last_update">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="441" parent="299" name="rental_date">
+      <ColNames>rental_date
+inventory_id
+customer_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="442" parent="299" name="idx_fk_inventory_id">
+      <ColNames>inventory_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="443" parent="299" name="idx_fk_customer_id">
+      <ColNames>customer_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="444" parent="299" name="idx_fk_staff_id">
+      <ColNames>staff_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="445" parent="299" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rental_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="446" parent="299" name="rental_date">
+      <ColNames>rental_date
+inventory_id
+customer_id</ColNames>
+      <UnderlyingIndexName>rental_date</UnderlyingIndexName>
+    </key>
+    <foreign-key id="447" parent="299" name="fk_rental_inventory">
+      <ColNames>inventory_id</ColNames>
+      <RefTableName>inventory</RefTableName>
+      <RefColNames>inventory_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="448" parent="299" name="fk_rental_customer">
+      <ColNames>customer_id</ColNames>
+      <RefTableName>customer</RefTableName>
+      <RefColNames>customer_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="449" parent="299" name="fk_rental_staff">
+      <ColNames>staff_id</ColNames>
+      <RefTableName>staff</RefTableName>
+      <RefColNames>staff_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <trigger id="450" parent="299" name="rental_date">
+      <SourceTextLength>27</SourceTextLength>
+      <Definer>root@%</Definer>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+    </trigger>
+    <column id="451" parent="300" name="staff_id">
+      <Position>1</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="452" parent="300" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="453" parent="300" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="454" parent="300" name="address_id">
+      <Position>4</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="455" parent="300" name="picture">
+      <Position>5</Position>
+      <DataType>blob|0s</DataType>
+    </column>
+    <column id="456" parent="300" name="email">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="457" parent="300" name="store_id">
+      <Position>7</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="458" parent="300" name="active">
+      <Position>8</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="459" parent="300" name="username">
+      <Position>9</Position>
+      <DataType>varchar(16)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="460" parent="300" name="password">
+      <Position>10</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <Collation>utf8mb4_bin</Collation>
+    </column>
+    <column id="461" parent="300" name="last_update">
+      <Position>11</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="462" parent="300" name="idx_fk_address_id">
+      <ColNames>address_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="463" parent="300" name="idx_fk_store_id">
+      <ColNames>store_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="464" parent="300" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>staff_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="465" parent="300" name="fk_staff_address">
+      <ColNames>address_id</ColNames>
+      <RefTableName>address</RefTableName>
+      <RefColNames>address_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="466" parent="300" name="fk_staff_store">
+      <ColNames>store_id</ColNames>
+      <RefTableName>store</RefTableName>
+      <RefColNames>store_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="467" parent="301" name="store_id">
+      <Position>1</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="468" parent="301" name="manager_staff_id">
+      <Position>2</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="469" parent="301" name="address_id">
+      <Position>3</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="470" parent="301" name="last_update">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <index id="471" parent="301" name="idx_unique_manager">
+      <ColNames>manager_staff_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="472" parent="301" name="idx_fk_address_id">
+      <ColNames>address_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="473" parent="301" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>store_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="474" parent="301" name="idx_unique_manager">
+      <ColNames>manager_staff_id</ColNames>
+      <UnderlyingIndexName>idx_unique_manager</UnderlyingIndexName>
+    </key>
+    <foreign-key id="475" parent="301" name="fk_store_staff">
+      <ColNames>manager_staff_id</ColNames>
+      <RefTableName>staff</RefTableName>
+      <RefColNames>staff_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="476" parent="301" name="fk_store_address">
+      <ColNames>address_id</ColNames>
+      <RefTableName>address</RefTableName>
+      <RefColNames>address_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="477" parent="302" name="actor_id">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="478" parent="302" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="479" parent="302" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="480" parent="302" name="film_info">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="481" parent="303" name="ID">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="482" parent="303" name="name">
+      <Position>2</Position>
+      <DataType>varchar(91)|0s</DataType>
+    </column>
+    <column id="483" parent="303" name="address">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="484" parent="303" name="zip code">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="485" parent="303" name="phone">
+      <Position>5</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="486" parent="303" name="city">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="487" parent="303" name="country">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="488" parent="303" name="notes">
+      <Position>8</Position>
+      <DataType>varchar(6)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="489" parent="303" name="SID">
+      <Position>9</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="490" parent="304" name="FID">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+    </column>
+    <column id="491" parent="304" name="title">
+      <Position>2</Position>
+      <DataType>varchar(128)|0s</DataType>
+    </column>
+    <column id="492" parent="304" name="description">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="493" parent="304" name="category">
+      <Position>4</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="494" parent="304" name="price">
+      <Position>5</Position>
+      <DataType>decimal(4,2 digit)|0s</DataType>
+    </column>
+    <column id="495" parent="304" name="length">
+      <Position>6</Position>
+      <DataType>smallint unsigned|0s</DataType>
+    </column>
+    <column id="496" parent="304" name="rating">
+      <Position>7</Position>
+      <DataType>enum(&apos;G&apos;, &apos;PG&apos;, &apos;PG-13&apos;, &apos;R&apos;, &apos;NC-17&apos;)|0e</DataType>
+    </column>
+    <column id="497" parent="304" name="actors">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="498" parent="305" name="FID">
+      <Position>1</Position>
+      <DataType>smallint unsigned|0s</DataType>
+    </column>
+    <column id="499" parent="305" name="title">
+      <Position>2</Position>
+      <DataType>varchar(128)|0s</DataType>
+    </column>
+    <column id="500" parent="305" name="description">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="501" parent="305" name="category">
+      <Position>4</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="502" parent="305" name="price">
+      <Position>5</Position>
+      <DataType>decimal(4,2 digit)|0s</DataType>
+    </column>
+    <column id="503" parent="305" name="length">
+      <Position>6</Position>
+      <DataType>smallint unsigned|0s</DataType>
+    </column>
+    <column id="504" parent="305" name="rating">
+      <Position>7</Position>
+      <DataType>enum(&apos;G&apos;, &apos;PG&apos;, &apos;PG-13&apos;, &apos;R&apos;, &apos;NC-17&apos;)|0e</DataType>
+    </column>
+    <column id="505" parent="305" name="actors">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="506" parent="306" name="category">
+      <Position>1</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="507" parent="306" name="total_sales">
+      <Position>2</Position>
+      <DataType>decimal(27,2 digit)|0s</DataType>
+    </column>
+    <column id="508" parent="307" name="store">
+      <Position>1</Position>
+      <DataType>varchar(101)|0s</DataType>
+    </column>
+    <column id="509" parent="307" name="manager">
+      <Position>2</Position>
+      <DataType>varchar(91)|0s</DataType>
+    </column>
+    <column id="510" parent="307" name="total_sales">
+      <Position>3</Position>
+      <DataType>decimal(27,2 digit)|0s</DataType>
+    </column>
+    <column id="511" parent="308" name="ID">
+      <Position>1</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="512" parent="308" name="name">
+      <Position>2</Position>
+      <DataType>varchar(91)|0s</DataType>
+    </column>
+    <column id="513" parent="308" name="address">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="514" parent="308" name="zip code">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="515" parent="308" name="phone">
+      <Position>5</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="516" parent="308" name="city">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="517" parent="308" name="country">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="518" parent="308" name="SID">
+      <Position>8</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <argument id="519" parent="309" name="p_film_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="520" parent="309" name="p_store_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="521" parent="309" name="p_film_count">
+      <Position>3</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="522" parent="310" name="p_film_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="523" parent="310" name="p_store_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="524" parent="310" name="p_film_count">
+      <Position>3</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="525" parent="311">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>decimal(5,2 digit)|0s</DataType>
+    </argument>
+    <argument id="526" parent="311" name="p_customer_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="527" parent="311" name="p_effective_date">
+      <Position>2</Position>
+      <DataType>datetime|0s</DataType>
+    </argument>
+    <argument id="528" parent="312">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="529" parent="312" name="p_inventory_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="530" parent="313">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>tinyint(1)|0s</DataType>
+    </argument>
+    <argument id="531" parent="313" name="p_inventory_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="532" parent="314" name="min_monthly_purchases">
+      <Position>1</Position>
+      <DataType>tinyint unsigned|0s</DataType>
+    </argument>
+    <argument id="533" parent="314" name="min_dollar_amount_purchased">
+      <Position>2</Position>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+    </argument>
+    <argument id="534" parent="314" name="count_rewardees">
+      <Position>3</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int|0s</DataType>
+    </argument>
   </database-model>
 </dataSource>

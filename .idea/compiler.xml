@@ -17,7 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="java-samples" options="--enable-preview" />
+      <module name="java-samples" options="" />
     </option>
   </component>
 </project>

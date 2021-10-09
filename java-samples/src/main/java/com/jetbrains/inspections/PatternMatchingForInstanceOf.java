@@ -80,6 +80,13 @@ public class PatternMatchingForInstanceOf {
         }
     }
 
+    void exampleThatNeedsManualHelp(Object x) {
+        if (x instanceof Integer && (Integer) x > 0) {
+            Integer integer = (Integer) x;
+            System.out.println(integer + 1);
+        }
+    }
+
     //<editor-fold desc="Helper methods">
     private boolean isLetterTrueFont(Object nodeValue) {
         return false;

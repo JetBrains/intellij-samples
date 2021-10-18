@@ -13,7 +13,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java-samples" target="17" />
-      <module name="kotlin-samples" target="11" />
+      <module name="kotlin-samples" target="11.0.12" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

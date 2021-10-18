@@ -12,9 +12,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 @SuppressWarnings({"StatementWithEmptyBody", "unused", "Java9CollectionFactory", "MismatchedQueryAndUpdateOfCollection"})
 public class DataFlowAnalysis {
 
@@ -113,13 +110,6 @@ public class DataFlowAnalysis {
             return;
         }
         System.out.println(x);
-    }
-
-    public void hamcrestMatchersSupportedOptional() {
-        final Optional<String> foo = getAnOptional();
-
-        assertThat(foo.isPresent(), is(true));
-        assertThat(foo.get(), is(42)); // INSPECTION: 'Optional.get()' without 'isPresent()' check
     }
 
     private void constantEvaluationOfSimpleMethods() {

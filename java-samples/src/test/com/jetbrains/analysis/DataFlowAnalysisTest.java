@@ -2,6 +2,11 @@ package com.jetbrains.analysis;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class DataFlowAnalysisTest {
     @Test
     public void shouldShowDataFlowAnalysisHints() {
@@ -18,4 +23,18 @@ public class DataFlowAnalysisTest {
         }
         System.out.println(output);
     }
+
+    @Test
+    public void hamcrestMatchersShouldSupportOptional() {
+        final Optional<String> foo = getAnOptional();
+
+        assertThat(foo.isPresent(), is(true));
+        assertThat(foo.get(), is(42)); // INSPECTION: 'Optional.get()' without 'isPresent()' check
+    }
+
+    private Optional<String> getAnOptional() {
+        return Optional.of("String");
+    }
+
+
 }

@@ -39,8 +39,8 @@
                 <version>3.8.1</version>
                 <configuration>
                     <release>${java.version}</release>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
                 <executions>
                     <execution>

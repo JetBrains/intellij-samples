@@ -6,8 +6,6 @@ import java.util.stream.IntStream;
 
 @SuppressWarnings({"unused", "ResultOfMethodCallIgnored", "SameParameterValue"})
 public class ParameterHints {
-    private ParameterHints() {
-    }
 
     private String[] getWordsInSentence(String sentence) {
         return sentence.split("\\s");
@@ -30,7 +28,7 @@ public class ParameterHints {
         Service.generateServiceName("user");
     }
 
-    private Customer findCustomer(String name, String address, Integer orderNumber, int id, boolean ascending) {
+    static Customer findCustomer(String name, String address, Integer orderNumber, int id, boolean ascending) {
         return null;
     }
 

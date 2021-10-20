@@ -29,7 +29,7 @@ public class DataFlowAnalysisTest {
         final Optional<String> foo = getAnOptional();
 
         assertThat(foo.isPresent(), is(true));
-        assertThat(foo.get(), is(42)); // INSPECTION: 'Optional.get()' without 'isPresent()' check
+        assertThat(foo.get(), is("String")); // INSPECTION: 'Optional.get()' without 'isPresent()' check
     }
 
     private Optional<String> getAnOptional() {

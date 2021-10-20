@@ -77,5 +77,6 @@
     </dependencies>
     <properties>
         <kotlin.version>1.5.31</kotlin.version>
+        <java.version>17</java.version>
     </properties>
 </project>

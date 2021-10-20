@@ -15,7 +15,7 @@ public class ParameterHints {
         new Service("/users/", 8080);
     }
 
-    public Customer findCustomerByName(String name) {
+    public static Customer findCustomerByName(String name) {
         return findCustomer(name, null, null, 0, true);
     }
 

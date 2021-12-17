@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="MongoDB">
-  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.23">
-    <root id="1">
-      <ServerVersion>5.0.2</ServerVersion>
-    </root>
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.31">
+    <root id="1"/>
     <schema id="2" parent="1" name="admin"/>
     <schema id="3" parent="1" name="config"/>
     <schema id="4" parent="1" name="local"/>

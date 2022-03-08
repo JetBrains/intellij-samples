@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.31">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.37">
     <root id="1"/>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
@@ -860,23 +860,23 @@
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="274" parent="1" name="Examples">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
       <Current>1</Current>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="275" parent="1" name="information_schema">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="276" parent="1" name="mysql">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="277" parent="1" name="performance_schema">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="278" parent="1" name="sys">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="279" parent="1" name="sakila">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="280" parent="1" name="app-user">
       <Plugin>caching_sha2_password</Plugin>
@@ -1050,10 +1050,10 @@
       <Position>3</Position>
     </argument>
     <column id="331" parent="292" name="actor_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="332" parent="292" name="first_name">
       <DataType>varchar(45)|0s</DataType>
@@ -1082,10 +1082,10 @@
       <Primary>1</Primary>
     </key>
     <column id="337" parent="293" name="address_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="338" parent="293" name="address">
       <DataType>varchar(50)|0s</DataType>
@@ -1147,10 +1147,10 @@
       <Primary>1</Primary>
     </key>
     <column id="350" parent="294" name="category_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="351" parent="294" name="name">
       <DataType>varchar(25)|0s</DataType>
@@ -1170,10 +1170,10 @@
       <Primary>1</Primary>
     </key>
     <column id="354" parent="295" name="city_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="355" parent="295" name="city">
       <DataType>varchar(50)|0s</DataType>
@@ -1208,10 +1208,10 @@
       <Primary>1</Primary>
     </key>
     <column id="361" parent="296" name="country_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="362" parent="296" name="country">
       <DataType>varchar(50)|0s</DataType>
@@ -1231,10 +1231,10 @@
       <Primary>1</Primary>
     </key>
     <column id="365" parent="297" name="customer_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="366" parent="297" name="store_id">
       <DataType>tinyint unsigned|0s</DataType>
@@ -1313,10 +1313,10 @@
       <Turn>before-row</Turn>
     </trigger>
     <column id="381" parent="298" name="film_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="382" parent="298" name="title">
       <DataType>varchar(128)|0s</DataType>
@@ -1528,10 +1528,10 @@ description</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="422" parent="302" name="inventory_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>mediumint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="423" parent="302" name="film_id">
       <DataType>smallint unsigned|0s</DataType>
@@ -1577,10 +1577,10 @@ film_id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="431" parent="303" name="language_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="432" parent="303" name="name">
       <DataType>char(20)|0s</DataType>
@@ -1600,10 +1600,10 @@ film_id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="435" parent="304" name="payment_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="436" parent="304" name="customer_id">
       <DataType>smallint unsigned|0s</DataType>
@@ -1678,10 +1678,10 @@ film_id</ColNames>
       <Turn>before-row</Turn>
     </trigger>
     <column id="450" parent="305" name="rental_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="451" parent="305" name="rental_date">
       <DataType>datetime|0s</DataType>
@@ -1769,10 +1769,10 @@ customer_id</ColNames>
       <Turn>before-row</Turn>
     </trigger>
     <column id="467" parent="306" name="staff_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="468" parent="306" name="first_name">
       <DataType>varchar(45)|0s</DataType>
@@ -1814,9 +1814,9 @@ customer_id</ColNames>
       <Position>9</Position>
     </column>
     <column id="476" parent="306" name="password">
-      <Collation>utf8mb4_bin</Collation>
       <DataType>varchar(40)|0s</DataType>
       <Position>10</Position>
+      <CollationName>utf8mb4_bin</CollationName>
     </column>
     <column id="477" parent="306" name="last_update">
       <DataType>timestamp|0s</DataType>
@@ -1851,10 +1851,10 @@ customer_id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="483" parent="307" name="store_id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="484" parent="307" name="manager_staff_id">
       <DataType>tinyint unsigned|0s</DataType>

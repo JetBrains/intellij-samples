@@ -6,6 +6,13 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ExtractMethod {
     void main() {
+        // Find Action - ⌘⇧A (macOS) or Ctrl+Shift+A (Windows/Linux)
+        // 1. Use Find Action to extract a method
+        // Take note of the shortcut displayed next to the action
+        // 2. Use Find Action to show the navigation bar
+        // 3. Use Find Action to paste from history
+        // 4. And much more!
+
         System.out.println("How to extract a method: ");
 
         String hotkey = "Ctrl/Cmd+Alt+M";
@@ -17,15 +24,12 @@ public class ExtractMethod {
         steps.add("Assign it a visibility");
         steps.add("Apply the refactoring");
 
-        //Extract this loop
-        for (String step : steps) {
-            System.out.println(step);
-        }
+        printSteps(steps);
     }
 
-    public void printList(List<String> values) {
-        for (String value : values) {
-            System.out.println(value);
+    private void printSteps(List<String> steps) {
+        for (String step : steps) {
+            System.out.println(step);
         }
     }
 }

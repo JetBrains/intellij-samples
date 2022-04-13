@@ -7,18 +7,22 @@ import java.util.ArrayList;
 @SuppressWarnings("unused")
 public class JavadocFormatting {
 
+
     /**
-     * <li>This is a JavaDoc comment</li>
-     * <li>Which we can render nicely</li>
-     * <li>Use Ctrl+Option+Q on macOS</li>
-     * <li>Use Ctrl+Alt+Q on Windows</li>
-     * <li>Or click the icon in the gutter</li>
-     * <li>Right-click to change the font size</li>
-     * <li>Use `Render documentation comments` setting</li>
-     * <li>HTML Tags are also supported</li>
+     * <li>Code demos are easier with in-editor docs rendering including HTML tags</li>
+     * <li>Describe your code using headings or lists</li>
+     * <li>Use ⌃⌥Q (macOS), or Ctrl+Alt+Q (Windows/Linux)</li>
+     * <li>Or click the gutter icon</li>
+     * <li>Right-click to change the font size of rendered Javadocs</li>
+     * <li>You can also add local or remote images</li>
+     * <img src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_1280x800.png"></img>
+     * <img src="jb_beam.png"></img>
+     * <a href="https://www.jetbrains.com/">JetBrains Website</a>
      */
+
+
     private static void toggleRenderedView(){
-        System.out.println("Ctrl+Option+Q (macOS) or Ctrl+Alt+Q (Windows)");
+        System.out.println("⌃⌥Q (macOS) or Ctrl+Alt+Q (Windows/Linux)");
     }
 
     private static void popupQuickDocumentation() {

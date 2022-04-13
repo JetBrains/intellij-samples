@@ -1,16 +1,14 @@
 package com.jetbrains.completion;
 
 public class PostfixCompletion {
-
-    private void newMethod(String something) {
+    private void Dog(String breed) {
         // 1. Use .var to define a variable
-        String s = "new string";
+        final var poodle = "Poodle";
 
-        // 2. Use .nn to add 'not null' condition
-        if (something != null) {
-
-            // 3. Use .sout to output variable value
-            System.out.println(something);
+        // 2. Use .nn to add a 'not null' condition
+        if (breed != null) {
+            // 3. Use .soutv to output a variable value
+            System.out.println("breed = " + breed);
         }
 
         // 4. Use .new to initialise a class
@@ -18,10 +16,7 @@ public class PostfixCompletion {
         try {
             new CodeCompletion();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-
-        // 6. Create new postfix completion
-        // Use search everywhere to find postfix and select "Postfix Completion" select + button then Java
     }
 }

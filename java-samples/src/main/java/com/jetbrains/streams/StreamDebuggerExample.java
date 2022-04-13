@@ -20,11 +20,6 @@ public class StreamDebuggerExample {
 
     public static void main(String[] args) {
 
-        // Debug Streams
-        // 1. Set a breakpoint - Ctrl + F8 (⌘ F8), or click in gutter area (line 30)
-        // 2. Start application in debug mode (debug main method from gutter icon)
-        // 3. Click on 'Trace Current Stream Chain'
-
         int[] result = IntStream.of(10, 87, 97, 43, 121, 20)
                                 .flatMap(StreamDebuggerExample::factorize)
                                 .distinct()

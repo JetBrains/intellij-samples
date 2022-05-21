@@ -1,7 +1,11 @@
 package com.jetbrains.domain
 
 /**
- * Hierarchy for showing in a UML diagram. Use Cmd+Option+Shift+U to generate/view the UML diagram.
+ * Generate UML diagrams for classes and their dependencies
+ * Select a package (user defined or any API)
+ * Use ⌘⌥⇧U (macOS), or Ctrl+Alt+Shift+U (Windows/Linux)
+ * to generate or view UML diagrams
+ * View source, parent or implementing classes
  */
 @Suppress("unused")
 class Fiesta : Car {

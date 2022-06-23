@@ -1,18 +1,22 @@
 package com.jetbrains.formatting;
 
 @SuppressWarnings("unused")
+
+
 public class LanguageInjection {
 
-    public static void main(String[] args) {
-        String json = "{\\n" +
-                      "  \"spaniel\": \"Tinker\",\n" +
-                      "  \"labrador\": \"Star\",\n" +
-                      "  \"poodle\": \"Hattie\",\n" +
-                      "  \"dalmatian\": \"Bubble\",\n" +
-                      "}\n";
-    }
+    String json = """
+            {
+                 "name":"Batman",
+                 "eye colour": "blue",
+                 "height": 188
+            }""";
+
+
+    String html = "<h1>Everything is AWESOME!!!</h1><p>Probably the best track from The Lego movie.</p>";
 
     private boolean verifyPhoneNumber(String num) {
-        return num.matches("\\d{3}-\\d{4}");
+        return num.matches(("[0-9]{3}-[0-9]{4}"));
     }
+
 }

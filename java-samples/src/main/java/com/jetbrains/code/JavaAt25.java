@@ -12,6 +12,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @SuppressWarnings("unused")
+// There's a view for every occasion
+// Use Find Action ⌘⇧A (macOS), Ctrl+Shift+A (Windows/Linux) to:
+// 1. Enter Presentation mode
+// 2. Enter Distraction free mode
+// 3. Enter Full screen mode
+// 4. Enter Zen mode
+
 public class JavaAt25 {
     private void weLoveCollections() {
         final List<String> strings = new ArrayList<>();
@@ -112,3 +119,5 @@ public class JavaAt25 {
 
     private record MyRecord(int id, String name) { }
 }
+
+

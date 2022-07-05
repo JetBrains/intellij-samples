@@ -9,8 +9,9 @@ enum class Entry {
 }
 
 fun test(e: Entry) {
-    when (e) {
+//    when (e) {
         // Alt+Enter -> Add remaining branches
-    }
+
+//    }
 }
 

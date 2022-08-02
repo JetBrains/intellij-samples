@@ -9,18 +9,18 @@ import static com.jetbrains.editing.ParameterHints.findCustomer;
 
 @SuppressWarnings("unused")
 public class InlayHints {
-    private Customer inlayHintsShownForParameterNames(String name) {
+    Customer inlayHintsShownForParameterNames(String name) {
         return findCustomer(name, null, null, 0, true);
     }
 
-    private void inlayHintsForChainedMethods() {
+    void inlayHintsForChainedMethods() {
         Stream.of(1, 2, 3)
               .filter(it -> it % 2 == 0)
               .map(it -> "item: " + it)
               .forEach(System.out::println);
     }
 
-    private void inlayHintsShownForImplicitTypes() {
+    void inlayHintsShownForImplicitTypes() {
         var customers = List.of(new Customer("First", "Last"));
     }
 }

@@ -1,1 +1,0 @@
-Kotlin project doesn't compile at the moment in IntelliJ because, for some reason, it's using the default project JDK (16) not JDK 11. JDK 16 hides internals and I think that Kotlin doesn't work well with that at the moment.

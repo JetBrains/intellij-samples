@@ -18,5 +18,18 @@ public class PostfixCompletion {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
+        // 6. Use .cast to add a correctly-formed cast expression
+        createAnimal(Dog.class);
+    }
+
+    private Animal createAnimal(Class<? extends Animal> dogClass) {
+        return null;
+    }
+
+    private class Animal {
+    }
+
+    private class Dog extends Animal {
     }
 }

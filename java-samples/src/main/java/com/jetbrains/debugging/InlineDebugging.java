@@ -28,12 +28,11 @@ public class InlineDebugging implements Runnable {
     @Override
     public void run() {
         MyList<Integer> list = new MyList<Integer>(Arrays.asList(1, 2, 3));
-        System.out.println(getNthFromLast(list, 2));
+        //System.out.println(getNthFromLast(list, 2));
+        int matches = StringUtils.countMatches("intellij idea", "i");
+        String caps = StringUtils.capitalize("intellij IDEA");
 
-        int i = StringUtils.getLevenshteinDistance("intellij", "idea", 3);
-        double j = StringUtils.getJaroWinklerDistance("intellij", "idea");
-
-        System.out.println(i + "," + j);
+        System.out.println(matches + "," + caps);
     }
 
     private static <T> T getNthFromLast(MyList<T> list, int n) {

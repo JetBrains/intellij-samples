@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/intellij-samples.iml" filepath="$PROJECT_DIR$/.idea/intellij-samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java-samples/java-samples.iml" filepath="$PROJECT_DIR$/java-samples/java-samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kotlin-samples/kotlin-samples.iml" filepath="$PROJECT_DIR$/kotlin-samples/kotlin-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-samples/web-samples.iml" filepath="$PROJECT_DIR$/web-samples/web-samples.iml" />
     </modules>
   </component>

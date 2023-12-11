@@ -1,7 +1,7 @@
 package com.jetbrains.startercode
 
 
-// Press Press ⇧⇧ (macOS) or Ctrl+Ctrl (Windows/Linux) to open the Search Everywhere dialog and type `soft wrap`, press **Enter** to enable it. Now your code will be wrapped within the IDE.
+// Press ⇧⇧ (macOS) or Ctrl+Ctrl (Windows/Linux) to open the Search Everywhere dialog and type `soft wrap`, press **Enter** to enable it. Now your code will be wrapped within the IDE.
 // You can also search for classes such as this one `Example.kt`, files in your project, actions in the IDE, and settings including themes or plugins in this dialog.
 
 fun main(args: Array<String>) {

@@ -1,35 +1,39 @@
-package com.jetbrains.code.jdk.preview;
+package com.jetbrains.code.jdk21;
 
 import java.util.List;
 
 /**
  * <ul>
  *     <li>#PreviewFeature First Preview #JDK17</li>
+ *     <li>#StandardFeature #JDK21</li>
  * </ul>
+ * See: <a href="https://openjdk.org/jeps/441">JEP 441</a>
  */
 @SuppressWarnings("unused")
 public class PatternMatchingForSwitch {
-    static String exampleJEP406OriginalCode(Object o) {
+    // Prior to Java 21
+    static String exampleJEP411OriginalCode(Object obj) {
         String formatted = "unknown";
-        if (o instanceof Integer i) {
+        if (obj instanceof Integer i) {
             formatted = String.format("int %d", i);
-        } else if (o instanceof Long l) {
+        } else if (obj instanceof Long l) {
             formatted = String.format("long %d", l);
-        } else if (o instanceof Double d) {
+        } else if (obj instanceof Double d) {
             formatted = String.format("double %f", d);
-        } else if (o instanceof String s) {
+        } else if (obj instanceof String s) {
             formatted = String.format("String %s", s);
         }
         return formatted;
     }
 
-    static String exampleJEP406PatternMatchingForSwitch(Object o) {
-        return switch (o) {
+    // As of Java 21
+    static String formatterPatternSwitch(Object obj) {
+        return switch (obj) {
             case Integer i -> String.format("int %d", i);
             case Long l -> String.format("long %d", l);
             case Double d -> String.format("double %f", d);
             case String s -> String.format("String %s", s);
-            default -> o.toString();
+            default -> obj.toString();
         };
     }
 
@@ -63,6 +67,22 @@ public class PatternMatchingForSwitch {
             case null -> System.out.println("Oops");
             case "Foo", "Bar" -> System.out.println("Great");
             default -> System.out.println("Ok");
+        }
+    }
+
+    // As of Java 21
+    static void testStringNew(String response) {
+        switch (response) {
+            case null -> {}
+            case "y", "Y" -> System.out.println("You got it");
+            case "n", "N" -> System.out.println("Shame");
+            case String s
+                    when s.equalsIgnoreCase("YES") -> System.out.println("You got it");
+            case String s
+                    when s.equalsIgnoreCase("NO") -> System.out.println("Shame");
+            case String s -> {
+                System.out.println("Sorry?");
+            }
         }
     }
 }

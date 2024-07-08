@@ -134,8 +134,6 @@ public class Java8Inspections {
         map.forEach(otherMap::putIfAbsent);
     }
 
-    //<editor-fold desc="Helper methods">
-
     private List<String> replaceWithCollectAndMap() {
         List<String> result = getStrings();
 
@@ -413,6 +411,7 @@ public class Java8Inspections {
     }
 
 
+    //<editor-fold desc="Helper methods">
     @NotNull
     private ArrayList<String> getStrings() {
         return new ArrayList<>();
@@ -447,8 +446,8 @@ public class Java8Inspections {
             return loadNames;
         }
     }
-
     //</editor-fold>
+
 }
 
 

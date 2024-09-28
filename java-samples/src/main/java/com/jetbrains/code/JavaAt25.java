@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 // 3. Enter Full screen mode
 // 4. Enter Zen mode
 // 5. Toggle viewing modes with
-// <kbd>⌃\`</kbd> (macOS) / <kbd>Ctrl+\`</kbd> (Windows/Linux)
+// Quick Switch Scheme ⌃`(macOS), \` (Windows/Linux)
 
 public class JavaAt25 {
     private void weLoveCollections() {

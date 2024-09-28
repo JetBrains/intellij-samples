@@ -18,6 +18,8 @@ import java.util.stream.Collectors;
 // 2. Enter Distraction free mode
 // 3. Enter Full screen mode
 // 4. Enter Zen mode
+// 5. Toggle viewing modes with
+// Quick Switch Scheme ⌃`(macOS), \` (Windows/Linux)
 
 public class JavaAt25 {
     private void weLoveCollections() {

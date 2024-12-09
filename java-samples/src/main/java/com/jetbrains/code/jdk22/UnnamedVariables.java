@@ -3,7 +3,6 @@ package com.jetbrains.code.jdk22;
 import com.jetbrains.entity.Order;
 
 import java.awt.Point;
-import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 

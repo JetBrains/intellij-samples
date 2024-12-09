@@ -24,8 +24,7 @@ public class UnnamedVariables {
         }
     }
 
-    static int demoUseOfUnderscoreInException() {
-        String s = "Some string";
+    static int demoUseOfUnderscoreInException(String s) {
         try {
             return Integer.parseInt(s);
         } catch (NumberFormatException _) {

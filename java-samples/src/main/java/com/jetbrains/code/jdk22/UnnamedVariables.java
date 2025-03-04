@@ -16,8 +16,9 @@ import java.util.concurrent.ArrayBlockingQueue;
 public class UnnamedVariables {
     static int suggestReplacingUnusedVariableWithUnderscore(Iterable<Order> orders) {
         int total = 0;
-        for (Order order : orders)    // order is unused
+        for (Order order : orders) {    // order is unused
             total++;
+        }
         return total;
     }
 

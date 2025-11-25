@@ -14,3 +14,6 @@ These examples currently show features all the way up to IntelliJ IDEA 2020.1, a
 There are also some basic samples for Spring and for Web/JavaScript features.
 
 See also: https://github.com/trishagee/groovy-samples
+
+
+##  added test comment

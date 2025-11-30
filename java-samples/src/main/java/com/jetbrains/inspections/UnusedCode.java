@@ -5,4 +5,8 @@ public class UnusedCode {
     public void methodOnlyUsedByTests() {
         System.out.println("This is only called by a test");
     }
+
+    public void methodThatIsNotUsedAtAll() {
+        System.out.println("This is never called");
+    }
 }

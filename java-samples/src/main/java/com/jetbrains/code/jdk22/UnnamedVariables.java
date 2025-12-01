@@ -3,15 +3,22 @@ package com.jetbrains.code.jdk22;
 import com.jetbrains.entity.Order;
 
 import java.awt.Point;
-import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 
+/**
+ * <ul>
+ *     <li>#PreviewFeature   #JDK21</li>
+ *     <li>#StandardFeature  #JDK22</li>
+ * </ul>
+ * See: <a href="https://openjdk.org/jeps/456">JEP 456</a>
+ */
 public class UnnamedVariables {
     static int suggestReplacingUnusedVariableWithUnderscore(Iterable<Order> orders) {
         int total = 0;
-        for (Order order : orders)    // order is unused
+        for (Order order : orders) {    // order is unused
             total++;
+        }
         return total;
     }
 
@@ -25,8 +32,7 @@ public class UnnamedVariables {
         }
     }
 
-    static int demoUseOfUnderscoreInException() {
-        String s = "Some string";
+    static int demoUseOfUnderscoreInException(String s) {
         try {
             return Integer.parseInt(s);
         } catch (NumberFormatException _) {

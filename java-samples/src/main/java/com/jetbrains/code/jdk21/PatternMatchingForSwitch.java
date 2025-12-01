@@ -40,7 +40,7 @@ public class PatternMatchingForSwitch {
     static void shouldSuggestMigratingToPatternMatchingForSwitch(Object x) {
         if (x instanceof String) {
             System.out.println(x);
-        } else if (x instanceof Integer) {
+        } else if (x instanceof Integer) { // pattern matching for instanceof
             Integer integer = (Integer) x;
             System.out.println(integer + 1);
         } else if (x instanceof List<?> list) {

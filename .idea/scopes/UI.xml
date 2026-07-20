@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="UI" pattern="src[standard-java]:com.jetbrains.domain.ui..*" />
-</component>

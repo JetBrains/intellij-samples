@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="Data Access" pattern="src[standard-java]:com.jetbrains.domain.repository..*" />
-</component>
